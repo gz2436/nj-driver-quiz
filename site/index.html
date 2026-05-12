@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新泽西驾照笔试练习 NJ Driver Quiz</title>
+<meta name="description" content="新泽西 NJ 驾照笔试中英对照练习，含官方手册校验、易错题、模拟考试。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="entry">
+    <h1>新泽西驾照笔试练习</h1>
+    <div class="sub">NJ Driver License Practice · 中英对照 · 题库已与官方手册交叉校验</div>
+
+    <div class="mode-grid">
+      <a class="mode-card" href="quiz.html?mode=full">
+        <div class="title">完整练习</div>
+        <div class="desc">所有题目，可随机或顺序，即时反馈 + 解析</div>
+        <div class="count" id="full-count">--</div>
+      </a>
+      <a class="mode-card" href="quiz.html?mode=easy">
+        <div class="title">易错题</div>
+        <div class="desc">从易错题题库精选，快速过一遍高频题</div>
+        <div class="count" id="easy-count">--</div>
+      </a>
+      <a class="mode-card" href="#" id="mode-topic-btn">
+        <div class="title">按分类练习</div>
+        <div class="desc">选标志、酒驾、停车、GDL... 一类一类攻克</div>
+        <div class="count">分类</div>
+      </a>
+      <a class="mode-card" href="quiz.html?mode=mock">
+        <div class="title">模拟考试</div>
+        <div class="desc">随机 50 题，提交后才出分；NJ 实考形式</div>
+        <div class="count">50 题</div>
+      </a>
+      <a class="mode-card" href="quiz.html?mode=wrong">
+        <div class="title">我的错题本</div>
+        <div class="desc">本地保存的答错题；定向重练</div>
+        <div class="count" id="wrong-count">--</div>
+      </a>
+      <a class="mode-card" href="signs.html">
+        <div class="title">交通标志参考</div>
+        <div class="desc">来自官方手册的标志速查表（颜色/形状）</div>
+        <div class="count">参考</div>
+      </a>
+    </div>
+
+    <div class="topic-chooser" id="topic-chooser">
+      <h3>选择分类（可多选）</h3>
+      <div class="topic-grid" id="topic-grid"></div>
+      <button class="btn primary" id="topic-start" disabled>开始练习</button>
+    </div>
+
+    <div class="entry-stats">
+      <h3>个人记录</h3>
+      <div class="row"><span class="label">题库版本</span><span class="value" id="version">--</span></div>
+      <div class="row"><span class="label">题目总数</span><span class="value" id="total-q">--</span></div>
+      <div class="row"><span class="label">累计尝试</span><span class="value" id="total-attempts">--</span></div>
+      <div class="row"><span class="label">已收藏</span><span class="value" id="bookmark-count">--</span></div>
+      <div class="row"><span class="label">错题本</span><span class="value" id="wrong-stat">--</span></div>
+      <div class="row"><span class="label">最近模考</span><span class="value" id="last-mock">--</span></div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script>
+(async function() {
+  const state = initPage();
+
+  // Load questions to populate counts
+  let questions = [];
+  let topicsMeta = {};
+  try {
+    questions = await fetch('../data/questions.json').then(r => r.json());
+    topicsMeta = await fetch('../data/topics.json').then(r => r.json());
+  } catch (e) {
+    console.error('Failed to load data:', e);
+  }
+
+  // Populate counts
+  document.getElementById('full-count').textContent = `${questions.length} 题`;
+  const easyCount = questions.filter(q => q.is_common_mistake).length;
+  document.getElementById('easy-count').textContent = `${easyCount} 题`;
+  document.getElementById('wrong-count').textContent = `${state.wrongAnswers.length} 题`;
+  document.getElementById('total-q').textContent = questions.length;
+  document.getElementById('total-attempts').textContent = state.totalAttempts;
+  document.getElementById('bookmark-count').textContent = state.bookmarks.length;
+  document.getElementById('wrong-stat').textContent = state.wrongAnswers.length;
+  document.getElementById('version').textContent = 'v2026.05.12';
+  if (state.mockExamHistory.length > 0) {
+    const last = state.mockExamHistory[state.mockExamHistory.length - 1];
+    document.getElementById('last-mock').textContent = `${last.score}/${last.total} (${last.date})`;
+  } else {
+    document.getElementById('last-mock').textContent = '尚未参加';
+  }
+
+  // Topic chooser
+  const topicCounts = {};
+  for (const q of questions) {
+    for (const t of q.topics) {
+      topicCounts[t] = (topicCounts[t] || 0) + 1;
+    }
+  }
+  const topicBtn = document.getElementById('mode-topic-btn');
+  const chooser = document.getElementById('topic-chooser');
+  const grid = document.getElementById('topic-grid');
+  const startBtn = document.getElementById('topic-start');
+  const selectedTopics = new Set();
+
+  const topicOrder = Object.keys(topicCounts).sort((a, b) => topicCounts[b] - topicCounts[a]);
+  for (const t of topicOrder) {
+    const meta = topicsMeta[t] || { zh: t, en: t };
+    const chip = document.createElement('div');
+    chip.className = 'topic-chip';
+    chip.innerHTML = `${meta.zh} <span class="count">${topicCounts[t]}</span>`;
+    chip.addEventListener('click', () => {
+      if (selectedTopics.has(t)) {
+        selectedTopics.delete(t);
+        chip.classList.remove('selected');
+      } else {
+        selectedTopics.add(t);
+        chip.classList.add('selected');
+      }
+      startBtn.disabled = selectedTopics.size === 0;
+    });
+    grid.appendChild(chip);
+  }
+
+  topicBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    chooser.classList.toggle('open');
+  });
+  startBtn.addEventListener('click', () => {
+    const ts = [...selectedTopics].join(',');
+    location.href = `quiz.html?mode=topic&t=${encodeURIComponent(ts)}`;
+  });
+})();
+</script>
+</body>
+</html>

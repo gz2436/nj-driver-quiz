@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>练习 · 新泽西驾照笔试</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <!-- Header -->
+  <header class="quiz-header">
+    <div class="left">
+      <button class="back-btn" id="back-btn">← 返回</button>
+      <h2 id="mode-title">练习</h2>
+    </div>
+    <div class="stats">
+      <span id="progress-text">0 / 0</span>
+      &nbsp;·&nbsp;
+      <span class="score-correct" id="correct-count">0</span> 对
+      &nbsp;·&nbsp;
+      <span class="score-wrong" id="wrong-count">0</span> 错
+      &nbsp;
+      <span id="mock-timer" class="mock-timer hidden">--:--</span>
+    </div>
+  </header>
+
+  <div class="progress"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+
+  <div id="mock-note" class="mock-note hidden">
+    模拟考试模式：答完 50 题提交后才显示得分。NJ 实考无时间限制，但建议自行计时（默认 30 分钟参考）。
+  </div>
+
+  <!-- Quiz card -->
+  <div id="quiz-view">
+    <div class="card">
+      <div class="q-toolbar">
+        <div class="qnum" id="qnum">第 1 题</div>
+        <div class="actions">
+          <div class="lang-toggle" id="lang-toggle">
+            <button data-lang="bilingual">双语</button>
+            <button data-lang="zh">中</button>
+            <button data-lang="en">EN</button>
+          </div>
+          <button id="tts-btn" class="tts-btn" title="朗读">🔊</button>
+          <button id="bookmark-btn" title="收藏">⭐</button>
+          <button id="report-btn" title="报错">⚠️</button>
+        </div>
+      </div>
+      <img id="stem-img" class="stem-img hidden" alt="">
+      <div class="stem" id="stem"></div>
+      <div class="options" id="options"></div>
+      <div class="feedback hidden" id="feedback"></div>
+      <div class="explanation hidden" id="explanation"></div>
+      <div class="related-questions hidden" id="related"></div>
+      <div class="controls">
+        <button class="btn" id="prev-btn">← 上一题</button>
+        <div class="jumper">
+          跳转到 <input type="number" id="jump-input" min="1"> 题
+        </div>
+        <button class="btn primary" id="next-btn">下一题 →</button>
+      </div>
+      <div class="hint">键盘 <kbd>A-D</kbd> 或 <kbd>1-4</kbd> 选答 · <kbd>T</kbd>/<kbd>F</kbd> 判断 · <kbd>←</kbd> <kbd>→</kbd> 翻题 · <kbd>Enter</kbd> 下一题</div>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div id="summary-view" class="hidden">
+    <div class="card summary">
+      <h2 id="summary-title">练习完成</h2>
+      <div class="score"><span id="final-correct">0</span> / <span id="final-total">0</span></div>
+      <div class="pct" id="final-pct">0%</div>
+      <div class="pass-msg" id="pass-msg"></div>
+      <div class="controls" style="justify-content:center; margin-top:18px;">
+        <button class="btn" id="review-btn">复习错题</button>
+        <button class="btn primary" id="redo-btn">重新开始</button>
+        <button class="btn" id="home-btn">回首页</button>
+      </div>
+      <div class="review-list hidden" id="review-list"></div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script>
+(async function() {
+  const state = initPage();
+
+  // Parse URL
+  const params = new URLSearchParams(location.search);
+  const mode = params.get('mode') || 'full';
+  const topicFilter = (params.get('t') || '').split(',').filter(Boolean);
+
+  // Load data
+  let allQuestions, explanations, topicsMeta;
+  try {
+    [allQuestions, explanations, topicsMeta] = await Promise.all([
+      fetch('../data/questions.json').then(r => r.json()),
+      fetch('../data/explanations.json').then(r => r.json()),
+      fetch('../data/topics.json').then(r => r.json()),
+    ]);
+  } catch (e) {
+    document.querySelector('.container').innerHTML = '<div class="card"><h2>数据加载失败</h2><p>请刷新页面重试。</p></div>';
+    console.error(e);
+    return;
+  }
+
+  // Build question pool by mode
+  let pool, modeTitle, isMock = false;
+  switch (mode) {
+    case 'easy':
+      pool = allQuestions.filter(q => q.is_common_mistake);
+      modeTitle = '易错题';
+      break;
+    case 'topic':
+      pool = allQuestions.filter(q => q.topics.some(t => topicFilter.includes(t)));
+      modeTitle = '分类：' + topicFilter.map(t => (topicsMeta[t]?.zh || t)).join('、');
+      break;
+    case 'mock':
+      pool = shuffle(allQuestions).slice(0, 50);
+      modeTitle = '模拟考试 (50)';
+      isMock = true;
+      document.getElementById('mock-note').classList.remove('hidden');
+      break;
+    case 'wrong':
+      pool = allQuestions.filter(q => state.wrongAnswers.includes(q.id));
+      modeTitle = '我的错题本';
+      break;
+    default:
+      pool = allQuestions;
+      modeTitle = '完整练习';
+  }
+  if (pool.length === 0) {
+    document.querySelector('.container').innerHTML = `<div class="card"><h2>${modeTitle}</h2><p>暂无可用题目。回到 <a href="index.html">首页</a>。</p></div>`;
+    return;
+  }
+  document.getElementById('mode-title').textContent = modeTitle;
+  document.title = `${modeTitle} · 新泽西驾照笔试`;
+
+  // Apply ordering
+  let order = isMock ? pool : weightedShuffle(pool, state);
+
+  // Per-session state
+  const session = {
+    questions: order,
+    current: 0,
+    answers: {},  // qid -> 'A'|'B'|...
+  };
+
+  // Render question
+  function renderQuestion() {
+    const q = session.questions[session.current];
+    const total = session.questions.length;
+    const answered = Object.keys(session.answers).length;
+    const correct = Object.entries(session.answers).filter(([qid, a]) => {
+      const qq = session.questions.find(qx => qx.id == qid);
+      return qq && qq.answer === a;
+    }).length;
+    const wrong = answered - correct;
+
+    document.getElementById('progress-text').textContent = `${session.current + 1} / ${total}`;
+    document.getElementById('progress-fill').style.width = `${(answered / total) * 100}%`;
+    if (!isMock) {
+      document.getElementById('correct-count').textContent = correct;
+      document.getElementById('wrong-count').textContent = wrong;
+    } else {
+      document.getElementById('correct-count').textContent = '?';
+      document.getElementById('wrong-count').textContent = '?';
+    }
+    document.getElementById('qnum').textContent = `第 ${session.current + 1} 题${q.type === 'tf' ? ' · 判断题' : ''}`;
+
+    // Stem image
+    const stemImg = document.getElementById('stem-img');
+    if (q.stem_img) {
+      stemImg.src = `../data/images/${q.stem_img}`;
+      stemImg.alt = `Question image: ${q.stem_img}`;
+      stemImg.classList.remove('hidden');
+    } else {
+      stemImg.classList.add('hidden');
+    }
+
+    // Stem text (split bilingual)
+    const stemEl = document.getElementById('stem');
+    const parts = splitBilingual(q.stem);
+    stemEl.innerHTML = '';
+    if (parts.en) {
+      const enEl = document.createElement('span');
+      enEl.className = 'en';
+      enEl.textContent = parts.en;
+      stemEl.appendChild(enEl);
+    }
+    if (parts.zh) {
+      const zhEl = document.createElement('span');
+      zhEl.className = 'zh';
+      zhEl.textContent = parts.zh;
+      stemEl.appendChild(zhEl);
+    }
+    if (!parts.en && !parts.zh) {
+      stemEl.textContent = q.stem;
+    }
+
+    // Options
+    const optsEl = document.getElementById('options');
+    optsEl.innerHTML = '';
+    const userAns = session.answers[q.id];
+    const letters = q.type === 'tf' ? ['T', 'F'] : ['A', 'B', 'C', 'D'];
+    const visible = q.type === 'tf' ? q.options.slice(0, 2) : q.options;
+
+    visible.forEach((text, i) => {
+      if (q.type !== 'tf' && !text) return;
+      const letter = letters[i];
+      const btn = document.createElement('button');
+      btn.className = 'option';
+      btn.disabled = !!userAns && !isMock;
+      if (userAns) {
+        if (isMock) {
+          // In mock mode, just highlight selected — no correctness
+          if (letter === userAns) btn.classList.add('selected');
+        } else {
+          if (letter === q.answer) btn.classList.add('correct');
+          else if (letter === userAns) btn.classList.add('wrong');
+        }
+      }
+      const letterEl = document.createElement('span');
+      letterEl.className = 'option-letter';
+      letterEl.textContent = letter;
+      const textEl = document.createElement('span');
+      textEl.className = 'option-text';
+      const oparts = splitBilingual(text);
+      if (oparts.en) {
+        const e = document.createElement('span');
+        e.className = 'opt-en';
+        e.textContent = oparts.en;
+        textEl.appendChild(e);
+      }
+      if (oparts.zh) {
+        const z = document.createElement('span');
+        z.className = 'opt-zh';
+        z.textContent = oparts.zh;
+        textEl.appendChild(z);
+      }
+      if (!oparts.en && !oparts.zh) textEl.textContent = text;
+      btn.appendChild(letterEl);
+      btn.appendChild(textEl);
+      btn.addEventListener('click', () => onAnswer(letter));
+      optsEl.appendChild(btn);
+    });
+
+    // Feedback + explanation (only outside mock mode)
+    const fb = document.getElementById('feedback');
+    const ex = document.getElementById('explanation');
+    const rel = document.getElementById('related');
+    if (userAns && !isMock) {
+      fb.classList.remove('hidden');
+      if (userAns === q.answer) {
+        fb.className = 'feedback show-correct';
+        fb.textContent = '✓ 答对了 / Correct';
+      } else {
+        fb.className = 'feedback show-wrong';
+        fb.textContent = `✗ 不对，正确答案是 ${q.answer} / Correct answer: ${q.answer}`;
+      }
+      renderExplanation(q, ex);
+      renderRelated(q, rel);
+    } else {
+      fb.classList.add('hidden');
+      ex.classList.add('hidden');
+      rel.classList.add('hidden');
+    }
+
+    // Buttons
+    document.getElementById('prev-btn').disabled = session.current === 0;
+    const nextBtn = document.getElementById('next-btn');
+    if (session.current === total - 1) {
+      nextBtn.textContent = answered === total ? '查看结果' : '下一题 →';
+    } else {
+      nextBtn.textContent = '下一题 →';
+    }
+    document.getElementById('jump-input').max = total;
+    document.getElementById('jump-input').value = session.current + 1;
+
+    // Bookmark icon
+    const bm = document.getElementById('bookmark-btn');
+    if (state.bookmarks.includes(q.id)) {
+      bm.classList.add('bookmarked');
+    } else {
+      bm.classList.remove('bookmarked');
+    }
+  }
+
+  function renderExplanation(q, el) {
+    if (!q.explanation_key || !explanations[q.explanation_key]) {
+      el.classList.add('hidden');
+      return;
+    }
+    const ex = explanations[q.explanation_key];
+    el.classList.remove('hidden');
+    el.innerHTML = `
+      <div class="label">📘 解析 / Explanation</div>
+      <div class="body">
+        <span class="zh">${ex.zh}</span>
+        <span class="en">${ex.en}</span>
+      </div>
+      <div class="source">来源：${ex.source_label}${ex.source_url ? ` · <a href="${ex.source_url}" target="_blank" rel="noopener">查看官方手册</a>` : ''}</div>
+    `;
+    // Add unit conversion hint if question mentions feet
+    if (/\b(\d+)\s*(feet|ft|英尺)\b/i.test(q.stem)) {
+      const m = q.stem.match(/\b(\d+)\s*(feet|ft|英尺)\b/i);
+      if (m) {
+        const ft = parseInt(m[1], 10);
+        const m_val = (ft * 0.3048).toFixed(1);
+        const hint = document.createElement('div');
+        hint.className = 'source';
+        hint.style.marginTop = '4px';
+        hint.textContent = `提示：${ft} 英尺 ≈ ${m_val} 米`;
+        el.querySelector('.body').appendChild(hint);
+      }
+    }
+  }
+
+  function renderRelated(q, el) {
+    if (!q.topics || q.topics.length === 0 || q.topics[0] === 'general') {
+      el.classList.add('hidden');
+      return;
+    }
+    const sameTopic = allQuestions.filter(other => {
+      return other.id !== q.id && other.topics.some(t => q.topics.includes(t) && t !== 'general');
+    });
+    if (sameTopic.length === 0) {
+      el.classList.add('hidden');
+      return;
+    }
+    const picks = shuffle(sameTopic).slice(0, 3);
+    el.classList.remove('hidden');
+    const items = picks.map(other => {
+      const preview = other.stem.length > 60 ? other.stem.slice(0, 60) + '…' : other.stem;
+      return `<li><a href="?mode=topic&t=${other.topics[0]}#qid=${other.id}">${preview}</a></li>`;
+    }).join('');
+    el.innerHTML = `
+      <div class="label">🔗 同主题练习 / Related</div>
+      <ul>${items}</ul>
+    `;
+  }
+
+  function onAnswer(letter) {
+    const q = session.questions[session.current];
+    if (session.answers[q.id] && !isMock) return;
+    session.answers[q.id] = letter;
+    state.totalAttempts = (state.totalAttempts || 0) + 1;
+    if (!isMock) {
+      // Update wrong-answer state
+      if (letter !== q.answer) {
+        if (!state.wrongAnswers.includes(q.id)) state.wrongAnswers.push(q.id);
+      } else {
+        // Correct → remove from wrong list (mastered)
+        state.wrongAnswers = state.wrongAnswers.filter(id => id !== q.id);
+      }
+      // Update topic progress
+      for (const t of q.topics) {
+        state.topicProgress[t] = state.topicProgress[t] || { seen: 0, correct: 0 };
+        state.topicProgress[t].seen += 1;
+        if (letter === q.answer) state.topicProgress[t].correct += 1;
+      }
+      saveState(state);
+    }
+    renderQuestion();
+  }
+
+  function nextQ() {
+    const total = session.questions.length;
+    if (session.current < total - 1) {
+      session.current++;
+      renderQuestion();
+    } else if (Object.keys(session.answers).length === total) {
+      showSummary();
+    }
+  }
+  function prevQ() {
+    if (session.current > 0) { session.current--; renderQuestion(); }
+  }
+  function jumpQ(n) {
+    const total = session.questions.length;
+    const idx = Math.max(0, Math.min(total - 1, n - 1));
+    session.current = idx;
+    renderQuestion();
+  }
+
+  function showSummary() {
+    document.getElementById('quiz-view').classList.add('hidden');
+    document.getElementById('summary-view').classList.remove('hidden');
+    const total = session.questions.length;
+    let correct = 0;
+    for (const q of session.questions) {
+      if (session.answers[q.id] === q.answer) correct++;
+    }
+    document.getElementById('final-correct').textContent = correct;
+    document.getElementById('final-total').textContent = total;
+    const pct = Math.round((correct / total) * 100);
+    document.getElementById('final-pct').textContent = `${pct}%`;
+    document.getElementById('summary-title').textContent = `${modeTitle} 完成`;
+    const passMsg = document.getElementById('pass-msg');
+    if (isMock) {
+      // NJ pass: 80% (40/50)
+      if (pct >= 80) {
+        passMsg.className = 'pass-msg pass';
+        passMsg.textContent = `✓ 达到 NJ 实考通过线（80%）`;
+      } else {
+        passMsg.className = 'pass-msg fail';
+        passMsg.textContent = `× 未达 NJ 实考通过线（80%）— 继续加油！`;
+      }
+      // Save mock history
+      state.mockExamHistory.push({
+        date: new Date().toISOString().slice(0, 10),
+        score: correct,
+        total,
+      });
+      saveState(state);
+    } else {
+      passMsg.textContent = '';
+    }
+    document.getElementById('review-list').classList.add('hidden');
+    document.getElementById('review-list').innerHTML = '';
+  }
+
+  function showReview() {
+    const list = document.getElementById('review-list');
+    list.classList.remove('hidden');
+    list.innerHTML = '';
+    const wrongs = [];
+    for (const q of session.questions) {
+      const a = session.answers[q.id];
+      if (a && a !== q.answer) wrongs.push({ q, your: a });
+    }
+    if (wrongs.length === 0) {
+      list.innerHTML = '<div class="review-item">全部答对，完美！</div>';
+      return;
+    }
+    for (const { q, your } of wrongs) {
+      const letters = q.type === 'tf' ? ['T', 'F'] : ['A', 'B', 'C', 'D'];
+      const yourText = q.options[letters.indexOf(your)] || '';
+      const correctText = q.options[letters.indexOf(q.answer)] || '';
+      const div = document.createElement('div');
+      div.className = 'review-item';
+      div.innerHTML = `
+        <div class="review-q">
+          ${q.stem_img ? `<img src="../data/images/${q.stem_img}" alt="">` : ''}
+          ${q.stem}
+        </div>
+        <div class="review-ans"><span class="your">你: ${your}.</span> ${yourText}</div>
+        <div class="review-ans"><span class="correct">正: ${q.answer}.</span> ${correctText}</div>
+      `;
+      list.appendChild(div);
+    }
+  }
+
+  function restart() {
+    session.current = 0;
+    session.answers = {};
+    if (mode === 'mock') {
+      order = shuffle(allQuestions).slice(0, 50);
+    } else {
+      order = weightedShuffle(pool, state);
+    }
+    session.questions = order;
+    document.getElementById('summary-view').classList.add('hidden');
+    document.getElementById('quiz-view').classList.remove('hidden');
+    renderQuestion();
+  }
+
+  // === Events ===
+  document.getElementById('back-btn').addEventListener('click', () => {
+    if (Object.keys(session.answers).length > 0 && !confirm('返回首页？当前进度将丢失。')) return;
+    location.href = 'index.html';
+  });
+  document.getElementById('prev-btn').addEventListener('click', prevQ);
+  document.getElementById('next-btn').addEventListener('click', nextQ);
+  document.getElementById('jump-input').addEventListener('change', (e) => {
+    jumpQ(parseInt(e.target.value, 10));
+  });
+  document.getElementById('redo-btn').addEventListener('click', restart);
+  document.getElementById('review-btn').addEventListener('click', showReview);
+  document.getElementById('home-btn').addEventListener('click', () => {
+    location.href = 'index.html';
+  });
+
+  // Language toggle
+  document.querySelectorAll('#lang-toggle button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      state.languageDisplay = lang;
+      applyLanguage(lang);
+      saveState(state);
+      updateLangButtons();
+    });
+  });
+  function updateLangButtons() {
+    document.querySelectorAll('#lang-toggle button').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === state.languageDisplay);
+    });
+  }
+  updateLangButtons();
+
+  // Bookmark
+  document.getElementById('bookmark-btn').addEventListener('click', () => {
+    const q = session.questions[session.current];
+    if (state.bookmarks.includes(q.id)) {
+      state.bookmarks = state.bookmarks.filter(id => id !== q.id);
+    } else {
+      state.bookmarks.push(q.id);
+    }
+    saveState(state);
+    renderQuestion();
+  });
+
+  // Report error
+  document.getElementById('report-btn').addEventListener('click', () => {
+    const q = session.questions[session.current];
+    window.open(reportErrorUrl(q.id), '_blank');
+  });
+
+  // TTS
+  document.getElementById('tts-btn').addEventListener('click', () => {
+    const q = session.questions[session.current];
+    const parts = splitBilingual(q.stem);
+    const lang = state.languageDisplay === 'zh' ? 'zh' : 'en';
+    const text = (lang === 'zh' ? parts.zh : parts.en) || q.stem;
+    speakText(text, lang);
+  });
+
+  // Keyboard
+  document.addEventListener('keydown', (e) => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (document.getElementById('quiz-view').classList.contains('hidden')) return;
+    const q = session.questions[session.current];
+    const k = e.key.toUpperCase();
+    if (q.type === 'tf') {
+      if (k === 'T' || e.key === '1') { onAnswer('T'); e.preventDefault(); return; }
+      if (k === 'F' || e.key === '2') { onAnswer('F'); e.preventDefault(); return; }
+    } else {
+      if (['A','B','C','D'].includes(k)) { onAnswer(k); e.preventDefault(); return; }
+      if (['1','2','3','4'].includes(e.key)) { onAnswer('ABCD'[parseInt(e.key)-1]); e.preventDefault(); return; }
+    }
+    if (e.key === 'ArrowRight' || e.key === 'Enter') { nextQ(); e.preventDefault(); }
+    else if (e.key === 'ArrowLeft') { prevQ(); e.preventDefault(); }
+  });
+
+  // Mock exam timer (informational only — no auto-submit)
+  let timerStart = null;
+  if (isMock) {
+    timerStart = Date.now();
+    const timerEl = document.getElementById('mock-timer');
+    timerEl.classList.remove('hidden');
+    setInterval(() => {
+      const sec = Math.floor((Date.now() - timerStart) / 1000);
+      const m = Math.floor(sec / 60);
+      const s = sec % 60;
+      timerEl.textContent = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    }, 1000);
+  }
+
+  // Handle hash navigation (#qid=N) — jump to question with that id
+  if (location.hash.startsWith('#qid=')) {
+    const targetId = parseInt(location.hash.slice(5), 10);
+    const idx = session.questions.findIndex(q => q.id === targetId);
+    if (idx >= 0) session.current = idx;
+  }
+
+  renderQuestion();
+})();
+</script>
+</body>
+</html>

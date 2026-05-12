@@ -1,0 +1,9 @@
+# Vercel-specific exclusions (don't ship source materials or build tooling)
+sources/
+tools/
+docs/web_findings.md
+*.docx
+*.doc
+*.pdf
+*.md
+!README.md

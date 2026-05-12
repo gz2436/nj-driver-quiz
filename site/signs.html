@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>交通标志参考 · 新泽西驾照笔试</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <header class="quiz-header">
+    <div class="left">
+      <button class="back-btn" onclick="location.href='index.html'">← 返回</button>
+      <h2>交通标志参考 / Signs Reference</h2>
+    </div>
+  </header>
+
+  <div class="card" style="margin-bottom: 20px;">
+    <h3 style="margin: 0 0 10px; font-size: 16px;">速记口诀 / Quick Reference</h3>
+    <div style="font-size: 13px; line-height: 1.7;">
+      <strong>形状 Shapes</strong><br>
+      • 八边形 Octagon → 停车 STOP（仅此一用）<br>
+      • 倒三角 Inverted Triangle → 让行 YIELD<br>
+      • 菱形 Diamond → 警告 WARNING<br>
+      • 五边形 Pentagon → 学校区 SCHOOL ZONE<br>
+      • 圆形 Circle → 铁路道口 RAILROAD<br>
+      • 竖矩形 Vertical rectangle → 法规 REGULATORY<br>
+      • 横矩形 Horizontal rectangle → 导向/服务 GUIDE/SERVICE<br>
+      <br>
+      <strong>颜色 Colors</strong><br>
+      • 红 Red → 禁令/停车 Prohibition/Stop<br>
+      • 黄 Yellow → 警告 Warning<br>
+      • 橙 Orange → 施工区 Construction Zone<br>
+      • 绿 Green → 导向/允许 Directions/Permitted<br>
+      • 蓝 Blue → 服务设施 Services<br>
+      • 棕 Brown → 公园/休闲 Recreation<br>
+      • 白 White → 法规 Regulatory
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom: 16px;">
+    <h3 style="margin: 0 0 8px; font-size: 16px;">官方手册标志页 / Official Manual Pages</h3>
+    <p style="font-size: 12px; color: var(--muted); margin: 0;">来源 NJ Driver Manual p213-224；点击可放大查看。</p>
+  </div>
+
+  <div id="signs-grid"></div>
+
+  <div class="card" style="margin-top: 16px;">
+    <h3 style="margin: 0 0 10px; font-size: 16px;">想专项练习？</h3>
+    <p style="font-size: 13px; margin: 0 0 12px;">用"按分类练习"选择 <strong>交通标志</strong> 分类，做 100+ 道标志题。</p>
+    <a class="btn primary" href="quiz.html?mode=topic&t=signs">开始标志题练习</a>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script>
+(function() {
+  initPage();
+  // Build manual sign pages grid
+  const grid = document.getElementById('signs-grid');
+  const pages = [];
+  for (let p = 213; p <= 224; p++) pages.push(p);
+  for (const p of pages) {
+    const div = document.createElement('div');
+    div.className = 'sign-card';
+    div.innerHTML = `
+      <a href="../data/images/manual_signs/manual_p${p}.png" target="_blank">
+        <img src="../data/images/manual_signs/manual_p${p}.png" alt="NJ Driver Manual page ${p}" loading="lazy">
+      </a>
+      <div class="pagenum">手册 p${p} / Manual p${p}</div>
+    `;
+    grid.appendChild(div);
+  }
+})();
+</script>
+</body>
+</html>
