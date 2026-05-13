@@ -2364,6 +2364,9 @@ button {
   padding-top: var(--s-5);
 }
 
+/* Desktop: hide mobile-only swipe hint */
+.swipe-hint { display: none; }
+
 .below-card {
   display: flex;
   flex-direction: column;
@@ -2592,42 +2595,29 @@ body[data-lang="en"] .explanation .body .en {
     max-width: 80px;
   }
 
-  /* Swipe affordance: horizontal pan owned by JS, vertical scroll by browser.
-     Peek edges hint that the card is swipable. */
+  /* Swipe-to-navigate: horizontal pan owned by JS, vertical scroll by browser */
   #quiz-view .card {
     touch-action: pan-y;
-    will-change: transform;
-    position: relative;
   }
-  #quiz-view .card::before,
-  #quiz-view .card::after {
-    content: '';
-    position: absolute;
-    top: 16px;
-    bottom: 16px;
-    width: 4px;
-    background: var(--surface-raised);
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.6;
-  }
-  #quiz-view .card::before { left: -7px; }
-  #quiz-view .card::after { right: -7px; }
 
-  /* Question card controls — keep three on one row, icons only */
-  .card .controls { gap: var(--s-2); flex-wrap: nowrap; }
-  .card .controls .btn {
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    border-radius: var(--r-full);
+  /* Mobile: hide prev/next buttons, swipe handles navigation. */
+  .card .controls #prev-btn,
+  .card .controls #next-btn { display: none; }
+  .card .controls .swipe-hint {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    color: var(--text-3);
+    letter-spacing: 0.05em;
+    flex: 1;
     justify-content: center;
-    flex-shrink: 0;
   }
-  .card .controls .btn span { display: none; }
-  .jumper { font-size: 12px; flex-shrink: 1; min-width: 0; }
+  .card .controls {
+    gap: var(--s-3);
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .jumper { font-size: 12px; flex-shrink: 0; }
   .jumper input { width: 36px; }
 
   /* Below card — hint not useful without keyboard */

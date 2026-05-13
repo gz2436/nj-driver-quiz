@@ -111,6 +111,7 @@
           <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
           <span>上一题</span>
         </button>
+        <span class="swipe-hint" aria-hidden="true">← 左右滑动切题 →</span>
         <div class="jumper">
           <input type="number" id="jump-input" min="1" aria-label="跳转到第几题" title="跳转到第几题">
           <span class="jumper-total" id="jumper-total">/ --</span>
@@ -836,74 +837,43 @@
   document.getElementById('prev-btn').addEventListener('click', prevQ);
   document.getElementById('next-btn').addEventListener('click', nextQ);
 
-  // === Swipe-to-navigate (D：跟手 + 瞬切；所有 listener passive，不干扰点击) ===
+  // === Swipe-to-navigate：纯手势检测，无视觉拖拽，瞬切 ===
   (() => {
     const card = document.querySelector('#quiz-view .card');
     if (!card) return;
-    const THRESH = 40;
-    const MIN_MOVE = 8;
+    const THRESH = 50;
     const ANGLE_DEG = 30;
-    const DAMP = 0.4;
 
-    let sx = 0, sy = 0, dx = 0, dy = 0;
-    let armed = false;     // touchstart 是否记录了起点
-    let isH = false;       // 是否判定为横滑
+    let sx = 0, sy = 0;
+    let armed = false;
 
     card.addEventListener('touchstart', (e) => {
       if (e.touches.length !== 1) return;
       sx = e.touches[0].clientX;
       sy = e.touches[0].clientY;
-      dx = dy = 0;
       armed = true;
-      isH = false;
     }, { passive: true });
 
-    card.addEventListener('touchmove', (e) => {
-      if (!armed) return;
-      dx = e.touches[0].clientX - sx;
-      dy = e.touches[0].clientY - sy;
-
-      if (!isH) {
-        if (Math.abs(dx) < MIN_MOVE && Math.abs(dy) < MIN_MOVE) return;
-        const angle = Math.atan2(Math.abs(dy), Math.abs(dx)) * 180 / Math.PI;
-        if (angle >= ANGLE_DEG) { armed = false; return; }  // 纵向 → 放弃，让浏览器滚
-        isH = true;
-        card.style.transition = 'none';
-      }
-      card.style.transform = `translateX(${dx * DAMP}px)`;
-    }, { passive: true });
-
-    card.addEventListener('touchend', () => {
+    card.addEventListener('touchend', (e) => {
       if (!armed) return;
       armed = false;
-      if (!isH) return;
-      isH = false;
+      const t = e.changedTouches[0];
+      const dx = t.clientX - sx;
+      const dy = t.clientY - sy;
+      if (Math.abs(dx) < THRESH) return;
+      const angle = Math.atan2(Math.abs(dy), Math.abs(dx)) * 180 / Math.PI;
+      if (angle >= ANGLE_DEG) return;
 
       const total = session.questions.length;
       const atFirst = session.current === 0;
       const allAnswered = Object.keys(session.answers).length === total;
       const atLast = session.current === total - 1 && !allAnswered;
-      const d = dx;
 
-      if (d < -THRESH && !atLast) {
-        card.style.transition = 'none';
-        card.style.transform = '';
-        nextQ();
-      } else if (d > THRESH && !atFirst) {
-        card.style.transition = 'none';
-        card.style.transform = '';
-        prevQ();
-      } else {
-        card.style.transition = 'transform 180ms cubic-bezier(0.16, 1, 0.3, 1)';
-        card.style.transform = '';
-      }
+      if (dx < 0 && !atLast) nextQ();
+      else if (dx > 0 && !atFirst) prevQ();
     }, { passive: true });
 
-    card.addEventListener('touchcancel', () => {
-      armed = false; isH = false;
-      card.style.transition = 'transform 160ms ease-out';
-      card.style.transform = '';
-    }, { passive: true });
+    card.addEventListener('touchcancel', () => { armed = false; }, { passive: true });
   })();
 
   document.getElementById('jump-input').addEventListener('change', (e) => {
