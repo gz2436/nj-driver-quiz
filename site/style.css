@@ -1160,11 +1160,19 @@ a:hover {
   padding: var(--s-4) var(--s-3);
   text-decoration: none;
   color: var(--text);
+  -webkit-text-fill-color: var(--text);
   border-radius: var(--r-sm);
   outline: none;
+  outline-color: transparent;
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
+}
+
+.menu-row:focus-visible {
+  color: var(--text);
+  -webkit-text-fill-color: var(--text);
+  outline: none;
 }
 
 .menu-row { transition: background var(--d-fast) var(--e-out); }
@@ -1344,10 +1352,11 @@ a:hover {
 .home-refs a,
 .home-refs a:link,
 .home-refs a:visited,
+.home-refs a:hover,
 .home-refs a:focus,
-.home-refs a:focus-visible,
 .home-refs a:active {
   color: var(--text-2);
+  -webkit-text-fill-color: var(--text-2);
   font-size: 13px;
   text-decoration: underline;
   text-decoration-color: var(--border-strong);
@@ -1356,6 +1365,12 @@ a:hover {
   outline-color: transparent;
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+.home-refs a:focus-visible {
+  color: var(--text-2);
+  -webkit-text-fill-color: var(--text-2);
+  outline: none;
 }
 
 .home-refs a {
@@ -1450,8 +1465,8 @@ a:hover {
   .home-refs a,
   .home-refs a:link,
   .home-refs a:visited,
+  .home-refs a:hover,
   .home-refs a:focus,
-  .home-refs a:focus-visible,
   .home-refs a:active {
     height: 26px;
     padding: 0 8px;
@@ -1463,14 +1478,23 @@ a:hover {
     gap: 4px;
     text-decoration: none;
     color: var(--text-2);
+    -webkit-text-fill-color: var(--text-2);
     background: transparent;
     background-color: transparent;
     outline: none;
     outline-color: transparent;
+    box-shadow: none;
     font-size: 11px;
     line-height: 1;
     white-space: nowrap;
     -webkit-tap-highlight-color: transparent;
+  }
+
+  .home-refs a:focus-visible {
+    border-color: var(--border);
+    color: var(--text-2);
+    -webkit-text-fill-color: var(--text-2);
+    outline: none;
   }
 
   .home-refs .ref-label {
