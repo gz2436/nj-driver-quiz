@@ -558,8 +558,7 @@
       `;
 
       const detail = document.createElement('div');
-      detail.className = 'mr-detail';
-      detail.style.display = 'none';
+      detail.className = 'mr-detail hidden';
       const letters = q.type === 'tf' ? ['T', 'F'] : ['A', 'B', 'C', 'D'];
       const yourTxt = a ? (q.options[letters.indexOf(a)] || '') : '';
       const correctTxt = q.options[letters.indexOf(q.answer)] || '';
@@ -582,8 +581,8 @@
       item.appendChild(detail);
 
       item.querySelector('[data-toggle]').addEventListener('click', () => {
-        const open = detail.style.display !== 'none';
-        detail.style.display = open ? 'none' : '';
+        const open = !detail.classList.contains('hidden');
+        detail.classList.toggle('hidden', open);
         item.classList.toggle('open', !open);
       });
 

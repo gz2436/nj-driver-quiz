@@ -2466,9 +2466,6 @@ button {
   stroke-linejoin: round;
 }
 
-.img-badge.hidden {
-  display: none;
-}
 
 .q-toolbar .actions {
   display: flex;
