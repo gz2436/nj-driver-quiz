@@ -1355,6 +1355,7 @@ a:hover {
 
   .home-refs {
     flex-shrink: 0;
+    gap: var(--s-2);
   }
 
   .home-refs a {
@@ -1363,7 +1364,7 @@ a:hover {
 
   .home-trace {
     font-size: 10px;
-    letter-spacing: 0.02em;
+    letter-spacing: 0;
     margin-right: 0;
     min-width: 0;
     overflow: hidden;
@@ -1372,7 +1373,11 @@ a:hover {
   }
 
   .home-trace .trace-dot {
-    margin: 0 3px;
+    margin: 0 2px;
+  }
+
+  .home-clear {
+    margin-left: 0;
   }
 }
 
