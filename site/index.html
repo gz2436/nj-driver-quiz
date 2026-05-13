@@ -160,7 +160,7 @@
   const traceParts = [
     `累计 <strong>${state.totalAttempts || 0}</strong>`,
     `错题 <strong>${state.wrongAnswers.length}</strong>`,
-    `上次模考 <strong>${lastMock ? `${lastMock.score}/${lastMock.total}` : '—/—'}</strong>`,
+    `上次 <strong>${lastMock ? `${lastMock.score}/${lastMock.total}` : '—/—'}</strong>`,
   ];
   document.getElementById('masthead-trace').innerHTML = traceParts.join(' <span class="trace-dot">·</span> ');
 

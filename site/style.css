@@ -3378,10 +3378,27 @@ footer.site-footer {
   .footer-inner {
     justify-content: center;
     text-align: center;
+    padding: var(--s-2) var(--s-4);
+    gap: var(--s-1);
+    row-gap: var(--s-1);
   }
   .footer-source,
   .footer-nav {
     justify-content: center;
+    font-size: 11px;
+  }
+  .footer-source .footer-label,
+  .footer-source a,
+  .footer-nav .nav-disclaimer {
+    font-size: 11px;
+  }
+  .footer-nav .footer-icon-link {
+    width: 20px;
+    height: 20px;
+  }
+  .footer-nav .footer-icon-link svg {
+    width: 14px;
+    height: 14px;
   }
 }
 
@@ -3700,5 +3717,35 @@ footer.site-footer {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Touch devices: neutralize :hover background/transform changes so tapped
+   elements don't keep a stuck highlight. Color hovers can stay (they read as
+   the natural "active" indication, not as stuck artifacts). */
+@media (hover: none) {
+  .menu-row:hover,
+  .menu-primary-block:hover,
+  .btn:hover:not(:disabled),
+  .btn.primary:hover:not(:disabled),
+  .option:hover,
+  .topic-row:hover,
+  .topic-list-action:hover,
+  .footer-nav .footer-icon-link:hover,
+  .footer-nav .nav-disclaimer:hover,
+  .footer-source a:hover,
+  .back-btn:hover,
+  .icon-action:hover,
+  .home-clear:hover,
+  .review-filter button:hover {
+    background-color: revert;
+    border-color: revert;
+    transform: none;
+  }
+  .menu-row:hover .menu-row-arrow,
+  .menu-primary-block:hover .menu-row-arrow,
+  .mock-intro-cta:hover .cta-arrow,
+  .topic-special-row:hover .topic-special-arrow {
+    transform: none;
   }
 }
