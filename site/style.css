@@ -1,6 +1,7 @@
 /* NJ Driver Quiz — design system v3 */
 
 :root {
+  color-scheme: light dark;
   /* spacing scale */
   --s-1: 4px;
   --s-2: 8px;
@@ -495,66 +496,67 @@ a:hover {
   .modal-disclaimer {
     max-width: 100%;
     min-height: auto;
-    padding: var(--s-4) var(--s-4) var(--s-3);
+    padding: var(--s-5) var(--s-5) var(--s-5);
     margin-bottom: 4vh;
     max-height: 92dvh;
   }
 
   .modal-backdrop {
-    padding: var(--s-2) var(--s-3);
+    padding: var(--s-3) var(--s-3);
     align-items: safe center;
   }
 
   .modal-disclaimer .disc-header {
-    margin-bottom: var(--s-3);
+    margin-bottom: var(--s-4);
   }
 
   .modal-disclaimer .disc-header h2 {
-    font-size: 18px;
+    font-size: 19px;
   }
 
   .modal-disclaimer .disc-lede.zh {
-    font-size: 12px;
-    line-height: 1.5;
+    font-size: 12.5px;
+    line-height: 1.55;
   }
 
   .modal-disclaimer .disc-lede.en {
-    font-size: 10.5px;
-    line-height: 1.4;
-    margin-bottom: var(--s-3);
+    font-size: 11px;
+    line-height: 1.45;
+    margin-bottom: var(--s-4);
   }
 
   .modal-disclaimer .disc-clauses li {
-    padding: var(--s-2) 0;
+    padding: var(--s-3) 0;
   }
 
   .modal-disclaimer .clause-head {
-    margin-bottom: 2px;
+    margin-bottom: 3px;
   }
 
   .modal-disclaimer .disc-clauses li .zh {
-    font-size: 11.5px;
-    line-height: 1.4;
+    font-size: 12px;
+    line-height: 1.45;
   }
 
   .modal-disclaimer .disc-clauses li .en {
-    font-size: 10px;
-    line-height: 1.35;
+    font-size: 10.5px;
+    line-height: 1.4;
   }
 
   .modal-disclaimer .disc-foot {
-    margin-top: var(--s-3);
-    font-size: 10.5px;
+    margin-top: var(--s-4);
+    font-size: 11px;
   }
 
   .modal-disclaimer .modal-actions {
-    padding-top: var(--s-3);
+    padding-top: var(--s-6);
+    padding-bottom: var(--s-2);
   }
 
   .btn.disc-agree {
-    height: 36px;
-    line-height: 36px;
-    min-width: 96px;
+    height: 40px;
+    line-height: 40px;
+    min-width: 112px;
     font-size: 13px;
   }
 }
@@ -1350,7 +1352,6 @@ a:hover {
 
 .home-refs a,
 .home-refs a:link,
-.home-refs a:visited,
 .home-refs a:focus,
 .home-refs a:active {
   color: var(--text-2);
@@ -1363,6 +1364,31 @@ a:hover {
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: transparent;
   transition: color var(--d-fast) var(--e-out), text-decoration-color var(--d-fast) var(--e-out), background var(--d-fast) var(--e-out), border-color var(--d-fast) var(--e-out);
+}
+
+/* :visited cannot resolve CSS variables in some WebKit builds, so hardcode
+   the colors per theme. WebKit also clamps :visited alpha to 1 — so for dark
+   mode, use a solid color close to the surface-raised background. iOS Safari
+   paints visited links via -webkit-text-fill-color, so override that too. */
+.home-refs a:visited {
+  color: #57534e;
+  -webkit-text-fill-color: #57534e;
+  text-decoration-color: #a8a29e;
+  border-color: #d4d4d8;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .home-refs a:visited {
+    color: #a8a29e;
+    -webkit-text-fill-color: #a8a29e;
+    text-decoration-color: #2c2c2c;
+    border-color: #2c2c2c;
+  }
+}
+:root[data-theme="dark"] .home-refs a:visited {
+  color: #a8a29e;
+  -webkit-text-fill-color: #a8a29e;
+  text-decoration-color: #2c2c2c;
+  border-color: #2c2c2c;
 }
 
 .home-refs a:focus-visible { outline: none; }
@@ -1456,14 +1482,11 @@ a:hover {
   .home-refs .ref-sep { display: none; }
   .home-refs .ref-icon { display: inline-block; width: 13px; height: 13px; }
 
-  .home-refs a,
-  .home-refs a:link,
-  .home-refs a:visited,
-  .home-refs a:focus,
-  .home-refs a:active {
+  .home-refs a {
     height: 26px;
     padding: 0 8px;
-    border: 1px solid var(--border);
+    border-width: 1px;
+    border-style: solid;
     border-color: var(--border);
     border-radius: var(--r-full);
     display: inline-flex;
@@ -1481,6 +1504,14 @@ a:hover {
     white-space: nowrap;
     -webkit-tap-highlight-color: transparent;
   }
+
+  /* visited can only restyle color/border-color/etc — width & style are set
+     above on the unscoped selector so they apply in every state. */
+  .home-refs a:visited { border-color: #d4d4d8; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .home-refs a:visited { border-color: rgba(255, 255, 255, 0.08); }
+  }
+  :root[data-theme="dark"] .home-refs a:visited { border-color: rgba(255, 255, 255, 0.08); }
 
   .home-refs a:focus-visible { outline: none; }
 
@@ -1963,11 +1994,15 @@ a:hover {
   font-size: var(--t-sm);
   white-space: nowrap;
   flex-shrink: 0;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
   transition: color var(--d-fast) var(--e-out);
 }
 
-.back-btn:hover {
-  color: var(--text);
+@media (hover: hover) {
+  .back-btn:hover {
+    color: var(--text);
+  }
 }
 
 .stats {
@@ -2981,7 +3016,9 @@ kbd {
   font: inherit;
   transition: color var(--d-fast) var(--e-out);
 }
-.empty-back:hover, .result-back:hover { color: var(--text); }
+@media (hover: hover) {
+  .empty-back:hover, .result-back:hover { color: var(--text); }
+}
 
 @media (max-width: 540px) {
   .empty-actions, .result-actions {
@@ -3818,7 +3855,7 @@ footer.site-footer {
 }
 
 @media (max-width: 540px) {
-  .toast { bottom: 40px; }
+  .toast { bottom: 80px; }
 }
 
 /* === Spinner === */
