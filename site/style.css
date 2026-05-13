@@ -1349,15 +1349,30 @@ a:hover {
 
   .home-below {
     padding-top: var(--s-4);
-    gap: var(--s-3);
-    flex-wrap: wrap;
+    gap: var(--s-2);
+    flex-wrap: nowrap;
+  }
+
+  .home-refs {
+    flex-shrink: 0;
+  }
+
+  .home-refs a {
+    font-size: 12px;
   }
 
   .home-trace {
-    width: 100%;
-    order: 3;
-    text-align: left;
-    margin-top: var(--s-2);
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    margin-right: 0;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .home-trace .trace-dot {
+    margin: 0 3px;
   }
 }
 
