@@ -133,6 +133,7 @@ body {
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  touch-action: manipulation;
 }
 
 /* Sample-data banner — shown when questions.json is missing and fallback to sample loaded.
@@ -274,6 +275,7 @@ a:hover {
   max-width: 520px;
   width: 100%;
   max-height: 90vh;
+  max-height: 90dvh;
   overflow-y: auto;
   padding: var(--s-8) var(--s-8) var(--s-6);
   box-shadow: 0 4px 16px rgb(0 0 0 / 0.12);
@@ -493,11 +495,67 @@ a:hover {
   .modal-disclaimer {
     max-width: 100%;
     min-height: auto;
-    padding: var(--s-6) var(--s-5) var(--s-5);
+    padding: var(--s-4) var(--s-4) var(--s-3);
+    margin-bottom: 0;
+    max-height: 96dvh;
   }
 
   .modal-backdrop {
-    padding: var(--s-4) var(--s-3);
+    padding: var(--s-2) var(--s-3);
+    align-items: safe center;
+  }
+
+  .modal-disclaimer .disc-header {
+    margin-bottom: var(--s-3);
+  }
+
+  .modal-disclaimer .disc-header h2 {
+    font-size: 18px;
+  }
+
+  .modal-disclaimer .disc-lede.zh {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .modal-disclaimer .disc-lede.en {
+    font-size: 10.5px;
+    line-height: 1.4;
+    margin-bottom: var(--s-3);
+  }
+
+  .modal-disclaimer .disc-clauses li {
+    padding: var(--s-2) 0;
+  }
+
+  .modal-disclaimer .clause-head {
+    margin-bottom: 2px;
+  }
+
+  .modal-disclaimer .disc-clauses li .zh {
+    font-size: 11.5px;
+    line-height: 1.4;
+  }
+
+  .modal-disclaimer .disc-clauses li .en {
+    font-size: 10px;
+    line-height: 1.35;
+  }
+
+  .modal-disclaimer .disc-foot {
+    margin-top: var(--s-3);
+    font-size: 10.5px;
+  }
+
+  .modal-disclaimer .modal-actions {
+    padding-top: var(--s-3);
+  }
+
+  .btn.disc-agree {
+    height: 36px;
+    line-height: 36px;
+    min-width: 96px;
+    font-size: 13px;
   }
 }
 
