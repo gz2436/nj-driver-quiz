@@ -120,8 +120,8 @@ vercel
 
 ## License
 
-- **代码**：MIT（`tools/`、`site/`）
-- **内容**（`data/`、`docs/explanations.json`）：[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) — 非商业用途，必须署名
+- **代码**（`tools/`、`site/`）：MIT
+- **内容**（`data/`、`docs/canonical_facts.md`）：[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) — 非商业用途，必须署名
 
 如需将题库用于商业用途请先联系。
 

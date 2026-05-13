@@ -22,7 +22,7 @@
 <div class="container">
   <header class="quiz-header">
     <div class="left">
-      <button class="back-btn" onclick="location.href='index.html'" aria-label="返回首页">
+      <button class="back-btn" id="back-btn" aria-label="返回首页">
         <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
         <span>返回</span>
       </button>
@@ -39,6 +39,7 @@
 <script>
 (async function() {
   initPage();
+  document.getElementById('back-btn').addEventListener('click', () => { location.href = 'index.html'; });
   const ex = (await fetchData('../data/explanations.json')).data;
 
   // Strip bilingual English companion text, keep abbreviations (≤3 ASCII letters: NJ, BAC, DUI, GDL, IID, mph, ft, oz, yr ...)

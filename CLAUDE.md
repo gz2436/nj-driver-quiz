@@ -79,7 +79,7 @@ git clone git@github.com:gz2436/nj-driver-quiz-data.git data
 
 ## 协议
 
-- 代码（site/, tools/）：MIT
-- 数据（data/）：CC BY-NC 4.0
+- 代码（site/、tools/）：MIT
+- 内容（data/、docs/canonical_facts.md）：CC BY-NC 4.0
 
 详见 `LICENSE`。

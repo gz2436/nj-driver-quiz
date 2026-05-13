@@ -147,7 +147,6 @@
 <script>
 (async function() {
   const state = initPage();
-  const STORAGE_KEY_LOCAL = 'nj_quiz_v1';
 
   let questions = [];
   let topicsMeta = {};
@@ -331,7 +330,7 @@
     document.getElementById('confirm-cancel').addEventListener('click', closeWithAnim);
     backdrop.addEventListener('click', (e) => { if (e.target === backdrop) closeWithAnim(); });
     document.getElementById('confirm-clear').addEventListener('click', () => {
-      try { localStorage.removeItem(STORAGE_KEY_LOCAL); } catch(e) {}
+      try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
       // Keep the backdrop alive (transparent + pointer-events on) until reload
       // so the synthetic click can't leak through to a menu-row underneath.
       backdrop.style.pointerEvents = 'auto';

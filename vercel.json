@@ -43,6 +43,7 @@
     {
       "source": "/data/explanations.json",
       "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" },
         { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }
       ]
     }

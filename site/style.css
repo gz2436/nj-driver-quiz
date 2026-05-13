@@ -35,6 +35,9 @@
   --r-lg: 6px;
   --r-xl: 6px;
 
+  /* fonts */
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+
   /* motion */
   --d-fast: 120ms;
   --d-base: 200ms;
@@ -607,7 +610,7 @@ button {
   font-size: 11px;
   color: var(--text-3);
   letter-spacing: 0.06em;
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-family: var(--font-mono);
   text-transform: uppercase;
 }
 
@@ -655,7 +658,7 @@ button {
 }
 
 .modal-disclaimer .clause-head .num {
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 600;
   color: var(--text-3);
@@ -679,7 +682,7 @@ button {
   color: var(--text-3);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-family: var(--font-mono);
   margin-left: 6px;
 }
 
@@ -721,7 +724,7 @@ button {
 
 .modal-disclaimer .disc-foot em {
   font-style: normal;
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-family: var(--font-mono);
   font-weight: 500;
   font-size: 10px;
   letter-spacing: 0.08em;
@@ -1201,7 +1204,7 @@ button {
 .home-cta-meta {
   font-size: 11px;
   opacity: 0.65;
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-family: var(--font-mono);
   letter-spacing: 0.04em;
   font-variant-numeric: tabular-nums;
 }
@@ -1234,7 +1237,7 @@ button {
 }
 
 .home-mode .num {
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 600;
   color: var(--text-3);
@@ -1254,7 +1257,7 @@ button {
 }
 
 .home-mode .meta {
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   color: var(--text-3);
   font-variant-numeric: tabular-nums;
@@ -1288,7 +1291,7 @@ button {
 .home-aux-link::before {
   content: "→";
   color: var(--text-3);
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
   transition: transform var(--d-fast) var(--e-out), color var(--d-fast) var(--e-out);
   display: inline-block;
@@ -1303,7 +1306,7 @@ button {
   margin-left: auto;
   font-size: 11px;
   color: var(--text-3);
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-family: var(--font-mono);
   letter-spacing: 0.02em;
 }
 
@@ -1344,7 +1347,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   color: var(--text-3);
   letter-spacing: 0.08em;
@@ -1495,7 +1498,7 @@ button {
 }
 
 .menu-row-num {
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
   color: var(--text-3);
   font-variant-numeric: tabular-nums;
@@ -1561,7 +1564,7 @@ button {
 }
 
 .menu-suborder-lbl {
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   color: var(--text-3);
   letter-spacing: 0.06em;
@@ -1686,7 +1689,7 @@ button {
   flex: 1 1 auto;
   text-align: right;
   margin-right: var(--s-2);
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   color: var(--text-3);
   letter-spacing: 0.04em;
@@ -3007,7 +3010,7 @@ body[data-lang="en"] .explanation .body .en {
 }
 
 kbd {
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-family: var(--font-mono);
   font-size: 10px;
   padding: 1px 5px;
   border: 1px solid var(--border);
