@@ -2544,6 +2544,12 @@ body[data-lang="en"] .explanation .body .en {
     max-width: 80px;
   }
 
+  /* Swipe-to-navigate: horizontal pan owned by JS, vertical scroll by browser */
+  #quiz-view .card {
+    touch-action: pan-y;
+    will-change: transform;
+  }
+
   /* Question card controls — keep three on one row, icons only */
   .card .controls { gap: var(--s-2); flex-wrap: nowrap; }
   .card .controls .btn {
