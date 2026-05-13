@@ -319,34 +319,12 @@
     document.getElementById('confirm-cancel').addEventListener('click', () => backdrop.remove());
     document.getElementById('confirm-clear').addEventListener('click', () => {
       backdrop.remove();
+      try { localStorage.removeItem(STORAGE_KEY_LOCAL); } catch(e) {}
       const t = document.createElement('div');
       t.className = 'toast';
-      t.innerHTML = `<span class="toast-glyph spinner spinner-sm" aria-hidden="true"></span><span class="toast-text">正在清除…</span>`;
+      t.innerHTML = `<span class="toast-glyph toast-check" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="toast-text">已清除所有数据</span>`;
       document.body.appendChild(t);
-      setTimeout(() => t.classList.add('show'), 10);
-      try { localStorage.removeItem(STORAGE_KEY_LOCAL); } catch(e) {}
-
-      // 1.2s 后开始过渡：先淡出 spinner + 文字
-      setTimeout(() => {
-        const glyph = t.querySelector('.toast-glyph');
-        const text = t.querySelector('.toast-text');
-        glyph.style.opacity = '0';
-        text.style.opacity = '0';
-        // 150ms 淡出完成后换内容、扩展气泡、淡入
-        setTimeout(() => {
-          glyph.className = 'toast-glyph toast-check';
-          glyph.innerHTML = `<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-          glyph.style.opacity = '';
-          text.textContent = '已清除所有数据';
-          text.style.opacity = '';
-          t.classList.add('is-done');
-        }, 180);
-      }, 1200);
-
-      setTimeout(() => {
-        t.classList.remove('show');
-        setTimeout(() => location.reload(), 280);
-      }, 3200);
+      setTimeout(() => location.reload(), 900);
     });
   });
 })();

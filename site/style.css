@@ -496,8 +496,8 @@ a:hover {
     max-width: 100%;
     min-height: auto;
     padding: var(--s-4) var(--s-4) var(--s-3);
-    margin-bottom: 0;
-    max-height: 96dvh;
+    margin-bottom: 4vh;
+    max-height: 92dvh;
   }
 
   .modal-backdrop {
@@ -580,6 +580,13 @@ a:hover {
 .modal-confirm p.confirm-en {
   color: var(--text-3);
   font-size: var(--t-xs);
+}
+
+.modal-confirm .modal-actions .btn {
+  border-radius: var(--r-full);
+  padding: 0 var(--s-5);
+  min-width: 92px;
+  justify-content: center;
 }
 
 /* modal — topic chooser */
@@ -3702,39 +3709,22 @@ footer.site-footer {
   position: fixed;
   left: 50%;
   bottom: 120px;
-  /* 抬到 footer 上方 (footer ≈ 96px 高) */
+  transform: translateX(-50%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--s-2);
-  transform: translateX(-50%) translateY(8px);
   background: var(--surface-raised);
   color: var(--text);
   border: 1px solid var(--border-strong);
   padding: var(--s-3) var(--s-5);
-  min-width: 140px;
+  min-width: 158px;
   border-radius: var(--r-full);
   font-size: var(--t-sm);
   box-shadow: var(--shadow-md);
   z-index: 2000;
-  opacity: 0;
-  transition:
-    opacity var(--d-base) var(--e-in),
-    transform var(--d-base) var(--e-in),
-    min-width var(--d-slow) var(--e-out);
   pointer-events: none;
 }
-
-.toast.show {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-  transition:
-    opacity var(--d-slow) var(--e-out),
-    transform var(--d-slow) var(--e-out),
-    min-width var(--d-slow) var(--e-out);
-}
-
-.toast.is-done { min-width: 158px; }
 
 .toast-glyph {
   display: inline-flex;
@@ -3743,20 +3733,10 @@ footer.site-footer {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
-  transition: opacity var(--d-fast) var(--e-in);
-}
-.toast-check {
-  color: var(--text-2);
-  animation: toast-check-pop var(--d-base) var(--e-out);
-}
-@keyframes toast-check-pop {
-  0% { transform: scale(0.5); opacity: 0; }
-  60% { transform: scale(1.15); opacity: 1; }
-  100% { transform: scale(1); opacity: 1; }
 }
 
-.toast-text {
-  transition: opacity var(--d-fast) var(--e-in);
+.toast-check {
+  color: var(--text-2);
 }
 
 /* === Spinner === */
