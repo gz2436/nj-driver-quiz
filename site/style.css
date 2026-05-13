@@ -1160,7 +1160,6 @@ a:hover {
   padding: var(--s-4) var(--s-3);
   text-decoration: none;
   color: var(--text);
-  -webkit-text-fill-color: var(--text);
   border-radius: var(--r-sm);
   outline: none;
   outline-color: transparent;
@@ -1169,11 +1168,7 @@ a:hover {
   user-select: none;
 }
 
-.menu-row:focus-visible {
-  color: var(--text);
-  -webkit-text-fill-color: var(--text);
-  outline: none;
-}
+.menu-row:focus-visible { outline: none; }
 
 .menu-row { transition: background var(--d-fast) var(--e-out); }
 
@@ -1185,15 +1180,17 @@ a:hover {
   margin: 0 var(--s-3);
 }
 
-.menu-row:hover {
-  background: var(--surface-sunken);
-  color: var(--text);
-  text-decoration: none;
-}
+@media (hover: hover) {
+  .menu-row:hover {
+    background: var(--surface-sunken);
+    color: var(--text);
+    text-decoration: none;
+  }
 
-.menu-row:hover .menu-row-arrow {
-  color: var(--text);
-  transform: translateX(3px);
+  .menu-row:hover .menu-row-arrow {
+    color: var(--text);
+    transform: translateX(3px);
+  }
 }
 
 .menu-row-body {
@@ -1266,18 +1263,20 @@ a:hover {
   transition: background var(--d-fast) var(--e-out);
 }
 
-.menu-primary-block:hover {
-  background: var(--surface-sunken);
-}
+@media (hover: hover) {
+  .menu-primary-block:hover {
+    background: var(--surface-sunken);
+  }
 
-.menu-primary-block:hover .menu-row-arrow {
-  color: var(--text);
-  transform: translateX(3px);
-}
+  .menu-primary-block:hover .menu-row-arrow {
+    color: var(--text);
+    transform: translateX(3px);
+  }
 
-/* group 已经接管 hover bg，里面的单行不再单独高亮，避免双重叠加 */
-.menu-primary-block .menu-row:hover {
-  background: transparent;
+  /* group 已经接管 hover bg，里面的单行不再单独高亮 */
+  .menu-primary-block .menu-row:hover {
+    background: transparent;
+  }
 }
 
 /* Sub-order row (toggle attached to primary) */
@@ -1352,11 +1351,9 @@ a:hover {
 .home-refs a,
 .home-refs a:link,
 .home-refs a:visited,
-.home-refs a:hover,
 .home-refs a:focus,
 .home-refs a:active {
   color: var(--text-2);
-  -webkit-text-fill-color: var(--text-2);
   font-size: 13px;
   text-decoration: underline;
   text-decoration-color: var(--border-strong);
@@ -1365,25 +1362,22 @@ a:hover {
   outline-color: transparent;
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: transparent;
-}
-
-.home-refs a:focus-visible {
-  color: var(--text-2);
-  -webkit-text-fill-color: var(--text-2);
-  outline: none;
-}
-
-.home-refs a {
   transition: color var(--d-fast) var(--e-out), text-decoration-color var(--d-fast) var(--e-out), background var(--d-fast) var(--e-out), border-color var(--d-fast) var(--e-out);
+}
+
+.home-refs a:focus-visible { outline: none; }
+
+/* Hover only on devices that actually have a mouse — touch devices never enter
+   this rule, so no "sticky hover" after tap. */
+@media (hover: hover) {
+  .home-refs a:hover {
+    color: var(--text);
+    text-decoration-color: var(--text-2);
+  }
 }
 
 .home-refs .ref-icon { display: none; }
 .home-refs .ref-label-short { display: none; }
-
-.home-refs a:hover {
-  color: var(--text);
-  text-decoration-color: var(--text-2);
-}
 
 .home-refs .ref-sep {
   color: var(--border-strong);
@@ -1465,7 +1459,6 @@ a:hover {
   .home-refs a,
   .home-refs a:link,
   .home-refs a:visited,
-  .home-refs a:hover,
   .home-refs a:focus,
   .home-refs a:active {
     height: 26px;
@@ -1478,7 +1471,6 @@ a:hover {
     gap: 4px;
     text-decoration: none;
     color: var(--text-2);
-    -webkit-text-fill-color: var(--text-2);
     background: transparent;
     background-color: transparent;
     outline: none;
@@ -1490,12 +1482,7 @@ a:hover {
     -webkit-tap-highlight-color: transparent;
   }
 
-  .home-refs a:focus-visible {
-    border-color: var(--border);
-    color: var(--text-2);
-    -webkit-text-fill-color: var(--text-2);
-    outline: none;
-  }
+  .home-refs a:focus-visible { outline: none; }
 
   .home-refs .ref-label {
     display: inline-block;
