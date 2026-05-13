@@ -2611,15 +2611,22 @@ body[data-lang="en"] .explanation .body .en {
   .jumper { font-size: 12px; flex-shrink: 0; }
   .jumper input { width: 36px; }
 
-  /* Swipe hint sits outside the card, below it */
+  /* Swipe hint sits outside the card, below it — keep minimal */
   .swipe-hint {
     display: block;
     text-align: center;
-    font-size: 11px;
+    font-size: 10px;
     color: var(--text-3);
-    letter-spacing: 0.05em;
-    margin-top: var(--s-3);
+    letter-spacing: 0.04em;
+    margin-top: 6px;
+    line-height: 1;
     user-select: none;
+  }
+
+  /* Pull the explanation block up closer to the card */
+  .below-card {
+    margin-top: var(--s-2);
+    gap: var(--s-2);
   }
 
   /* Below card — hint not useful without keyboard */
