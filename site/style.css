@@ -3524,6 +3524,13 @@ footer.site-footer {
   color: var(--text-3);
 }
 
+.footer-source .footer-label-short { display: none; }
+
+@media (max-width: 540px) {
+  .footer-source .footer-label-full { display: none; }
+  .footer-source .footer-label-short { display: inline; }
+}
+
 .footer-source a {
   color: var(--text-2);
   text-decoration: underline;
@@ -3746,6 +3753,41 @@ footer.site-footer {
 
 .toast-check {
   color: var(--text-2);
+}
+
+/* Desktop-only: animated spinner-to-check toast. Mobile renders the toast
+   statically (no transitions). */
+.toast.is-animated {
+  min-width: 140px;
+  opacity: 0;
+  transform: translateX(-50%) translateY(8px);
+  transition:
+    opacity var(--d-base) var(--e-in),
+    transform var(--d-base) var(--e-in),
+    min-width var(--d-slow) var(--e-out);
+}
+.toast.is-animated.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  transition:
+    opacity var(--d-slow) var(--e-out),
+    transform var(--d-slow) var(--e-out),
+    min-width var(--d-slow) var(--e-out);
+}
+.toast.is-animated.is-done { min-width: 158px; }
+.toast.is-animated .toast-glyph {
+  transition: opacity var(--d-fast) var(--e-in);
+}
+.toast.is-animated .toast-text {
+  transition: opacity var(--d-fast) var(--e-in);
+}
+.toast.is-animated .toast-check {
+  animation: toast-check-pop var(--d-base) var(--e-out);
+}
+@keyframes toast-check-pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 @media (max-width: 540px) {
