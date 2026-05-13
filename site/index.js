@@ -65,9 +65,7 @@
 
   function openTopicModal() {
     const selected = new Set();
-    const backdrop = document.createElement('div');
-    backdrop.className = 'modal-backdrop';
-    backdrop.innerHTML = `
+    const { backdrop, close } = openModal(`
       <div class="modal modal-topic">
         <div class="modal-topic-head">
           <h2>选择分类</h2>
@@ -91,8 +89,7 @@
           <button class="btn primary" id="topic-start" disabled>开始练习</button>
         </div>
       </div>
-    `;
-    document.body.appendChild(backdrop);
+    `);
     const grid = backdrop.querySelector('#topic-grid-modal');
     const startBtn = backdrop.querySelector('#topic-start');
     const statusEl = backdrop.querySelector('#topic-status');
@@ -145,15 +142,7 @@
       updateStatus();
     });
 
-    const close = () => {
-      backdrop.classList.add('closing');
-      setTimeout(() => backdrop.remove(), 200);
-    };
     backdrop.querySelector('#topic-cancel').addEventListener('click', close);
-    backdrop.addEventListener('click', (e) => { if (e.target === backdrop) close(); });
-    document.addEventListener('keydown', function onEsc(e) {
-      if (e.key === 'Escape') { close(); document.removeEventListener('keydown', onEsc); }
-    });
     startBtn.addEventListener('click', () => {
       const ts = [...selected].join(',');
       location.href = `quiz.html?mode=topic&t=${encodeURIComponent(ts)}`;
@@ -162,9 +151,7 @@
 
   // Clear data
   document.getElementById('clear-data-btn').addEventListener('click', () => {
-    const backdrop = document.createElement('div');
-    backdrop.className = 'modal-backdrop';
-    backdrop.innerHTML = `
+    const { backdrop, close } = openModal(`
       <div class="modal modal-confirm">
         <h2>清除本地数据</h2>
         <p>将清除浏览器中保存的所有数据：错题记录、累计尝试次数、模考历史、语言偏好。此操作不可撤销。</p>
@@ -174,14 +161,8 @@
           <button class="btn primary danger" id="confirm-clear">确认清除</button>
         </div>
       </div>
-    `;
-    document.body.appendChild(backdrop);
-    function closeWithAnim() {
-      backdrop.classList.add('closing');
-      setTimeout(() => backdrop.remove(), 200);
-    }
-    document.getElementById('confirm-cancel').addEventListener('click', closeWithAnim);
-    backdrop.addEventListener('click', (e) => { if (e.target === backdrop) closeWithAnim(); });
+    `);
+    document.getElementById('confirm-cancel').addEventListener('click', close);
     document.getElementById('confirm-clear').addEventListener('click', () => {
       try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
       // Keep the backdrop alive (transparent + pointer-events on) until reload

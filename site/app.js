@@ -138,6 +138,41 @@ function weightedShuffle(questions, state) {
   return result;
 }
 
+// === Modal helper ===
+// Mount a modal-backdrop with provided HTML, return the backdrop and a close() that
+// runs the 200ms .closing animation before removing. Caller wires inner buttons.
+function openModal(html, opts = {}) {
+  const { closeOnEsc = true, closeOnBackdrop = true, onClose } = opts;
+  const backdrop = document.createElement('div');
+  backdrop.className = 'modal-backdrop';
+  backdrop.innerHTML = html;
+  document.body.appendChild(backdrop);
+
+  let closed = false;
+  function onKey(e) {
+    if (e.key === 'Escape') close();
+  }
+  function close() {
+    if (closed) return;
+    closed = true;
+    document.removeEventListener('keydown', onKey);
+    backdrop.classList.add('closing');
+    setTimeout(() => {
+      backdrop.remove();
+      if (onClose) onClose();
+    }, 200);
+  }
+
+  if (closeOnEsc) document.addEventListener('keydown', onKey);
+  if (closeOnBackdrop) {
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === backdrop) close();
+    });
+  }
+
+  return { backdrop, close };
+}
+
 // === Disclaimer modal ===
 const DISCLAIMER_HTML = `
 <p class="disc-lede zh">本站为社区维护的学习工具，按&ldquo;现状&rdquo;提供，<br>与新泽西州&nbsp;MVC&nbsp;无任何关联，<br>不构成法律或专业建议。</p>
@@ -184,9 +219,8 @@ const DISCLAIMER_HTML = `
 `;
 
 function showDisclaimer(state, onAccept) {
-  const backdrop = document.createElement('div');
-  backdrop.className = 'modal-backdrop';
-  backdrop.innerHTML = `
+  // Disclaimer is mandatory: no Esc / no click-outside dismissal.
+  const { close } = openModal(`
     <div class="modal modal-disclaimer">
       <header class="disc-header">
         <h2>免责声明</h2>
@@ -197,16 +231,11 @@ function showDisclaimer(state, onAccept) {
         <button class="btn primary disc-agree" id="disclaimer-agree">我同意</button>
       </div>
     </div>
-  `;
-  document.body.appendChild(backdrop);
+  `, { closeOnEsc: false, closeOnBackdrop: false, onClose: onAccept });
   document.getElementById('disclaimer-agree').addEventListener('click', () => {
     state.disclaimerAccepted = new Date().toISOString().slice(0, 10);
     saveState(state);
-    backdrop.classList.add('closing');
-    setTimeout(() => {
-      backdrop.remove();
-      if (onAccept) onAccept();
-    }, 200);
+    close();
   });
 }
 
