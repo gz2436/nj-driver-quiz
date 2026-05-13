@@ -231,6 +231,13 @@
       letterEl.textContent = letter;
       const textEl = document.createElement('span');
       textEl.className = 'option-text';
+      // SR-only state label so screen readers get feedback (sighted users see color + glyph).
+      if (userAns && !isMock) {
+        const srState = document.createElement('span');
+        srState.className = 'sr-only';
+        srState.textContent = letter === q.answer ? ' 正确答案' : (letter === userAns ? ' 你的错误答案' : '');
+        if (srState.textContent) btn.appendChild(srState);
+      }
       const oparts = splitBilingual(text);
       if (oparts.en && oparts.zh) textEl.classList.add('bilingual');
       if (oparts.en) {

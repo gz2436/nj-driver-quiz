@@ -1,5 +1,18 @@
 /* NJ Driver Quiz — design system v3 */
 
+/* Screen-reader-only utility — visually hidden but read by AT. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 :root {
   color-scheme: light dark;
   /* spacing scale */
@@ -1423,12 +1436,9 @@ button {
   gap: 0;
 }
 
-/* Each menu row */
-.menu-row,
-.menu-row:link,
-.menu-row:visited,
-.menu-row:focus,
-.menu-row:active {
+/* Each menu row — base layout (single-class so anchor + button get same specificity
+   and the @media (max-width: 540px) override can affect both). */
+.menu-row {
   display: flex;
   align-items: center;
   gap: var(--s-4);
@@ -1441,6 +1451,23 @@ button {
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  font: inherit;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* iOS color/outline lockdown for the anchor variant (button is unaffected by :link/:visited). */
+.menu-row:link,
+.menu-row:visited,
+.menu-row:focus,
+.menu-row:active {
+  color: var(--text);
+  outline: none;
+  outline-color: transparent;
 }
 
 .menu-row:focus-visible { outline: none; }

@@ -29,7 +29,6 @@ const DEFAULT_STATE = {
   version: 1,
   disclaimerAccepted: null,
   wrongAnswers: [],          // question IDs
-  bookmarks: [],             // question IDs
   topicProgress: {},         // topic → {seen, correct}
   totalAttempts: 0,
   languageDisplay: 'bilingual',  // 'bilingual' | 'zh' | 'en'
