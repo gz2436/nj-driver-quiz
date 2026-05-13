@@ -1276,8 +1276,10 @@ a:hover {
   text-decoration-color: var(--border-strong);
   text-underline-offset: 3px;
   -webkit-user-drag: none;
-  transition: color var(--d-fast) var(--e-out), text-decoration-color var(--d-fast) var(--e-out);
+  transition: color var(--d-fast) var(--e-out), text-decoration-color var(--d-fast) var(--e-out), background var(--d-fast) var(--e-out), border-color var(--d-fast) var(--e-out);
 }
+
+.home-refs .ref-icon { display: none; }
 
 .home-refs a:hover {
   color: var(--text);
@@ -1355,11 +1357,25 @@ a:hover {
 
   .home-refs {
     flex-shrink: 0;
-    gap: var(--s-2);
+    gap: 6px;
   }
 
+  .home-refs .ref-sep { display: none; }
+  .home-refs .ref-label { display: none; }
+  .home-refs .ref-icon { display: inline-block; }
+
   .home-refs a {
-    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--border);
+    border-radius: var(--r-full);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    text-decoration: none;
+    color: var(--text-2);
+    background: transparent;
   }
 
   .home-trace {
