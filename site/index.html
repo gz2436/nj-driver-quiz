@@ -293,7 +293,10 @@
       updateStatus();
     });
 
-    const close = () => backdrop.remove();
+    const close = () => {
+      backdrop.classList.add('closing');
+      setTimeout(() => backdrop.remove(), 200);
+    };
     backdrop.querySelector('#topic-cancel').addEventListener('click', close);
     backdrop.addEventListener('click', (e) => { if (e.target === backdrop) close(); });
     document.addEventListener('keydown', function onEsc(e) {
@@ -321,7 +324,12 @@
       </div>
     `;
     document.body.appendChild(backdrop);
-    document.getElementById('confirm-cancel').addEventListener('click', () => backdrop.remove());
+    function closeWithAnim() {
+      backdrop.classList.add('closing');
+      setTimeout(() => backdrop.remove(), 200);
+    }
+    document.getElementById('confirm-cancel').addEventListener('click', closeWithAnim);
+    backdrop.addEventListener('click', (e) => { if (e.target === backdrop) closeWithAnim(); });
     document.getElementById('confirm-clear').addEventListener('click', () => {
       try { localStorage.removeItem(STORAGE_KEY_LOCAL); } catch(e) {}
       // Keep the backdrop alive (transparent + pointer-events on) until reload

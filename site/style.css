@@ -123,6 +123,7 @@
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,
@@ -135,6 +136,15 @@ html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
   touch-action: manipulation;
+}
+
+/* Smooth cross-document transitions on supporting browsers (Chrome 126+,
+   Safari TP). Falls back to instant navigation everywhere else. */
+@view-transition { navigation: auto; }
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: var(--d-base);
+  animation-timing-function: var(--e-out);
 }
 
 /* Sample-data banner — shown when questions.json is missing and fallback to sample loaded.
@@ -206,14 +216,63 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: var(--accent-hover);
+@media (hover: hover) {
+  a:hover { color: var(--accent-hover); }
 }
 
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
   border-radius: var(--r-sm);
+}
+
+/* Touch devices: hard lock anchors & buttons against iOS UA color overrides.
+   -webkit-text-fill-color is what iOS uses to paint the red :active/:visited;
+   pinning it to currentColor means the element's `color` always wins. */
+@media (hover: none) {
+  a, a:link, a:visited, a:hover, a:focus, a:active,
+  button, button:hover, button:focus, button:active {
+    -webkit-text-fill-color: currentColor;
+    -webkit-tap-highlight-color: transparent;
+    outline-color: transparent;
+  }
+}
+
+button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Hardcoded :visited colors — CSS variables don't resolve in WebKit :visited
+   context, so without these iOS shows its default red. */
+.footer-source a:visited,
+.home-refs a:visited {
+  color: #57534e;
+  -webkit-text-fill-color: #57534e;
+}
+.menu-row:visited {
+  color: #292524;
+  -webkit-text-fill-color: #292524;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .footer-source a:visited,
+  :root:not([data-theme="light"]) .home-refs a:visited {
+    color: #a8a29e;
+    -webkit-text-fill-color: #a8a29e;
+  }
+  :root:not([data-theme="light"]) .menu-row:visited {
+    color: #f5f5f4;
+    -webkit-text-fill-color: #f5f5f4;
+  }
+}
+:root[data-theme="dark"] .footer-source a:visited,
+:root[data-theme="dark"] .home-refs a:visited {
+  color: #a8a29e;
+  -webkit-text-fill-color: #a8a29e;
+}
+:root[data-theme="dark"] .menu-row:visited {
+  color: #f5f5f4;
+  -webkit-text-fill-color: #f5f5f4;
 }
 
 .container {
@@ -281,6 +340,13 @@ a:hover {
   padding: var(--s-8) var(--s-8) var(--s-6);
   box-shadow: 0 4px 16px rgb(0 0 0 / 0.12);
   animation: m-enter var(--d-slow) var(--e-out);
+}
+
+.modal-backdrop.closing { animation: bd-fade-out var(--d-base) var(--e-in) forwards; }
+.modal-backdrop.closing .modal { animation: m-exit var(--d-base) var(--e-in) forwards; }
+
+@keyframes m-exit {
+  to { opacity: 0; transform: scale(0.97); }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -649,8 +715,10 @@ a:hover {
   transition: color var(--d-fast) var(--e-out);
   letter-spacing: 0.01em;
 }
+@media (hover: hover) {
 .topic-list-action:hover:not(:disabled) {
   color: var(--text);
+}
 }
 .topic-list-action:disabled {
   opacity: 0.35;
@@ -701,9 +769,11 @@ a:hover {
   font-size: var(--t-sm);
   transition: color var(--d-fast) var(--e-out), border-color var(--d-fast) var(--e-out);
 }
+@media (hover: hover) {
 .topic-row:hover {
   color: var(--text);
   border-color: var(--border-strong);
+}
 }
 .topic-row:hover .topic-row-check {
   border-color: var(--text-2);
@@ -762,9 +832,11 @@ a:hover {
   color: white;
 }
 
-.btn.danger:hover:not(:disabled) {
-  background: var(--wrong);
-  opacity: 0.9;
+@media (hover: hover) {
+  .btn.danger:hover:not(:disabled) {
+    background: var(--wrong);
+    opacity: 0.9;
+  }
 }
 
 /* === Buttons === */
@@ -787,13 +859,23 @@ a:hover {
   -webkit-tap-highlight-color: transparent;
 }
 
-.btn:hover:not(:disabled) {
-  background: var(--bg);
-  border-color: var(--border-strong);
-}
-
-.btn:active:not(:disabled) {
-  transform: translateY(1px);
+@media (hover: hover) {
+  .btn:hover:not(:disabled) {
+    background: var(--bg);
+    border-color: var(--border-strong);
+  }
+  .btn:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+  .btn.primary:hover:not(:disabled) {
+    background: var(--text);
+    border-color: var(--text);
+    color: var(--bg);
+    opacity: 0.9;
+  }
+  .btn.primary:active:not(:disabled) {
+    transform: translateY(1px);
+  }
 }
 
 .btn:disabled {
@@ -805,17 +887,6 @@ a:hover {
   background: var(--text);
   color: var(--bg);
   border-color: var(--text);
-}
-
-.btn.primary:hover:not(:disabled) {
-  background: var(--text);
-  border-color: var(--text);
-  color: var(--bg);
-  opacity: 0.9;
-}
-
-.btn.primary:active:not(:disabled) {
-  transform: translateY(1px);
 }
 
 .btn.sm {
@@ -830,9 +901,11 @@ a:hover {
   color: var(--text-2);
 }
 
+@media (hover: hover) {
 .btn.ghost:hover:not(:disabled) {
   background: var(--bg);
   color: var(--text);
+}
 }
 
 /* === Home page (v6 redesign) === */
@@ -894,10 +967,12 @@ a:hover {
   transition: opacity var(--d-fast) var(--e-out), transform var(--d-fast) var(--e-out);
 }
 
+@media (hover: hover) {
 .home-cta:hover {
   color: var(--bg);
   text-decoration: none;
   opacity: 0.92;
+}
 }
 
 .home-cta:active {
@@ -959,10 +1034,12 @@ a:hover {
   transition: padding var(--d-fast) var(--e-out), color var(--d-fast) var(--e-out);
 }
 
+@media (hover: hover) {
 .home-mode:hover {
   text-decoration: none;
   color: var(--text);
   padding-left: var(--s-3);
+}
 }
 
 .home-mode .num {
@@ -1010,9 +1087,11 @@ a:hover {
   transition: color var(--d-fast) var(--e-out);
 }
 
+@media (hover: hover) {
 .home-aux-link:hover {
   color: var(--text);
   text-decoration: none;
+}
 }
 
 .home-aux-link::before {
@@ -1322,8 +1401,10 @@ a:hover {
   -webkit-tap-highlight-color: transparent;
 }
 
+@media (hover: hover) {
 .order-toggle button:hover {
   color: var(--text);
+}
 }
 
 .order-toggle button.active {
@@ -1492,7 +1573,7 @@ a:hover {
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    text-decoration: none;
+    text-decoration: none !important;
     color: var(--text-2);
     background: transparent;
     background-color: transparent;
@@ -1503,6 +1584,11 @@ a:hover {
     line-height: 1;
     white-space: nowrap;
     -webkit-tap-highlight-color: transparent;
+  }
+  .home-refs a:active {
+    border-color: var(--border) !important;
+    background: transparent !important;
+    color: var(--text-2) !important;
   }
 
   /* visited can only restyle color/border-color/etc — width & style are set
@@ -1554,8 +1640,10 @@ a:hover {
   -webkit-tap-highlight-color: transparent;
 }
 
+@media (hover: hover) {
 .ghost-clear:hover {
   color: var(--wrong);
+}
 }
 
 /* Footer clear button — 轻量、跟链接同档次 */
@@ -1586,9 +1674,11 @@ a:hover {
   stroke-linejoin: round;
 }
 
+@media (hover: hover) {
 .home-clear:hover {
   background: color-mix(in srgb, var(--wrong) 10%, transparent);
   color: var(--wrong);
+}
 }
 
 /* Ref pills */
@@ -1619,10 +1709,12 @@ a:hover {
   transition: border-color var(--d-fast) var(--e-out), background var(--d-fast) var(--e-out);
 }
 
+@media (hover: hover) {
 .ref-pill:hover {
   border-color: var(--border-strong);
   background: var(--surface-raised);
   text-decoration: none;
+}
 }
 
 .ref-title {
@@ -1706,10 +1798,12 @@ a:hover {
   border-top: 1px solid var(--border);
 }
 
+@media (hover: hover) {
 .link-card:hover {
   padding-left: var(--s-4);
   border-bottom-color: var(--text-3);
   text-decoration: none;
+}
 }
 
 .link-card .link-text {
@@ -1786,9 +1880,11 @@ a:hover {
   transition: color var(--d-fast) var(--e-out), border-color var(--d-fast) var(--e-out);
 }
 
+@media (hover: hover) {
 .strip-clear:hover {
   color: var(--wrong);
   border-color: var(--border);
+}
 }
 
 .entry-stats {
@@ -1829,9 +1925,11 @@ a:hover {
   transition: color var(--d-fast) var(--e-out), border-color var(--d-fast) var(--e-out);
 }
 
+@media (hover: hover) {
 .stats-clear:hover {
   color: var(--wrong);
   border-color: var(--border);
+}
 }
 
 .stat-grid {
@@ -1910,9 +2008,11 @@ a:hover {
   gap: var(--s-2);
 }
 
+@media (hover: hover) {
 .topic-chip:hover {
   border-color: var(--border-strong);
   color: var(--text);
+}
 }
 
 .topic-chip.selected {
@@ -1936,10 +2036,12 @@ a:hover {
   align-self: flex-start;
 }
 
+@media (hover: hover) {
 .topic-chip-special:hover {
   border-color: var(--accent);
   color: var(--accent-hover);
   background: color-mix(in srgb, var(--accent) 6%, transparent);
+}
 }
 
 .topic-chip-special .count {
@@ -2163,9 +2265,11 @@ a:hover {
   transition: color var(--d-fast) var(--e-out), border-color var(--d-fast) var(--e-out);
 }
 
+@media (hover: hover) {
 .icon-action:hover {
   color: var(--text);
   border-color: var(--border);
+}
 }
 
 .icon-action.active {
@@ -2350,10 +2454,12 @@ body[data-lang="en"] .explanation .body .en {
   min-height: 52px;
 }
 
-.option:hover:not(:disabled) {
-  border-color: var(--border-strong);
-  background: var(--surface);
-  color: var(--text);
+@media (hover: hover) {
+  .option:hover:not(:disabled) {
+    border-color: var(--border-strong);
+    background: var(--surface);
+    color: var(--text);
+  }
 }
 
 .option:disabled {
@@ -2706,8 +2812,10 @@ kbd {
   background: var(--bg);
   transition: border-color var(--d-fast) var(--e-out);
 }
-.auto-switch:hover {
-  border-color: var(--border-strong);
+@media (hover: hover) {
+  .auto-switch:hover {
+    border-color: var(--border-strong);
+  }
 }
 .auto-switch input {
   position: absolute;
@@ -3103,9 +3211,11 @@ kbd {
   transition: background var(--d-fast) var(--e-out), color var(--d-fast) var(--e-out);
 }
 .review-filter button:last-child { border-right: none; }
+@media (hover: hover) {
 .review-filter button:hover {
   background: var(--accent-tint);
   color: var(--text);
+}
 }
 .review-filter button.active {
   background: var(--accent);
@@ -3509,9 +3619,11 @@ kbd {
     background var(--d-fast) var(--e-out);
 }
 
+@media (hover: hover) {
 .sign-card:hover {
   border-color: var(--border-strong);
   background: var(--surface);
+}
 }
 
 .sign-card img {
@@ -3545,26 +3657,58 @@ footer.site-footer {
 }
 
 @media (max-width: 540px) {
+  /* 单行紧凑布局：[来源胶囊]  [图标×3]  [免责声明] */
   .footer-inner {
-    justify-content: center;
-    text-align: center;
-    padding: var(--s-2) var(--s-4);
-    gap: var(--s-1);
-    row-gap: var(--s-1);
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: var(--s-3) var(--s-4);
+    gap: var(--s-2);
+    row-gap: 0;
   }
-  .footer-source,
-  .footer-nav {
+  .footer-source {
+    flex: 0 1 auto;
+    min-width: 0;
     justify-content: center;
-    font-size: 11px;
+    gap: 4px;
+    padding: 0;
+    border: none;
+    background: none;
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
   }
-  .footer-source .footer-label,
+  .footer-source .footer-label {
+    display: inline;
+    font-size: 10px;
+    color: var(--text-3);
+  }
+  .footer-source .footer-label-full { display: inline; }
+  .footer-source .footer-label-short { display: none; }
   .footer-source a,
+  .footer-source a:link,
+  .footer-source a:visited,
+  .footer-source a:focus,
+  .footer-source a:active {
+    font-size: 10px;
+    text-decoration: none;
+    color: var(--text-2);
+  }
+  .footer-source .footer-cross { color: var(--text-3); margin: 0 1px; font-size: 9px; }
+  .footer-nav {
+    flex-shrink: 0;
+    justify-content: flex-end;
+    gap: 6px;
+  }
+  .footer-nav .footer-pipe { display: none; }
   .footer-nav .nav-disclaimer {
-    font-size: 11px;
+    font-size: 10px;
+    padding: 2px 8px;
   }
   .footer-nav .footer-icon-link {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
   }
   .footer-nav .footer-icon-link svg {
     width: 14px;
@@ -3590,11 +3734,6 @@ footer.site-footer {
 
 .footer-source .footer-label-short { display: none; }
 
-@media (max-width: 540px) {
-  .footer-source .footer-label-full { display: none; }
-  .footer-source .footer-label-short { display: inline; }
-}
-
 .footer-source a {
   color: var(--text-2);
   text-decoration: underline;
@@ -3603,9 +3742,11 @@ footer.site-footer {
   transition: color var(--d-fast) var(--e-out), text-decoration-color var(--d-fast) var(--e-out);
 }
 
+@media (hover: hover) {
 .footer-source a:hover {
   color: var(--text);
   text-decoration-color: var(--text);
+}
 }
 
 .footer-nav {
@@ -3621,7 +3762,9 @@ footer.site-footer {
   transition: color var(--d-fast) var(--e-out);
 }
 
+@media (hover: hover) {
 .footer-nav a:hover { color: var(--text); }
+}
 
 .footer-nav .footer-icon-link {
   display: inline-flex;
@@ -3637,9 +3780,11 @@ footer.site-footer {
   cursor: pointer;
   transition: color var(--d-fast) var(--e-out), background var(--d-fast) var(--e-out);
 }
+@media (hover: hover) {
 .footer-nav .footer-icon-link:hover {
   color: var(--text);
   background: var(--surface);
+}
 }
 
 /* Theme toggle: show sun in dark mode (click to go light), moon in light mode (click to go dark) */
@@ -3664,7 +3809,10 @@ footer.site-footer {
   align-self: center;
 }
 
-.footer-nav .nav-disclaimer {
+.footer-nav .nav-disclaimer,
+.footer-nav .nav-disclaimer:link,
+.footer-nav .nav-disclaimer:focus,
+.footer-nav .nav-disclaimer:active {
   color: var(--wrong);
   text-decoration: none;
   padding: 3px var(--s-2);
@@ -3672,10 +3820,28 @@ footer.site-footer {
   font-size: 11px;
   font-weight: 500;
   transition: background var(--d-fast) var(--e-out);
+  outline: none;
 }
-.footer-nav .nav-disclaimer:hover {
-  color: var(--wrong);
-  background: var(--wrong-tint);
+/* :visited hardcoded — variables don't work in WebKit :visited */
+.footer-nav .nav-disclaimer:visited {
+  color: #dc2626;
+  -webkit-text-fill-color: #dc2626;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .footer-nav .nav-disclaimer:visited {
+    color: #f87171;
+    -webkit-text-fill-color: #f87171;
+  }
+}
+:root[data-theme="dark"] .footer-nav .nav-disclaimer:visited {
+  color: #f87171;
+  -webkit-text-fill-color: #f87171;
+}
+@media (hover: hover) {
+  .footer-nav .nav-disclaimer:hover {
+    color: var(--wrong);
+    background: var(--wrong-tint);
+  }
 }
 
 .footer-bullet {

@@ -164,7 +164,7 @@ function weightedShuffle(questions, state) {
 
 // === Disclaimer modal ===
 const DISCLAIMER_HTML = `
-<p class="disc-lede zh">本站为社区维护的学习工具，按"现状"提供，与新泽西州 MVC 无任何关联，<br>不构成法律或专业建议。</p>
+<p class="disc-lede zh">本站为社区维护的学习工具，按&ldquo;现状&rdquo;提供，<br>与新泽西州&nbsp;MVC&nbsp;无任何关联，<br>不构成法律或专业建议。</p>
 <p class="disc-lede en">This community study tool is provided "AS IS", is not affiliated with the NJ MVC, and does not constitute legal or professional advice.</p>
 
 <ol class="disc-clauses">
@@ -226,8 +226,11 @@ function showDisclaimer(state, onAccept) {
   document.getElementById('disclaimer-agree').addEventListener('click', () => {
     state.disclaimerAccepted = new Date().toISOString().slice(0, 10);
     saveState(state);
-    backdrop.remove();
-    if (onAccept) onAccept();
+    backdrop.classList.add('closing');
+    setTimeout(() => {
+      backdrop.remove();
+      if (onAccept) onAccept();
+    }, 200);
   });
 }
 
