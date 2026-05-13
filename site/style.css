@@ -1280,6 +1280,7 @@ a:hover {
 }
 
 .home-refs .ref-icon { display: none; }
+.home-refs .ref-label-short { display: none; }
 
 .home-refs a:hover {
   color: var(--text);
@@ -1357,26 +1358,33 @@ a:hover {
 
   .home-refs {
     flex-shrink: 0;
-    gap: 6px;
+    gap: 5px;
   }
 
   .home-refs .ref-sep { display: none; }
-  .home-refs .ref-label { display: none; }
-  .home-refs .ref-icon { display: inline-block; }
+  .home-refs .ref-icon { display: inline-block; width: 13px; height: 13px; }
 
   .home-refs a {
-    width: 30px;
-    height: 30px;
+    height: 26px;
+    padding: 0 8px;
     border: 1px solid var(--border);
     border-radius: var(--r-full);
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    padding: 0;
+    gap: 4px;
     text-decoration: none;
     color: var(--text-2);
     background: transparent;
+    font-size: 11px;
+    line-height: 1;
+    white-space: nowrap;
   }
+
+  .home-refs .ref-label {
+    display: inline-block;
+  }
+  .home-refs .ref-label-full { display: none; }
+  .home-refs .ref-label-short { display: inline; }
 
   .home-trace {
     font-size: 10px;
