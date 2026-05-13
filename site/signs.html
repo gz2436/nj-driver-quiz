@@ -3,74 +3,184 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>交通标志参考 · 新泽西驾照笔试</title>
+<title>交通标志参考　新泽西驾照笔试</title>
+<meta name="description" content="新泽西驾照笔试常考交通标志中英对照参考：警告、禁止、指路、施工等。">
+<meta name="theme-color" content="#1a1a1a">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="交通标志参考 · 新泽西驾照笔试">
+<meta property="og:description" content="官方手册标志一览：颜色、形状、含义中英对照。">
+<meta property="og:image" content="/site/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="style.css">
+<script async src="https://tally.so/widgets/embed.js"></script>
 </head>
 <body>
 
 <div class="container">
   <header class="quiz-header">
     <div class="left">
-      <button class="back-btn" onclick="location.href='index.html'">← 返回</button>
-      <h2>交通标志参考 / Signs Reference</h2>
+      <button class="back-btn" onclick="location.href='index.html'" aria-label="返回首页">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        <span>返回</span>
+      </button>
+      <h2>交通标志参考　Signs Reference</h2>
     </div>
   </header>
 
-  <div class="card" style="margin-bottom: 20px;">
-    <h3 style="margin: 0 0 10px; font-size: 16px;">速记口诀 / Quick Reference</h3>
-    <div style="font-size: 13px; line-height: 1.7;">
-      <strong>形状 Shapes</strong><br>
-      • 八边形 Octagon → 停车 STOP（仅此一用）<br>
-      • 倒三角 Inverted Triangle → 让行 YIELD<br>
-      • 菱形 Diamond → 警告 WARNING<br>
-      • 五边形 Pentagon → 学校区 SCHOOL ZONE<br>
-      • 圆形 Circle → 铁路道口 RAILROAD<br>
-      • 竖矩形 Vertical rectangle → 法规 REGULATORY<br>
-      • 横矩形 Horizontal rectangle → 导向/服务 GUIDE/SERVICE<br>
-      <br>
-      <strong>颜色 Colors</strong><br>
-      • 红 Red → 禁令/停车 Prohibition/Stop<br>
-      • 黄 Yellow → 警告 Warning<br>
-      • 橙 Orange → 施工区 Construction Zone<br>
-      • 绿 Green → 导向/允许 Directions/Permitted<br>
-      • 蓝 Blue → 服务设施 Services<br>
-      • 棕 Brown → 公园/休闲 Recreation<br>
-      • 白 White → 法规 Regulatory
+  <div class="sign-info-card">
+    <h3>速记　Quick Reference</h3>
+    <div class="twocol">
+      <div>
+        <strong>形状　Shapes</strong>
+        <dl class="ref-list">
+          <div><dt>八边形</dt><dd>停车 STOP（仅此一用）</dd></div>
+          <div><dt>倒三角</dt><dd>让行 YIELD</dd></div>
+          <div><dt>菱形</dt><dd>警告 WARNING</dd></div>
+          <div><dt>五边形</dt><dd>学校区 SCHOOL ZONE</dd></div>
+          <div><dt>圆形</dt><dd>铁路道口 RAILROAD</dd></div>
+          <div><dt>竖矩形</dt><dd>法规 REGULATORY</dd></div>
+          <div><dt>横矩形</dt><dd>导向 / 服务 GUIDE / SERVICE</dd></div>
+        </dl>
+      </div>
+      <div>
+        <strong>颜色　Colors</strong>
+        <dl class="ref-list">
+          <div><dt>红</dt><dd>禁令 / 停车 Prohibition / Stop</dd></div>
+          <div><dt>黄</dt><dd>警告 Warning</dd></div>
+          <div><dt>橙</dt><dd>施工区 Construction Zone</dd></div>
+          <div><dt>绿</dt><dd>导向 / 允许 Directions / Permitted</dd></div>
+          <div><dt>蓝</dt><dd>服务设施 Services</dd></div>
+          <div><dt>棕</dt><dd>公园 / 休闲 Recreation</dd></div>
+          <div><dt>白</dt><dd>法规 Regulatory</dd></div>
+        </dl>
+      </div>
     </div>
   </div>
 
-  <div class="card" style="margin-bottom: 16px;">
-    <h3 style="margin: 0 0 8px; font-size: 16px;">官方手册标志页 / Official Manual Pages</h3>
-    <p style="font-size: 12px; color: var(--muted); margin: 0;">来源 NJ Driver Manual p213-224；点击可放大查看。</p>
+  <div class="sign-info-card" style="margin-top: var(--s-4);">
+    <h3>官方手册标志页　Official Manual</h3>
+    <p>来源 NJ Driver Manual p213-224。点击可放大查看。</p>
   </div>
 
-  <div id="signs-grid"></div>
+  <div class="signs-grid" id="signs-grid"></div>
 
-  <div class="card" style="margin-top: 16px;">
-    <h3 style="margin: 0 0 10px; font-size: 16px;">想专项练习？</h3>
-    <p style="font-size: 13px; margin: 0 0 12px;">用"按分类练习"选择 <strong>交通标志</strong> 分类，做 100+ 道标志题。</p>
+  <div class="sign-info-card" style="margin-top: var(--s-5); display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 240px;">
+      <h3 style="margin: 0 0 var(--s-1);">想专项练习？</h3>
+      <p>用"按分类练习"选 <strong>交通标志</strong>，做 100+ 道标志题。</p>
+    </div>
     <a class="btn primary" href="quiz.html?mode=topic&t=signs">开始标志题练习</a>
   </div>
 </div>
+
+<style>
+  .ref-list { margin: var(--s-2) 0 0; padding: 0; }
+  .ref-list > div {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: var(--s-3);
+    padding: var(--s-1) 0;
+    align-items: baseline;
+  }
+  .ref-list dt {
+    color: var(--text);
+    font-weight: 500;
+    font-size: var(--t-sm);
+  }
+  .ref-list dd {
+    margin: 0;
+    color: var(--text-2);
+    font-size: var(--t-sm);
+  }
+</style>
 
 <script src="app.js"></script>
 <script>
 (function() {
   initPage();
-  // Build manual sign pages grid
   const grid = document.getElementById('signs-grid');
   const pages = [];
   for (let p = 213; p <= 224; p++) pages.push(p);
-  for (const p of pages) {
+
+  pages.forEach((p, idx) => {
     const div = document.createElement('div');
     div.className = 'sign-card';
     div.innerHTML = `
-      <a href="../data/images/manual_signs/manual_p${p}.png" target="_blank">
-        <img src="../data/images/manual_signs/manual_p${p}.png" alt="NJ Driver Manual page ${p}" loading="lazy">
-      </a>
-      <div class="pagenum">手册 p${p} / Manual p${p}</div>
+      <img src="../data/images/manual_signs/manual_p${p}.png" alt="NJ Driver Manual page ${p}" loading="lazy">
+      <div class="pagenum">p${p}</div>
     `;
+    div.addEventListener('click', () => openLightbox(idx));
     grid.appendChild(div);
+  });
+
+  function openLightbox(startIdx) {
+    let idx = startIdx;
+    const backdrop = document.createElement('div');
+    backdrop.className = 'lightbox-backdrop';
+    backdrop.innerHTML = `
+      <img class="lightbox-img" alt="">
+      <div class="lightbox-controls">
+        <button class="nav prev" aria-label="上一张">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <span class="count"></span>
+        <button class="nav next" aria-label="下一张">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    `;
+    document.body.appendChild(backdrop);
+
+    const img = backdrop.querySelector('.lightbox-img');
+    const count = backdrop.querySelector('.count');
+    const prevBtn = backdrop.querySelector('.nav.prev');
+    const nextBtn = backdrop.querySelector('.nav.next');
+
+    function render() {
+      const p = pages[idx];
+      img.src = `../data/images/manual_signs/manual_p${p}.png`;
+      img.alt = `NJ Driver Manual p${p}`;
+      count.textContent = `${idx + 1} / ${pages.length}`;
+      prevBtn.disabled = idx === 0;
+      nextBtn.disabled = idx === pages.length - 1;
+    }
+    render();
+
+    const close = () => {
+      backdrop.classList.add('closing');
+      document.removeEventListener('keydown', onKey);
+      setTimeout(() => backdrop.remove(), 200);
+    };
+    const go = (delta) => {
+      const ni = idx + delta;
+      if (ni >= 0 && ni < pages.length) { idx = ni; render(); }
+    };
+
+    // 点任意地方关闭，除了控件区
+    backdrop.addEventListener('click', (e) => {
+      if (e.target.closest('.lightbox-controls')) return;
+      close();
+    });
+    prevBtn.addEventListener('click', () => go(-1));
+    nextBtn.addEventListener('click', () => go(1));
+
+    const onKey = (e) => {
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') go(-1);
+      else if (e.key === 'ArrowRight') go(1);
+    };
+    document.addEventListener('keydown', onKey);
+
+    // Touch swipe
+    let touchX = null;
+    backdrop.addEventListener('touchstart', (e) => { touchX = e.touches[0].clientX; }, { passive: true });
+    backdrop.addEventListener('touchend', (e) => {
+      if (touchX === null) return;
+      const dx = e.changedTouches[0].clientX - touchX;
+      touchX = null;
+      if (Math.abs(dx) > 50) go(dx < 0 ? 1 : -1);
+    });
   }
 })();
 </script>

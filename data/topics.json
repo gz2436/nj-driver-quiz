@@ -74,5 +74,9 @@
   "general": {
     "zh": "综合",
     "en": "General"
+  },
+  "unclassified": {
+    "zh": "未分类",
+    "en": "Unclassified"
   }
 }

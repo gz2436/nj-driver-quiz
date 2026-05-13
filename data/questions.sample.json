@@ -1,0 +1,412 @@
+[
+  {
+    "id": 1,
+    "type": "mc",
+    "stem": "The motor vehicle registration shall be renewed: 车牌重新注册的时限是",
+    "options": [
+      "every six months 每六个月",
+      "every year 每年",
+      "every three years 每三年",
+      "every month 每月"
+    ],
+    "answer": "B",
+    "answer_text": null,
+    "topics": [
+      "license_admin"
+    ],
+    "is_common_mistake": false,
+    "explanation_key": "inspection_freq",
+    "verified": true,
+    "needs_review": null,
+    "source_doc": "complete",
+    "source_para_idx": 2,
+    "stem_en": "The motor vehicle registration shall be renewed:",
+    "stem_zh": "车牌重新注册的时限是",
+    "options_en": [
+      "every six months",
+      "every year",
+      "every three years",
+      "every month"
+    ],
+    "options_zh": [
+      "每六个月",
+      "每年",
+      "每三年",
+      "每月"
+    ],
+    "answer_text_en": "",
+    "answer_text_zh": "",
+    "lang_primary": "en",
+    "needs_translation": null,
+    "notes": null
+  },
+  {
+    "id": 2,
+    "type": "mc",
+    "stem": "If you drink four 12 ounce bottles of beer you will have about as much alcohol in your system as if you drank: 饮四瓶 12 盎司容量啤酒，相当于其他的酒是",
+    "options": [
+      "12 ounces of table wine 12盎司淡酒",
+      "1 drink of whiskey or gin 1杯威士忌或松子酒",
+      "4 drinks of whiskey or gin 4杯威士忌或松子酒",
+      "4 ounces of table wine 4盎司淡酒"
+    ],
+    "answer": "B",
+    "answer_text": null,
+    "topics": [
+      "alcohol_equivalent"
+    ],
+    "is_common_mistake": true,
+    "explanation_key": "alcohol_equivalent",
+    "verified": true,
+    "needs_review": null,
+    "source_doc": "complete",
+    "source_para_idx": 88,
+    "stem_en": "If you drink four 12 ounce bottles of beer you will have about as much alcohol in your system as if you drank:",
+    "stem_zh": "饮四瓶 12 盎司容量啤酒，相当于其他的酒是",
+    "options_en": [
+      "12 ounces of table wine",
+      "1 drink of whiskey or gin",
+      "4 drinks of whiskey or gin",
+      "4 ounces of table wine"
+    ],
+    "options_zh": [
+      "12盎司淡酒",
+      "1杯威士忌或松子酒",
+      "4杯威士忌或松子酒",
+      "4盎司淡酒"
+    ],
+    "answer_text_en": "",
+    "answer_text_zh": "",
+    "lang_primary": "en",
+    "needs_translation": null,
+    "notes": null
+  },
+  {
+    "id": 3,
+    "type": "mc",
+    "stem": "New Jersey law states that you may or may not be under the influence if your blood alcohol content is: 新泽西法律规定，你血液中酒精含量在什么范围内可能不受酒精影响",
+    "options": [
+      "more than .10% but less than .15% 大于 0.1%但小于 0.15%",
+      "more than .15% but less than .20% 大于 0.15%但小于 0.2%",
+      "more than .05% but less than .10% 大于 0.05%但小于 0.1%",
+      "all of the above 以上皆是"
+    ],
+    "answer": "C",
+    "answer_text": null,
+    "topics": [
+      "bac_levels"
+    ],
+    "is_common_mistake": false,
+    "explanation_key": null,
+    "verified": false,
+    "needs_review": null,
+    "source_doc": "complete",
+    "source_para_idx": 95,
+    "stem_en": "New Jersey law states that you may or may not be under the influence if your blood alcohol content is:",
+    "stem_zh": "新泽西法律规定，你血液中酒精含量在什么范围内可能不受酒精影响",
+    "options_en": [
+      "more than .10% but less than .15%",
+      "more than .15% but less than .20%",
+      "more than .05% but less than .10%",
+      "all of the above"
+    ],
+    "options_zh": [
+      "大于 0.1%但小于 0.15%",
+      "大于 0.15%但小于 0.2%",
+      "大于 0.05%但小于 0.1%",
+      "以上皆是"
+    ],
+    "answer_text_en": "",
+    "answer_text_zh": "",
+    "lang_primary": "en",
+    "needs_translation": null,
+    "notes": null
+  },
+  {
+    "id": 4,
+    "type": "mc",
+    "stem": "You may drive on public or private property to avoid a traffic or signal: 你可以驾车于公共或私人产地以避开交通信号，条件是",
+    "options": [
+      "only if the driver stops the vehicle before crossing the sidewalk 只有在人行横道线前停下",
+      "only with permission of the property owner 只有在私人产地主人准许之下",
+      "anytime 任何时间",
+      "when directed to do so by police officer 当你在警察指挥下"
+    ],
+    "answer": "D",
+    "answer_text": null,
+    "topics": [
+      "unclassified"
+    ],
+    "is_common_mistake": false,
+    "explanation_key": null,
+    "verified": false,
+    "needs_review": null,
+    "source_doc": "complete",
+    "source_para_idx": 223,
+    "stem_en": "You may drive on public or private property to avoid a traffic or signal:",
+    "stem_zh": "你可以驾车于公共或私人产地以避开交通信号，条件是",
+    "options_en": [
+      "only if the driver stops the vehicle before crossing the sidewalk",
+      "only with permission of the property owner",
+      "anytime",
+      "when directed to do so by police officer"
+    ],
+    "options_zh": [
+      "只有在人行横道线前停下",
+      "只有在私人产地主人准许之下",
+      "任何时间",
+      "当你在警察指挥下"
+    ],
+    "answer_text_en": "",
+    "answer_text_zh": "",
+    "lang_primary": "en",
+    "needs_translation": null,
+    "notes": null
+  },
+  {
+    "id": 5,
+    "type": "mc",
+    "stem": "During bad weather, the two-second rule should be increased to: 在天气恶劣的情况下，车距保持两秒钟的规定应增加到",
+    "options": [
+      "five to six seconds 5-6秒",
+      "six to seven seconds 6-7秒",
+      "two to three seconds 2-3秒",
+      "three to four seconds 3-4秒"
+    ],
+    "answer": "D",
+    "answer_text": null,
+    "topics": [
+      "general"
+    ],
+    "is_common_mistake": true,
+    "explanation_key": null,
+    "verified": false,
+    "needs_review": null,
+    "source_doc": "complete",
+    "source_para_idx": 563,
+    "stem_en": "During bad weather, the two-second rule should be increased to:",
+    "stem_zh": "在天气恶劣的情况下，车距保持两秒钟的规定应增加到",
+    "options_en": [
+      "five to six seconds",
+      "six to seven seconds",
+      "two to three seconds",
+      "three to four seconds"
+    ],
+    "options_zh": [
+      "5-6秒",
+      "6-7秒",
+      "2-3秒",
+      "3-4秒"
+    ],
+    "answer_text_en": "",
+    "answer_text_zh": "",
+    "lang_primary": "en",
+    "needs_translation": null,
+    "notes": null
+  },
+  {
+    "id": 6,
+    "type": "mc_image",
+    "stem": "What does this sign mean? 这个标志是什么意思？",
+    "options": [
+      "Take route 45 at night 在晚上走45号公路",
+      "45 mph is the minimum speed limit 45英里/小时是最低速度限制",
+      "The maximum speed limit is 45 mph 最高时速限制为45英里",
+      "You can drive up to 45 mph when driving at night 夜间驾驶时速最高可达 45 英里/小时"
+    ],
+    "answer": "D",
+    "answer_text": null,
+    "topics": [
+      "signs"
+    ],
+    "is_common_mistake": false,
+    "explanation_key": null,
+    "verified": false,
+    "needs_review": null,
+    "source_doc": "complete",
+    "source_para_idx": 1026,
+    "stem_en": "What does this sign mean?",
+    "stem_zh": "这个标志是什么意思？",
+    "options_en": [
+      "Take route 45 at night",
+      "45 mph is the minimum speed limit",
+      "The maximum speed limit is 45 mph",
+      "You can drive up to 45 mph when driving at night"
+    ],
+    "options_zh": [
+      "在晚上走45号公路",
+      "45英里/小时是最低速度限制",
+      "最高时速限制为45英里",
+      "夜间驾驶时速最高可达 45 英里/小时"
+    ],
+    "answer_text_en": "",
+    "answer_text_zh": "",
+    "lang_primary": "en",
+    "needs_translation": null,
+    "notes": null
+  },
+  {
+    "id": 7,
+    "type": "mc_image",
+    "stem": "What does this sign indicate? 这个标志表示什么？",
+    "options": [
+      "A steep hill/steep descent, drive with care 陡峭的山坡/陡峭的下坡，小心驾驶",
+      "A slow-moving vehicle 一辆缓慢行驶的车辆",
+      "A tow truck 一辆拖车",
+      "A slippery road 一条湿滑的路"
+    ],
+    "answer": "A",
+    "answer_text": null,
+    "topics": [
+      "signs"
+    ],
+    "is_common_mistake": false,
+    "explanation_key": null,
+    "verified": false,
+    "needs_review": null,
+    "source_doc": "complete",
+    "source_para_idx": 1337,
+    "stem_en": "What does this sign indicate?",
+    "stem_zh": "这个标志表示什么？",
+    "options_en": [
+      "A steep hill/steep descent, drive with care",
+      "A slow-moving vehicle",
+      "A tow truck",
+      "A slippery road"
+    ],
+    "options_zh": [
+      "陡峭的山坡/陡峭的下坡，小心驾驶",
+      "一辆缓慢行驶的车辆",
+      "一辆拖车",
+      "一条湿滑的路"
+    ],
+    "answer_text_en": "",
+    "answer_text_zh": "",
+    "lang_primary": "en",
+    "needs_translation": null,
+    "notes": null
+  },
+  {
+    "id": 8,
+    "type": "mc",
+    "stem": "Locked wheel skids are usually caused by: 锁定的车轮打滑通常是由以下原因造成的",
+    "options": [
+      "Braking too hard at a high speed 在高速状态下刹车过猛",
+      "Pressing the gas and brake pedal at the same time 同时踩下油门和刹车踏板",
+      "Ignition turned to the lock position while the vehicle is still in motion 车辆仍在行驶中，点火器转到锁定位置",
+      "Drive wheels losing traction with the road surface 驱动轮失去与路面的牵引力"
+    ],
+    "answer": "A",
+    "answer_text": null,
+    "topics": [
+      "skid_blowout"
+    ],
+    "is_common_mistake": false,
+    "explanation_key": "skid_recovery",
+    "verified": true,
+    "needs_review": "option_leak;orphan_after_pair_merge",
+    "source_doc": "complete",
+    "source_para_idx": 2023,
+    "stem_en": "Locked wheel skids are usually caused by:",
+    "stem_zh": "锁定的车轮打滑通常是由以下原因造成的",
+    "options_en": [
+      "Braking too hard at a high speed",
+      "Pressing the gas and brake pedal at the same time",
+      "Ignition turned to the lock position while the vehicle is still in motion",
+      "Drive wheels losing traction with the road surface"
+    ],
+    "options_zh": [
+      "在高速状态下刹车过猛",
+      "同时踩下油门和刹车踏板",
+      "车辆仍在行驶中，点火器转到锁定位置",
+      "驱动轮失去与路面的牵引力"
+    ],
+    "answer_text_en": "",
+    "answer_text_zh": "",
+    "lang_primary": "en",
+    "needs_translation": null,
+    "notes": "auto-detected: D_zh has long English run (53+ chars)"
+  },
+  {
+    "id": 9,
+    "type": "mc",
+    "stem": "If there is another driver tailgating you, you should NOT: 如果另一个司机紧贴跟着你的车，你不应该",
+    "options": [
+      "Provide more space to allow them to pass 提供空间让其超车",
+      "Increase your speed 加速",
+      "Move to the right lane 并向右侧车道",
+      "reduce your speed 减速"
+    ],
+    "answer": "B",
+    "answer_text": null,
+    "topics": [
+      "unclassified"
+    ],
+    "is_common_mistake": false,
+    "explanation_key": null,
+    "verified": false,
+    "needs_review": null,
+    "source_doc": "complete",
+    "source_para_idx": 2999,
+    "stem_en": "If there is another driver tailgating you, you should NOT:",
+    "stem_zh": "如果另一个司机紧贴跟着你的车，你不应该",
+    "options_en": [
+      "Provide more space to allow them to pass",
+      "Increase your speed",
+      "Move to the right lane",
+      "reduce your speed"
+    ],
+    "options_zh": [
+      "提供空间让其超车",
+      "加速",
+      "并向右侧车道",
+      "减速"
+    ],
+    "answer_text_en": "",
+    "answer_text_zh": "",
+    "lang_primary": "en",
+    "needs_translation": null,
+    "notes": null
+  },
+  {
+    "id": 10,
+    "type": "mc",
+    "stem": "Cell phones may not be used while driving except for: 开车时不许使用手机，除非",
+    "options": [
+      "Fire emergencies 火警",
+      "Life-threatening situations 生命垂危",
+      "Traffic accidents 发生交通事故",
+      "All of the above 以上皆是"
+    ],
+    "answer": "D",
+    "answer_text": null,
+    "topics": [
+      "unclassified"
+    ],
+    "is_common_mistake": false,
+    "explanation_key": null,
+    "verified": false,
+    "needs_review": null,
+    "source_doc": "complete",
+    "source_para_idx": 3333,
+    "stem_en": "",
+    "stem_zh": "开车时不许使用手机，除非",
+    "options_en": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "options_zh": [
+      "火警",
+      "生命垂危",
+      "发生交通事故",
+      "以上皆是"
+    ],
+    "answer_text_en": "",
+    "answer_text_zh": "",
+    "lang_primary": "zh",
+    "needs_translation": "zh_to_en",
+    "notes": null
+  }
+]

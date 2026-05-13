@@ -6,7 +6,11 @@
     { "source": "/", "destination": "/site/index.html" },
     { "source": "/quiz", "destination": "/site/quiz.html" },
     { "source": "/signs", "destination": "/site/signs.html" },
+    { "source": "/cheatsheet", "destination": "/site/cheatsheet.html" },
     { "source": "/data/:path*", "destination": "/data/:path*" }
+  ],
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true }
   ],
   "headers": [
     {
@@ -30,7 +34,14 @@
     {
       "source": "/data/questions.json",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        { "key": "Cache-Control", "value": "public, max-age=3600" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }
+      ]
+    },
+    {
+      "source": "/data/explanations.json",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }
       ]
     }
   ]

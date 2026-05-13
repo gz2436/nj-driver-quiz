@@ -45,12 +45,13 @@ This is a personal study tool, not affiliated with the NJ Motor Vehicle Commissi
 │   ├── extract_images.py
 │   ├── cluster.py
 │   └── reconcile.py
-├── data/                       # 题库（入 git）
-│   ├── questions.json
-│   ├── explanations.json
-│   ├── topics.json
-│   ├── images.json
-│   └── images/                 # 含 manual_signs/
+├── data/                       # 题库
+│   ├── topics.json             # 分类元数据（入 git）
+│   ├── questions.sample.json   # 10 题样例，开源演示用（入 git）
+│   ├── explanations.sample.json # 配套样例解析（入 git）
+│   ├── questions.json          # 完整 567 题，本地保留（不入 git）
+│   ├── explanations.json       # 完整解析（不入 git）
+│   └── images/                 # 题目配图（不入 git）
 ├── site/                       # 静态网站
 │   ├── index.html
 │   ├── quiz.html
@@ -64,13 +65,21 @@ This is a personal study tool, not affiliated with the NJ Motor Vehicle Commissi
 ## 本地开发 / Local Dev
 
 ```bash
-# 简单的本地服务器
-cd site
-python3 -m http.server 8000
-# 打开 http://localhost:8000
+# 任意静态服务器（仓库根目录）
+npx live-server --port=8000 --no-browser --quiet
+# 打开 http://localhost:8000/site/
 ```
 
-或者用任意静态服务器（serve、http-server 等）。注意 `fetch('../data/questions.json')` 需要 HTTP 协议下访问，**不能**用 `file://` 直接打开 `index.html`。
+注意 `fetch('../data/questions.json')` 需要 HTTP 协议下访问，**不能**用 `file://` 直接打开 `index.html`。
+
+### 关于题库
+
+仓库默认只提供 **10 道样例题**（`data/questions.sample.json`），用于跑通代码、看 UI、提 PR。完整 567 题中英对照题库是作者整理的成果，未公开。
+
+clone 仓库后直接运行会自动加载样例数据，页面顶部会显示横条提示「样例模式」。如需完整题库可：
+
+1. **自行整理**：从 [aiqiang.org](https://www.aiqiang.org/post/nj-driverlicense-written-exam-practice) 与 [NJ Driver Manual](https://www.nj.gov/mvc/pdf/license/drivermanual.pdf) 起点，参考 `data/questions.sample.json` 的结构生成 `data/questions.json` 即可
+2. **联系作者**：研究/学习用途可申请获取完整题库
 
 ## 重建题库 / Rebuild Question Bank
 

@@ -4,6 +4,16 @@ sources/
 *.doc
 *.pdf
 
+# Curated question bank — kept private. Sample versions are committed.
+data/questions.json
+data/explanations.json
+data/images/
+
+# Allow sample data + topic schema to be committed
+!data/questions.sample.json
+!data/explanations.sample.json
+!data/topics.json
+
 # Build artifacts
 /tmp/
 
@@ -15,6 +25,7 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+.claude/
 
 # Node (if added later)
 node_modules/

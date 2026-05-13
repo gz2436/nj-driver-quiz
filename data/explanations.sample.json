@@ -1,0 +1,58 @@
+{
+  "inspection_freq": {
+    "zh": "NJ 燃油/柴油载客车辆每 2 年验车一次。新车前 5 年免检。商用车每年验车一次。",
+    "en": "NJ gas/diesel passenger vehicles: every 2 years. New cars exempt first 5 years. Commercial: yearly.",
+    "source_label": "NJ Manual p162",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "NJ 车辆检查　Inspection",
+      "rows": [
+        [
+          "燃油/柴油客车　Passenger",
+          "每 2 年"
+        ],
+        [
+          "商用车　Commercial",
+          "每年"
+        ],
+        [
+          "新车前 5 年　New car",
+          "免检"
+        ],
+        [
+          "外州迁入　Out-of-state move",
+          "14 days"
+        ]
+      ]
+    }
+  },
+  "skid_recovery": {
+    "zh": "车辆打滑时：松开油门和刹车，将方向盘转向打滑（车尾甩出）的方向。绝不能猛踩刹车或反向打方向。",
+    "en": "If your car skids: ease off gas and brake, steer in the direction the rear is skidding. Never slam brakes or steer opposite.",
+    "source_label": "NJ Manual (defensive driving)",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf"
+  },
+  "alcohol_equivalent": {
+    "zh": "一杯标准饮品的酒精含量大致相等：12 盎司啤酒 ≈ 5 盎司葡萄酒（12%）≈ 1.5 盎司 86 度烈酒。",
+    "en": "Standard drink equivalents: 12 oz beer ≈ 5 oz wine (12%) ≈ 1.5 oz 86-proof liquor.",
+    "source_label": "NJ Driver Manual p116",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "一杯标准饮品　One Standard Drink",
+      "rows": [
+        [
+          "啤酒　Beer",
+          "12 oz"
+        ],
+        [
+          "葡萄酒 12%　Wine",
+          "5 oz"
+        ],
+        [
+          "86 度烈酒　Liquor (86-proof)",
+          "1.5 oz"
+        ]
+      ]
+    }
+  }
+}

@@ -4,138 +4,337 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>新泽西驾照笔试练习 NJ Driver Quiz</title>
-<meta name="description" content="新泽西 NJ 驾照笔试中英对照练习，含官方手册校验、易错题、模拟考试。">
+<meta name="description" content="新泽西 NJ 驾照笔试中英对照练习，含官方手册校验、易错题、模拟考试、错题本。">
+<meta name="theme-color" content="#1a1a1a">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="新泽西驾照笔试 · NJ Driver Quiz">
+<meta property="og:description" content="567 题中英对照，模拟考试 + 易错题 + 错题本。">
+<meta property="og:image" content="/site/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="style.css">
+<script async src="https://tally.so/widgets/embed.js"></script>
 </head>
 <body>
 
-<div class="container">
-  <div class="entry">
-    <h1>新泽西驾照笔试练习</h1>
-    <div class="sub">NJ Driver License Practice · 中英对照 · 题库已与官方手册交叉校验</div>
+<div class="container home-v4">
 
-    <div class="mode-grid">
-      <a class="mode-card" href="quiz.html?mode=full">
-        <div class="title">完整练习</div>
-        <div class="desc">所有题目，可随机或顺序，即时反馈 + 解析</div>
-        <div class="count" id="full-count">--</div>
+  <!-- Compact bilingual header -->
+  <header class="home-head">
+    <h1>新泽西驾照笔试</h1>
+    <p class="home-head-en">New Jersey Driver Test</p>
+  </header>
+
+  <!-- One menu card with all modes — same style as quiz card -->
+  <div class="card menu-card">
+
+    <!-- Primary row: 快速浏览 (Anki-style flip through with answers) -->
+    <a class="menu-row menu-row-primary" href="quiz.html?mode=browse">
+      <div class="menu-row-body">
+        <div class="menu-row-title">快速浏览</div>
+        <div class="menu-row-desc">题目 + 答案直接看，Anki 式翻题</div>
+      </div>
+      <div class="menu-row-meta">
+        <span class="menu-row-num"><span id="browse-num">—</span> 题</span>
+        <svg class="menu-row-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+    </a>
+
+    <!-- Paired block: 完整练习 + 出题顺序 (one hover unit) -->
+    <div class="menu-primary-block">
+      <a class="menu-row" href="quiz.html?mode=full">
+        <div class="menu-row-body">
+          <div class="menu-row-title">开始完整练习</div>
+          <div class="menu-row-desc">全题库随机抽题，错题自动归档</div>
+        </div>
+        <div class="menu-row-meta">
+          <svg class="menu-row-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </div>
       </a>
-      <a class="mode-card" href="quiz.html?mode=easy">
-        <div class="title">易错题</div>
-        <div class="desc">从易错题题库精选，快速过一遍高频题</div>
-        <div class="count" id="easy-count">--</div>
-      </a>
-      <a class="mode-card" href="#" id="mode-topic-btn">
-        <div class="title">按分类练习</div>
-        <div class="desc">选标志、酒驾、停车、GDL... 一类一类攻克</div>
-        <div class="count">分类</div>
-      </a>
-      <a class="mode-card" href="quiz.html?mode=mock">
-        <div class="title">模拟考试</div>
-        <div class="desc">随机 50 题，提交后才出分；NJ 实考形式</div>
-        <div class="count">50 题</div>
-      </a>
-      <a class="mode-card" href="quiz.html?mode=wrong">
-        <div class="title">我的错题本</div>
-        <div class="desc">本地保存的答错题；定向重练</div>
-        <div class="count" id="wrong-count">--</div>
-      </a>
-      <a class="mode-card" href="signs.html">
-        <div class="title">交通标志参考</div>
-        <div class="desc">来自官方手册的标志速查表（颜色/形状）</div>
-        <div class="count">参考</div>
-      </a>
+      <div class="menu-suborder">
+        <span class="menu-suborder-lbl">出题顺序</span>
+        <div class="order-toggle" id="cta-order-toggle" role="group" aria-label="出题顺序">
+          <button type="button" data-order="random">随机</button>
+          <button type="button" data-order="sequential">默认</button>
+        </div>
+      </div>
     </div>
 
-    <div class="topic-chooser" id="topic-chooser">
-      <h3>选择分类（可多选）</h3>
-      <div class="topic-grid" id="topic-grid"></div>
-      <button class="btn primary" id="topic-start" disabled>开始练习</button>
-    </div>
+    <a class="menu-row" href="quiz.html?mode=easy">
+      <div class="menu-row-body">
+        <div class="menu-row-title">易错题</div>
+        <div class="menu-row-desc">高频易错快速过一遍</div>
+      </div>
+      <div class="menu-row-meta">
+        <span class="menu-row-num"><span id="easy-num">—</span> 题</span>
+        <svg class="menu-row-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+    </a>
 
-    <div class="entry-stats">
-      <h3>个人记录</h3>
-      <div class="row"><span class="label">题库版本</span><span class="value" id="version">--</span></div>
-      <div class="row"><span class="label">题目总数</span><span class="value" id="total-q">--</span></div>
-      <div class="row"><span class="label">累计尝试</span><span class="value" id="total-attempts">--</span></div>
-      <div class="row"><span class="label">已收藏</span><span class="value" id="bookmark-count">--</span></div>
-      <div class="row"><span class="label">错题本</span><span class="value" id="wrong-stat">--</span></div>
-      <div class="row"><span class="label">最近模考</span><span class="value" id="last-mock">--</span></div>
-    </div>
+    <a class="menu-row" href="quiz.html?mode=mock">
+      <div class="menu-row-body">
+        <div class="menu-row-title">模拟考试</div>
+        <div class="menu-row-desc">仿真 NJ 实考，提交才出分</div>
+      </div>
+      <div class="menu-row-meta">
+        <span class="menu-row-num"><span>50</span> 题</span>
+        <svg class="menu-row-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+    </a>
+
+    <a class="menu-row" href="#" id="mode-topic-btn">
+      <div class="menu-row-body">
+        <div class="menu-row-title">按分类练习</div>
+        <div class="menu-row-desc">标志、酒驾、GDL、停车等</div>
+      </div>
+      <div class="menu-row-meta">
+        <span class="menu-row-num"><span id="topic-num">—</span> 类</span>
+        <svg class="menu-row-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+    </a>
+
+    <a class="menu-row" href="quiz.html?mode=wrong">
+      <div class="menu-row-body">
+        <div class="menu-row-title">错题本</div>
+        <div class="menu-row-desc">浏览器本地记录，定向重练</div>
+      </div>
+      <div class="menu-row-meta">
+        <span class="menu-row-num"><span id="wrong-num">—</span> 道</span>
+        <svg class="menu-row-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+    </a>
+
   </div>
+
+  <!-- Footer: 一行 hairline 之上，左侧链接 / 中央 trace / 右侧清除 -->
+  <footer class="home-below">
+    <nav class="home-refs">
+      <a href="cheatsheet.html">考前速记</a>
+      <span class="ref-sep" aria-hidden="true">·</span>
+      <a href="signs.html">交通标志</a>
+    </nav>
+    <div class="home-trace" id="masthead-trace"></div>
+    <button class="home-clear" id="clear-data-btn" aria-label="清除本地数据" title="清除本地数据">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 7h16"/>
+        <path d="M10 11v6M14 11v6"/>
+        <path d="M6 7l1 12a2 2 0 002 2h6a2 2 0 002-2l1-12"/>
+        <path d="M9 7V5a1 1 0 011-1h4a1 1 0 011 1v2"/>
+      </svg>
+    </button>
+  </footer>
 </div>
 
 <script src="app.js"></script>
 <script>
 (async function() {
   const state = initPage();
+  const STORAGE_KEY_LOCAL = 'nj_quiz_v1';
 
-  // Load questions to populate counts
   let questions = [];
   let topicsMeta = {};
   try {
-    questions = await fetch('../data/questions.json').then(r => r.json());
-    topicsMeta = await fetch('../data/topics.json').then(r => r.json());
+    const [qq, tt] = await Promise.all([
+      fetchData('../data/questions.json'),
+      fetchData('../data/topics.json'),
+    ]);
+    questions = qq.data;
+    topicsMeta = tt.data;
   } catch (e) {
     console.error('Failed to load data:', e);
   }
 
-  // Populate counts
-  document.getElementById('full-count').textContent = `${questions.length} 题`;
-  const easyCount = questions.filter(q => q.is_common_mistake).length;
-  document.getElementById('easy-count').textContent = `${easyCount} 题`;
-  document.getElementById('wrong-count').textContent = `${state.wrongAnswers.length} 题`;
-  document.getElementById('total-q').textContent = questions.length;
-  document.getElementById('total-attempts').textContent = state.totalAttempts;
-  document.getElementById('bookmark-count').textContent = state.bookmarks.length;
-  document.getElementById('wrong-stat').textContent = state.wrongAnswers.length;
-  document.getElementById('version').textContent = 'v2026.05.12';
-  if (state.mockExamHistory.length > 0) {
-    const last = state.mockExamHistory[state.mockExamHistory.length - 1];
-    document.getElementById('last-mock').textContent = `${last.score}/${last.total} (${last.date})`;
-  } else {
-    document.getElementById('last-mock').textContent = '尚未参加';
-  }
+  const uniqueQuestions = questions.filter(q => !q.is_duplicate_of);
+  const topicKeys = Object.keys(topicsMeta).filter(k => k !== 'general');
 
-  // Topic chooser
-  const topicCounts = {};
-  for (const q of questions) {
-    for (const t of q.topics) {
-      topicCounts[t] = (topicCounts[t] || 0) + 1;
-    }
-  }
-  const topicBtn = document.getElementById('mode-topic-btn');
-  const chooser = document.getElementById('topic-chooser');
-  const grid = document.getElementById('topic-grid');
-  const startBtn = document.getElementById('topic-start');
-  const selectedTopics = new Set();
+  document.getElementById('browse-num').textContent = uniqueQuestions.length;
+  document.getElementById('easy-num').textContent = uniqueQuestions.filter(q => q.is_common_mistake).length;
+  document.getElementById('wrong-num').textContent = state.wrongAnswers.length;
+  document.getElementById('topic-num').textContent = topicKeys.length;
 
-  const topicOrder = Object.keys(topicCounts).sort((a, b) => topicCounts[b] - topicCounts[a]);
-  for (const t of topicOrder) {
-    const meta = topicsMeta[t] || { zh: t, en: t };
-    const chip = document.createElement('div');
-    chip.className = 'topic-chip';
-    chip.innerHTML = `${meta.zh} <span class="count">${topicCounts[t]}</span>`;
-    chip.addEventListener('click', () => {
-      if (selectedTopics.has(t)) {
-        selectedTopics.delete(t);
-        chip.classList.remove('selected');
-      } else {
-        selectedTopics.add(t);
-        chip.classList.add('selected');
-      }
-      startBtn.disabled = selectedTopics.size === 0;
+  // 始终显示 trace 三段：累计 / 错题 / 上次模考；无数据时用 — 占位
+  const lastMock = state.mockExamHistory.length > 0
+    ? state.mockExamHistory[state.mockExamHistory.length - 1]
+    : null;
+  const traceParts = [
+    `累计 <strong>${state.totalAttempts || 0}</strong>`,
+    `错题 <strong>${state.wrongAnswers.length}</strong>`,
+    `上次模考 <strong>${lastMock ? `${lastMock.score}/${lastMock.total}` : '—/—'}</strong>`,
+  ];
+  document.getElementById('masthead-trace').innerHTML = traceParts.join(' <span class="trace-dot">·</span> ');
+
+  // Order toggle
+  const ctaToggle = document.getElementById('cta-order-toggle');
+  function updateOrderButtons() {
+    ctaToggle.querySelectorAll('button').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.order === state.orderMode);
     });
-    grid.appendChild(chip);
+  }
+  updateOrderButtons();
+  ctaToggle.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (btn.dataset.order === state.orderMode) return;
+      state.orderMode = btn.dataset.order;
+      saveState(state);
+      updateOrderButtons();
+    });
+  });
+
+  // Topic modal
+  const topicCounts = {};
+  for (const q of uniqueQuestions) {
+    for (const t of q.topics) topicCounts[t] = (topicCounts[t] || 0) + 1;
+  }
+  const topicOrder = Object.keys(topicCounts).sort((a, b) => topicCounts[b] - topicCounts[a]);
+
+  document.getElementById('mode-topic-btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    openTopicModal();
+  });
+
+  function openTopicModal() {
+    const selected = new Set();
+    const backdrop = document.createElement('div');
+    backdrop.className = 'modal-backdrop';
+    backdrop.innerHTML = `
+      <div class="modal modal-topic">
+        <div class="modal-topic-head">
+          <h2>选择分类</h2>
+          <p class="modal-sub">可多选，开始后只练这些主题</p>
+        </div>
+
+        <div class="topic-list-head">
+          <span class="topic-list-label">分类</span>
+          <span class="topic-list-actions">
+            <button type="button" class="topic-list-action" id="topic-select-all">全选</button>
+            <span class="topic-list-sep" aria-hidden="true">·</span>
+            <button type="button" class="topic-list-action" id="topic-select-clear" disabled>清空</button>
+            <span class="topic-list-status" id="topic-status">未选</span>
+          </span>
+        </div>
+
+        <div class="topic-list" id="topic-grid-modal"></div>
+
+        <div class="modal-actions modal-actions-pair">
+          <button class="btn" id="topic-cancel">取消</button>
+          <button class="btn primary" id="topic-start" disabled>开始练习</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(backdrop);
+    const grid = backdrop.querySelector('#topic-grid-modal');
+    const startBtn = backdrop.querySelector('#topic-start');
+    const statusEl = backdrop.querySelector('#topic-status');
+    const selectAllBtn = backdrop.querySelector('#topic-select-all');
+    const clearBtn = backdrop.querySelector('#topic-select-clear');
+    const rowMap = new Map();
+
+    function updateStatus() {
+      const n = selected.size;
+      statusEl.textContent = n === 0 ? '未选' : `已选 ${n} 项`;
+      statusEl.classList.toggle('active', n > 0);
+      startBtn.disabled = n === 0;
+      clearBtn.disabled = n === 0;
+      selectAllBtn.disabled = n === topicOrder.length;
+      let totalQ = 0;
+      for (const t of selected) totalQ += topicCounts[t] || 0;
+      startBtn.textContent = n === 0 ? '开始练习' : `开始练习 · ${totalQ} 题`;
+    }
+
+    for (const t of topicOrder) {
+      const meta = topicsMeta[t] || { zh: t, en: t };
+      const row = document.createElement('button');
+      row.className = 'topic-row';
+      row.type = 'button';
+      row.innerHTML = `
+        <span class="topic-row-check" aria-hidden="true"></span>
+        <span class="topic-row-name">${meta.zh}</span>
+        <span class="topic-row-count">${topicCounts[t]}</span>
+      `;
+      row.addEventListener('click', () => {
+        if (selected.has(t)) { selected.delete(t); row.classList.remove('selected'); }
+        else { selected.add(t); row.classList.add('selected'); }
+        updateStatus();
+      });
+      grid.appendChild(row);
+      rowMap.set(t, row);
+    }
+    updateStatus();
+
+    selectAllBtn.addEventListener('click', () => {
+      for (const t of topicOrder) {
+        selected.add(t);
+        rowMap.get(t).classList.add('selected');
+      }
+      updateStatus();
+    });
+    clearBtn.addEventListener('click', () => {
+      selected.clear();
+      for (const row of rowMap.values()) row.classList.remove('selected');
+      updateStatus();
+    });
+
+    const close = () => backdrop.remove();
+    backdrop.querySelector('#topic-cancel').addEventListener('click', close);
+    backdrop.addEventListener('click', (e) => { if (e.target === backdrop) close(); });
+    document.addEventListener('keydown', function onEsc(e) {
+      if (e.key === 'Escape') { close(); document.removeEventListener('keydown', onEsc); }
+    });
+    startBtn.addEventListener('click', () => {
+      const ts = [...selected].join(',');
+      location.href = `quiz.html?mode=topic&t=${encodeURIComponent(ts)}`;
+    });
   }
 
-  topicBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    chooser.classList.toggle('open');
-  });
-  startBtn.addEventListener('click', () => {
-    const ts = [...selectedTopics].join(',');
-    location.href = `quiz.html?mode=topic&t=${encodeURIComponent(ts)}`;
+  // Clear data
+  document.getElementById('clear-data-btn').addEventListener('click', () => {
+    const backdrop = document.createElement('div');
+    backdrop.className = 'modal-backdrop';
+    backdrop.innerHTML = `
+      <div class="modal modal-confirm">
+        <h2>清除本地数据</h2>
+        <p>将清除浏览器中保存的所有数据：错题记录、累计尝试次数、模考历史、语言偏好。此操作不可撤销。</p>
+        <p class="confirm-en">Clear all locally-stored data: wrong-answer log, attempts, mock history, language preference. This cannot be undone.</p>
+        <div class="modal-actions modal-actions-pair">
+          <button class="btn" id="confirm-cancel">取消</button>
+          <button class="btn primary danger" id="confirm-clear">确认清除</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(backdrop);
+    document.getElementById('confirm-cancel').addEventListener('click', () => backdrop.remove());
+    document.getElementById('confirm-clear').addEventListener('click', () => {
+      backdrop.remove();
+      const t = document.createElement('div');
+      t.className = 'toast';
+      t.innerHTML = `<span class="toast-glyph spinner spinner-sm" aria-hidden="true"></span><span class="toast-text">正在清除…</span>`;
+      document.body.appendChild(t);
+      setTimeout(() => t.classList.add('show'), 10);
+      try { localStorage.removeItem(STORAGE_KEY_LOCAL); } catch(e) {}
+
+      // 1.2s 后开始过渡：先淡出 spinner + 文字
+      setTimeout(() => {
+        const glyph = t.querySelector('.toast-glyph');
+        const text = t.querySelector('.toast-text');
+        glyph.style.opacity = '0';
+        text.style.opacity = '0';
+        // 150ms 淡出完成后换内容、扩展气泡、淡入
+        setTimeout(() => {
+          glyph.className = 'toast-glyph toast-check';
+          glyph.innerHTML = `<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+          glyph.style.opacity = '';
+          text.textContent = '已清除所有数据';
+          text.style.opacity = '';
+          t.classList.add('is-done');
+        }, 180);
+      }, 1200);
+
+      setTimeout(() => {
+        t.classList.remove('show');
+        setTimeout(() => location.reload(), 280);
+      }, 3200);
+    });
   });
 })();
 </script>

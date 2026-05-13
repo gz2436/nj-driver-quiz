@@ -1,9 +1,36 @@
-# Vercel-specific exclusions (don't ship source materials or build tooling)
+# What NOT to upload to Vercel.
+# When this file exists, Vercel uses it INSTEAD of .gitignore. So we must explicitly
+# list every exclusion here — and crucially, we do NOT list data/questions.json
+# or data/explanations.json, so the full question bank gets deployed (unlike on
+# GitHub where .gitignore keeps them private).
+
+# Source materials and build inputs
 sources/
 tools/
-docs/web_findings.md
+docs/
 *.docx
 *.doc
 *.pdf
 *.md
 !README.md
+
+# Sample data — production has the real files
+data/questions.sample.json
+data/explanations.sample.json
+
+# Dev / OS / editor cruft
+/tmp/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local-only directories
+.claude/
+.github/
