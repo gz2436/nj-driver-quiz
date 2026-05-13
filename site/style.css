@@ -367,6 +367,54 @@ button {
     outline: none !important;
     transition: none !important;
   }
+
+  /* 题目工具栏图标（朗读/报错） */
+  .icon-action,
+  .icon-action:hover,
+  .icon-action:focus,
+  .icon-action:focus-visible,
+  .icon-action:active {
+    color: var(--text-3) !important;
+    -webkit-text-fill-color: var(--text-3) !important;
+    background: none !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    outline: none !important;
+    transition: none !important;
+  }
+  .icon-action.active {
+    color: var(--text) !important;
+    -webkit-text-fill-color: var(--text) !important;
+  }
+
+  /* 首页 / 错题本 等清理按钮 */
+  .home-clear,
+  .home-clear:hover,
+  .home-clear:focus,
+  .home-clear:focus-visible,
+  .home-clear:active,
+  .ghost-clear,
+  .ghost-clear:hover,
+  .ghost-clear:focus,
+  .ghost-clear:focus-visible,
+  .ghost-clear:active,
+  .strip-clear,
+  .strip-clear:hover,
+  .strip-clear:focus,
+  .strip-clear:focus-visible,
+  .strip-clear:active,
+  .stats-clear,
+  .stats-clear:hover,
+  .stats-clear:focus,
+  .stats-clear:focus-visible,
+  .stats-clear:active {
+    color: var(--text-3) !important;
+    -webkit-text-fill-color: var(--text-3) !important;
+    background: none !important;
+    background-color: transparent !important;
+    outline: none !important;
+    transition: none !important;
+  }
 }
 
 /* Hardcoded :visited colors — CSS variables don't resolve in WebKit :visited
@@ -2542,12 +2590,6 @@ body[data-lang="en"] .explanation .body .en {
   .quiz-header h2 {
     font-size: var(--t-sm);
     max-width: 80px;
-  }
-
-  /* Swipe-to-navigate: horizontal pan owned by JS, vertical scroll by browser */
-  #quiz-view .card {
-    touch-action: pan-y;
-    will-change: transform;
   }
 
   /* Question card controls — keep three on one row, icons only */
