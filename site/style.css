@@ -2603,22 +2603,24 @@ body[data-lang="en"] .explanation .body .en {
   /* Mobile: hide prev/next buttons, swipe handles navigation. */
   .card .controls #prev-btn,
   .card .controls #next-btn { display: none; }
-  .card .controls .swipe-hint {
-    display: inline-flex;
-    align-items: center;
-    font-size: 11px;
-    color: var(--text-3);
-    letter-spacing: 0.05em;
-    flex: 1;
-    justify-content: center;
-  }
   .card .controls {
     gap: var(--s-3);
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: center;
   }
   .jumper { font-size: 12px; flex-shrink: 0; }
   .jumper input { width: 36px; }
+
+  /* Swipe hint sits outside the card, below it */
+  .swipe-hint {
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-3);
+    letter-spacing: 0.05em;
+    margin-top: var(--s-3);
+    user-select: none;
+  }
 
   /* Below card — hint not useful without keyboard */
   .below-card .hint { display: none; }
