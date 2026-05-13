@@ -1341,19 +1341,25 @@ a:hover {
   gap: var(--s-3);
 }
 
-.home-refs a {
+.home-refs a,
+.home-refs a:link,
+.home-refs a:visited,
+.home-refs a:focus,
+.home-refs a:focus-visible,
+.home-refs a:active {
   color: var(--text-2);
   font-size: 13px;
   text-decoration: underline;
   text-decoration-color: var(--border-strong);
   text-underline-offset: 3px;
+  outline: none;
+  outline-color: transparent;
   -webkit-user-drag: none;
-  transition: color var(--d-fast) var(--e-out), text-decoration-color var(--d-fast) var(--e-out), background var(--d-fast) var(--e-out), border-color var(--d-fast) var(--e-out);
+  -webkit-tap-highlight-color: transparent;
 }
 
-.home-refs a:visited {
-  color: var(--text-2);
-  text-decoration-color: var(--border-strong);
+.home-refs a {
+  transition: color var(--d-fast) var(--e-out), text-decoration-color var(--d-fast) var(--e-out), background var(--d-fast) var(--e-out), border-color var(--d-fast) var(--e-out);
 }
 
 .home-refs .ref-icon { display: none; }
@@ -1441,10 +1447,16 @@ a:hover {
   .home-refs .ref-sep { display: none; }
   .home-refs .ref-icon { display: inline-block; width: 13px; height: 13px; }
 
-  .home-refs a {
+  .home-refs a,
+  .home-refs a:link,
+  .home-refs a:visited,
+  .home-refs a:focus,
+  .home-refs a:focus-visible,
+  .home-refs a:active {
     height: 26px;
     padding: 0 8px;
     border: 1px solid var(--border);
+    border-color: var(--border);
     border-radius: var(--r-full);
     display: inline-flex;
     align-items: center;
@@ -1452,9 +1464,13 @@ a:hover {
     text-decoration: none;
     color: var(--text-2);
     background: transparent;
+    background-color: transparent;
+    outline: none;
+    outline-color: transparent;
     font-size: 11px;
     line-height: 1;
     white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .home-refs .ref-label {
