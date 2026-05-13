@@ -3,7 +3,7 @@
 
 Outputs:
 - /Users/gavincheung/NYU/Driver/data/images/*.{jpg,png}  (docx inline images)
-- /Users/gavincheung/NYU/Driver/data/images/manual_signs/*.png  (rendered pages 213-224)
+- /Users/gavincheung/NYU/Driver/data/images/manual_signs/*.jpg  (rendered pages 213-224)
 """
 import os
 import shutil
@@ -59,8 +59,10 @@ def render_manual_signs_pages():
             page = pdf.pages[page_num - 1]  # 0-indexed
             try:
                 img = page.to_image(resolution=144).original
-                out_path = f'{out_dir}/manual_p{page_num}.png'
-                img.save(out_path, 'PNG', optimize=True)
+                out_path = f'{out_dir}/manual_p{page_num}.jpg'
+                if img.mode != 'RGB':
+                    img = img.convert('RGB')
+                img.save(out_path, 'JPEG', quality=80, optimize=True)
                 rendered += 1
             except Exception as e:
                 print(f'  Failed page {page_num}: {e}', file=sys.stderr)

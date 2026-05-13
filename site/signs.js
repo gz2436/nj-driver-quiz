@@ -9,7 +9,7 @@
     const div = document.createElement('div');
     div.className = 'sign-card';
     div.innerHTML = `
-      <img src="../data/images/manual_signs/manual_p${p}.png" alt="NJ Driver Manual page ${p}" loading="lazy">
+      <img src="../data/images/manual_signs/manual_p${p}.jpg" alt="NJ Driver Manual page ${p}" loading="lazy">
       <div class="pagenum">p${p}</div>
     `;
     div.addEventListener('click', () => openLightbox(idx));
@@ -41,7 +41,7 @@
 
     function render() {
       const p = pages[idx];
-      img.src = `../data/images/manual_signs/manual_p${p}.png`;
+      img.src = `../data/images/manual_signs/manual_p${p}.jpg`;
       img.alt = `NJ Driver Manual p${p}`;
       count.textContent = `${idx + 1} / ${pages.length}`;
       prevBtn.disabled = idx === 0;
