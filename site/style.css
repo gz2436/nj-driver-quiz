@@ -3082,8 +3082,8 @@ kbd {
 }
 
 @media (max-width: 540px) {
-  .auto-switch-label { display: none; }
-  .auto-switch { padding: 0 6px; }
+  .auto-switch-label { display: inline; font-size: 10px; }
+  .auto-switch { padding: 0 6px; gap: 6px; }
 }
 
 /* === Mock exam === */
