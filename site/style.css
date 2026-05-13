@@ -3465,7 +3465,10 @@ footer.site-footer {
   .footer-inner {
     justify-content: center;
     text-align: center;
-    padding: var(--s-2) var(--s-4);
+    padding-top: var(--s-2);
+    padding-bottom: var(--s-2);
+    padding-left: max(env(safe-area-inset-left), var(--s-8));
+    padding-right: max(env(safe-area-inset-right), var(--s-8));
     gap: var(--s-1);
     row-gap: var(--s-1);
   }
@@ -3474,7 +3477,7 @@ footer.site-footer {
     justify-content: center;
     font-size: 11px;
   }
-  .footer-source .footer-label,
+  .footer-source .footer-label { display: none; }
   .footer-source a,
   .footer-nav .nav-disclaimer {
     font-size: 11px;
@@ -3807,32 +3810,65 @@ footer.site-footer {
   }
 }
 
-/* Touch devices: neutralize :hover background/transform changes so tapped
-   elements don't keep a stuck highlight. Color hovers can stay (they read as
-   the natural "active" indication, not as stuck artifacts). */
+/* Touch devices: kill all :hover side effects so tapped elements don't keep a
+   stuck highlight. Mirror the non-hover state for color/background/border/
+   shadow/transform/text-decoration. */
 @media (hover: none) {
-  .menu-row:hover,
-  .menu-primary-block:hover,
+  a:hover,
+  .topic-list-action:hover:not(:disabled),
+  .topic-row:hover,
+  .topic-row:hover .topic-row-check,
   .btn:hover:not(:disabled),
   .btn.primary:hover:not(:disabled),
-  .option:hover,
-  .topic-row:hover,
-  .topic-list-action:hover,
-  .footer-nav .footer-icon-link:hover,
-  .footer-nav .nav-disclaimer:hover,
-  .footer-source a:hover,
+  .btn.danger:hover:not(:disabled),
+  .btn.ghost:hover:not(:disabled),
+  .home-cta:hover,
+  .home-cta:hover .home-cta-num,
+  .home-mode:hover,
+  .home-mode:hover .num,
+  .home-aux-link:hover,
+  .menu-row:hover,
+  .menu-row:hover .menu-row-arrow,
+  .menu-primary-block:hover,
+  .menu-primary-block:hover .menu-row-arrow,
+  .menu-primary-block .menu-row:hover,
+  .order-toggle button:hover,
+  .home-refs a:hover,
+  .ghost-clear:hover,
+  .home-clear:hover,
+  .ref-pill:hover,
+  .ref-pill:hover .ref-arrow,
+  .link-card:hover,
+  .link-card:hover .link-arrow,
+  .strip-clear:hover,
+  .stats-clear:hover,
+  .topic-chip:hover,
+  .topic-chip-special:hover,
   .back-btn:hover,
   .icon-action:hover,
-  .home-clear:hover,
-  .review-filter button:hover {
+  .option:hover:not(:disabled),
+  .auto-switch:hover,
+  .mock-intro-cta:hover .cta-arrow,
+  .empty-back:hover,
+  .result-back:hover,
+  .review-filter button:hover,
+  .mr-row:hover .mr-stem,
+  .sign-card:hover,
+  .footer-source a:hover,
+  .footer-nav a:hover,
+  .footer-nav .footer-icon-link:hover,
+  .footer-nav .nav-disclaimer:hover,
+  .lightbox-controls .nav:hover,
+  .lightbox-close:hover,
+  .topic-special-row:hover .topic-special-arrow {
     background-color: revert;
     border-color: revert;
+    color: revert;
+    box-shadow: revert;
+    text-decoration-color: revert;
     transform: none;
   }
-  .menu-row:hover .menu-row-arrow,
-  .menu-primary-block:hover .menu-row-arrow,
-  .mock-intro-cta:hover .cta-arrow,
-  .topic-special-row:hover .topic-special-arrow {
-    transform: none;
+  .home-aux-link:hover::before {
+    width: revert;
   }
 }
