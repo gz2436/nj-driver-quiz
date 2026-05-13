@@ -40,6 +40,7 @@
         <svg class="menu-row-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
       </div>
     </a>
+    <div class="menu-sep" aria-hidden="true"></div>
 
     <!-- Paired block: 完整练习 + 出题顺序 (one hover unit) -->
     <div class="menu-primary-block">
@@ -60,6 +61,7 @@
         </div>
       </div>
     </div>
+    <div class="menu-sep" aria-hidden="true"></div>
 
     <a class="menu-row" href="quiz.html?mode=easy">
       <div class="menu-row-body">
@@ -71,6 +73,7 @@
         <svg class="menu-row-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
       </div>
     </a>
+    <div class="menu-sep" aria-hidden="true"></div>
 
     <a class="menu-row" href="quiz.html?mode=mock">
       <div class="menu-row-body">
@@ -82,6 +85,7 @@
         <svg class="menu-row-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
       </div>
     </a>
+    <div class="menu-sep" aria-hidden="true"></div>
 
     <a class="menu-row" href="#" id="mode-topic-btn">
       <div class="menu-row-body">
@@ -93,6 +97,7 @@
         <svg class="menu-row-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
       </div>
     </a>
+    <div class="menu-sep" aria-hidden="true"></div>
 
     <a class="menu-row" href="quiz.html?mode=wrong">
       <div class="menu-row-body">
@@ -317,12 +322,13 @@
     document.body.appendChild(backdrop);
     document.getElementById('confirm-cancel').addEventListener('click', () => backdrop.remove());
     document.getElementById('confirm-clear').addEventListener('click', () => {
-      backdrop.remove();
       try { localStorage.removeItem(STORAGE_KEY_LOCAL); } catch(e) {}
-      const t = document.createElement('div');
-      t.className = 'toast';
-      t.innerHTML = `<span class="toast-glyph toast-check" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="toast-text">已清除所有数据</span>`;
-      document.body.appendChild(t);
+      // Make the backdrop pass-through-proof while it sits over the page,
+      // and defer its removal so the synthetic click cannot leak through
+      // to a menu-row underneath (which would mark it :visited / :focus).
+      backdrop.style.pointerEvents = 'auto';
+      backdrop.innerHTML = `<div class="toast"><span class="toast-glyph toast-check" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="toast-text">已清除所有数据</span></div>`;
+      backdrop.style.background = 'transparent';
       setTimeout(() => location.reload(), 900);
     });
   });

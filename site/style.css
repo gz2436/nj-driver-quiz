@@ -584,10 +584,9 @@ a:hover {
 
 .modal-confirm .modal-actions .btn {
   border-radius: var(--r-full);
-  padding: 0 var(--s-6);
-  min-width: 104px;
+  padding: 0 var(--s-5);
+  min-width: 88px;
   justify-content: center;
-  letter-spacing: 0.04em;
 }
 
 /* modal — topic chooser */
@@ -1150,7 +1149,11 @@ a:hover {
 }
 
 /* Each menu row */
-.menu-row {
+.menu-row,
+.menu-row:link,
+.menu-row:visited,
+.menu-row:focus,
+.menu-row:active {
   display: flex;
   align-items: center;
   gap: var(--s-4);
@@ -1158,22 +1161,20 @@ a:hover {
   text-decoration: none;
   color: var(--text);
   border-radius: var(--r-sm);
-  transition: background var(--d-fast) var(--e-out);
+  outline: none;
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
 }
 
-.menu-row:visited { color: var(--text); }
+.menu-row { transition: background var(--d-fast) var(--e-out); }
 
-/* Separator via box-shadow instead of border-top: box-shadow is not styleable
-   by :visited, so it never picks up the browser's purple visited color. */
-.menu-row+.menu-row,
-.menu-suborder+.menu-row,
-.menu-primary-block+.menu-row {
-  box-shadow: inset 0 1px 0 var(--border);
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+/* Separator: rendered by a sibling <div class="menu-sep"></div> so its color
+   is never tied to anchor state (:visited / :focus / :active). */
+.menu-sep {
+  height: 1px;
+  background: var(--border);
+  margin: 0 var(--s-3);
 }
 
 .menu-row:hover {
