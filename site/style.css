@@ -1159,13 +1159,18 @@ a:hover {
   border-radius: var(--r-sm);
   transition: background var(--d-fast) var(--e-out);
   -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
   user-select: none;
 }
 
+.menu-row:visited { color: var(--text); }
+
+/* Separator via box-shadow instead of border-top: box-shadow is not styleable
+   by :visited, so it never picks up the browser's purple visited color. */
 .menu-row+.menu-row,
 .menu-suborder+.menu-row,
 .menu-primary-block+.menu-row {
-  border-top: 1px solid var(--border);
+  box-shadow: inset 0 1px 0 var(--border);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -3472,10 +3477,7 @@ footer.site-footer {
   .footer-inner {
     justify-content: center;
     text-align: center;
-    padding-top: var(--s-2);
-    padding-bottom: var(--s-2);
-    padding-left: max(env(safe-area-inset-left), var(--s-8));
-    padding-right: max(env(safe-area-inset-right), var(--s-8));
+    padding: var(--s-2) var(--s-4);
     gap: var(--s-1);
     row-gap: var(--s-1);
   }
@@ -3484,7 +3486,7 @@ footer.site-footer {
     justify-content: center;
     font-size: 11px;
   }
-  .footer-source .footer-label { display: none; }
+  .footer-source .footer-label,
   .footer-source a,
   .footer-nav .nav-disclaimer {
     font-size: 11px;

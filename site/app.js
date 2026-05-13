@@ -318,7 +318,7 @@ function renderFooter(state) {
   footer.innerHTML = `
     <div class="footer-inner">
       <div class="footer-source">
-        <span class="footer-label">数据来源</span>
+        <span class="footer-label">整理自</span>
         <a href="https://www.aiqiang.org/post/nj-driverlicense-written-exam-practice" target="_blank" rel="noopener">aiqiang.org</a>
         <span class="footer-cross" aria-hidden="true">×</span>
         <a href="https://www.nj.gov/mvc/pdf/license/drivermanual.pdf" target="_blank" rel="noopener">NJ Driver Manual</a>
