@@ -536,7 +536,7 @@
     // Auto advance
     if (state.autoAdvance && !isBrowse && session.current < session.questions.length - 1) {
       if (autoAdvanceTimer) clearTimeout(autoAdvanceTimer);
-      const delay = isMock ? 600 : 1400;
+      const delay = isMock ? 500 : 1000;
       autoAdvanceTimer = setTimeout(() => {
         autoAdvanceTimer = null;
         nextQ();
