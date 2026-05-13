@@ -3387,6 +3387,17 @@ footer.site-footer {
   flex-wrap: wrap;
 }
 
+@media (max-width: 540px) {
+  .footer-inner {
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-source,
+  .footer-nav {
+    justify-content: center;
+  }
+}
+
 .footer-source {
   display: inline-flex;
   align-items: baseline;
