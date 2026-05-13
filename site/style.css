@@ -352,6 +352,23 @@ button {
     transition: none !important;
   }
 
+  /* 题目选项：锁死非状态-class 时的颜色，避免 iOS sticky hover 把背景涂灰。
+     state 类（.selected / .correct / .wrong）通过更高特异性覆盖以下规则。 */
+  .option:not(.selected):not(.correct):not(.wrong),
+  .option:not(.selected):not(.correct):not(.wrong):hover,
+  .option:not(.selected):not(.correct):not(.wrong):focus,
+  .option:not(.selected):not(.correct):not(.wrong):focus-visible,
+  .option:not(.selected):not(.correct):not(.wrong):active {
+    background: var(--surface-raised) !important;
+    background-color: var(--surface-raised) !important;
+    border-color: var(--border) !important;
+    color: var(--text) !important;
+    -webkit-text-fill-color: var(--text) !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transition: none !important;
+  }
+
   /* footer 图标按钮（分享/github/主题切换） */
   .footer-nav .footer-icon-link,
   .footer-nav .footer-icon-link:link,
