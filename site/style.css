@@ -584,9 +584,10 @@ a:hover {
 
 .modal-confirm .modal-actions .btn {
   border-radius: var(--r-full);
-  padding: 0 var(--s-5);
-  min-width: 92px;
+  padding: 0 var(--s-6);
+  min-width: 104px;
   justify-content: center;
+  letter-spacing: 0.04em;
 }
 
 /* modal — topic chooser */
@@ -1347,6 +1348,11 @@ a:hover {
   text-underline-offset: 3px;
   -webkit-user-drag: none;
   transition: color var(--d-fast) var(--e-out), text-decoration-color var(--d-fast) var(--e-out), background var(--d-fast) var(--e-out), border-color var(--d-fast) var(--e-out);
+}
+
+.home-refs a:visited {
+  color: var(--text-2);
+  text-decoration-color: var(--border-strong);
 }
 
 .home-refs .ref-icon { display: none; }
@@ -3739,6 +3745,10 @@ footer.site-footer {
 
 .toast-check {
   color: var(--text-2);
+}
+
+@media (max-width: 540px) {
+  .toast { bottom: 40px; }
 }
 
 /* === Spinner === */
