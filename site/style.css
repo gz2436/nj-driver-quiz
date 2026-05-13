@@ -283,6 +283,90 @@ button {
     border-color: transparent !important;
     color: var(--text-2) !important;
   }
+
+  /* 速记/标志胶囊：每个状态都锁死边/底/字 + 去 transition + 去 outline */
+  .home-refs a,
+  .home-refs a:link,
+  .home-refs a:visited,
+  .home-refs a:hover,
+  .home-refs a:focus,
+  .home-refs a:focus-visible,
+  .home-refs a:active {
+    border-color: var(--border) !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    color: var(--text-2) !important;
+    -webkit-text-fill-color: var(--text-2) !important;
+    outline: none !important;
+    outline-color: transparent !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    transition: none !important;
+  }
+
+  /* 返回按钮 */
+  .back-btn,
+  .back-btn:hover,
+  .back-btn:focus,
+  .back-btn:focus-visible,
+  .back-btn:active {
+    color: var(--text-2) !important;
+    -webkit-text-fill-color: var(--text-2) !important;
+    background: none !important;
+    background-color: transparent !important;
+    outline: none !important;
+    outline-color: transparent !important;
+    box-shadow: none !important;
+    transition: none !important;
+  }
+
+  /* footer source 链接（aiqiang.org / NJ Driver Manual） */
+  .footer-source a,
+  .footer-source a:link,
+  .footer-source a:visited,
+  .footer-source a:hover,
+  .footer-source a:focus,
+  .footer-source a:focus-visible,
+  .footer-source a:active {
+    color: var(--text-2) !important;
+    -webkit-text-fill-color: var(--text-2) !important;
+    text-decoration: none !important;
+    background: none !important;
+    outline: none !important;
+    transition: none !important;
+  }
+
+  /* 免责声明 */
+  .footer-nav .nav-disclaimer,
+  .footer-nav .nav-disclaimer:link,
+  .footer-nav .nav-disclaimer:visited,
+  .footer-nav .nav-disclaimer:hover,
+  .footer-nav .nav-disclaimer:focus,
+  .footer-nav .nav-disclaimer:focus-visible,
+  .footer-nav .nav-disclaimer:active {
+    color: var(--wrong) !important;
+    -webkit-text-fill-color: var(--wrong) !important;
+    background: none !important;
+    background-color: transparent !important;
+    outline: none !important;
+    transition: none !important;
+  }
+
+  /* footer 图标按钮（分享/github/主题切换） */
+  .footer-nav .footer-icon-link,
+  .footer-nav .footer-icon-link:link,
+  .footer-nav .footer-icon-link:visited,
+  .footer-nav .footer-icon-link:hover,
+  .footer-nav .footer-icon-link:focus,
+  .footer-nav .footer-icon-link:focus-visible,
+  .footer-nav .footer-icon-link:active {
+    color: var(--text-3) !important;
+    -webkit-text-fill-color: var(--text-3) !important;
+    background: none !important;
+    background-color: transparent !important;
+    outline: none !important;
+    transition: none !important;
+  }
 }
 
 /* Hardcoded :visited colors — CSS variables don't resolve in WebKit :visited
