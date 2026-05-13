@@ -138,7 +138,7 @@ html {
 /* Sample-data banner — shown when questions.json is missing and fallback to sample loaded.
    Triggered by JS setting `<html data-sample-mode="1">`. Banner is a sticky strip on top. */
 html[data-sample-mode="1"] body::before {
-  content: '⚠ 此为开源代码自带的样例题（10 题）。完整题库未公开';
+  content: '正在浏览样例（10 题）· 完整版请访问 njq.vercel.app';
   position: sticky;
   top: 0;
   display: block;

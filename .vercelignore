@@ -1,8 +1,8 @@
 # What NOT to upload to Vercel.
 # When this file exists, Vercel uses it INSTEAD of .gitignore. So we must explicitly
-# list every exclusion here — and crucially, we do NOT list data/questions.json
-# or data/explanations.json, so the full question bank gets deployed (unlike on
-# GitHub where .gitignore keeps them private).
+# list every exclusion here — and notably we do NOT list data/questions.json or
+# data/explanations.json, so the full data is included on Vercel (whereas .gitignore
+# keeps them out of the public code repo).
 
 # Source materials and build inputs
 sources/

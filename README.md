@@ -72,14 +72,13 @@ npx live-server --port=8000 --no-browser --quiet
 
 注意 `fetch('../data/questions.json')` 需要 HTTP 协议下访问，**不能**用 `file://` 直接打开 `index.html`。
 
-### 关于题库
+### 关于数据
 
-仓库默认只提供 **10 道样例题**（`data/questions.sample.json`），用于跑通代码、看 UI、提 PR。完整 567 题中英对照题库是作者整理的成果，未公开。
+仓库附带 10 道样例题（`data/questions.sample.json`）用于跑通代码、看 UI、提 PR。本地 clone 后直接运行会加载样例，页面顶部会出现「样例模式」横条。
 
-clone 仓库后直接运行会自动加载样例数据，页面顶部会显示横条提示「样例模式」。如需完整题库可：
+线上完整版：[njq.vercel.app](https://njq.vercel.app)
 
-1. **自行整理**：从 [aiqiang.org](https://www.aiqiang.org/post/nj-driverlicense-written-exam-practice) 与 [NJ Driver Manual](https://www.nj.gov/mvc/pdf/license/drivermanual.pdf) 起点，参考 `data/questions.sample.json` 的结构生成 `data/questions.json` 即可
-2. **联系作者**：研究/学习用途可申请获取完整题库
+数据结构以 `data/questions.sample.json` 为参考，主要来源为 [aiqiang.org](https://www.aiqiang.org/post/nj-driverlicense-written-exam-practice) 与 [NJ Driver Manual](https://www.nj.gov/mvc/pdf/license/drivermanual.pdf)。
 
 ## 重建题库 / Rebuild Question Bank
 

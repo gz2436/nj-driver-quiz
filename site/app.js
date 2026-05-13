@@ -2,8 +2,8 @@
 
 const STORAGE_KEY = 'nj_quiz_v1';
 
-// Fetch a data file, falling back to .sample.json (for open-source clones where the
-// curated bank is private). The site shows a small banner when running on samples.
+// Fetch a data file, falling back to .sample.json when the main file isn't present.
+// A small banner appears when running on samples.
 // URL param ?sample=1 forces sample mode regardless of real file availability.
 async function fetchData(path) {
   const forceSample = new URLSearchParams(location.search).get('sample') === '1';

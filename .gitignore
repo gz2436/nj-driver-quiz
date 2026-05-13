@@ -4,12 +4,15 @@ sources/
 *.doc
 *.pdf
 
-# Curated question bank — kept private. Sample versions are committed.
+# Large data files live in the data store repo, not here
 data/questions.json
 data/explanations.json
+data/explanations.json.backup
 data/images/
+data/images.json
+data/README.md
 
-# Allow sample data + topic schema to be committed
+# Sample data + topic schema are committed for local dev
 !data/questions.sample.json
 !data/explanations.sample.json
 !data/topics.json
@@ -35,3 +38,4 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+.vercel
