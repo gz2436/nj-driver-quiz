@@ -82,10 +82,6 @@ function saveState(state) {
   }
 }
 
-function isWeChat() {
-  return /MicroMessenger/i.test(navigator.userAgent);
-}
-
 function applyLanguage(lang) {
   document.body.setAttribute('data-lang', lang);
 }
@@ -243,19 +239,6 @@ function ensureDisclaimer(state, onReady) {
   }
 }
 
-// === WeChat banner ===
-function setupWechatBanner() {
-  if (!isWeChat()) return;
-  const banner = document.createElement('div');
-  banner.className = 'wechat-banner';
-  banner.innerHTML = `
-    <span>检测到你在微信中打开。建议点右上角"在浏览器中打开"以获得最佳体验。</span>
-    <button title="关闭" id="wechat-close" aria-label="关闭提示">${iconSVG('x')}</button>
-  `;
-  document.body.insertBefore(banner, document.body.firstChild);
-  document.getElementById('wechat-close').addEventListener('click', () => banner.remove());
-}
-
 // === TTS ===
 function speakText(text, lang) {
   if (!('speechSynthesis' in window)) return;
@@ -406,7 +389,6 @@ function initPage(opts = {}) {
   const state = loadState();
   applyLanguage(state.languageDisplay);
   applyTheme(state.theme);
-  setupWechatBanner();
   renderFooter(state);
   ensureDisclaimer(state, opts.onDisclaimerReady);
   return state;
