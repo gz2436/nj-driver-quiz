@@ -1,0 +1,27 @@
+# Oversized official manuals — re-downloadable from the NJ MVC site, kept out of git.
+# Everything else under sources/ is tracked.
+sources/drivermanual.pdf
+sources/nj-chinese-manual-2025.pdf
+
+# Build artifacts
+/tmp/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+.claude/
+
+# Node (if added later)
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.vercel

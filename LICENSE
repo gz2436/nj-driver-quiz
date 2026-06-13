@@ -1,0 +1,69 @@
+This project has two licenses for two kinds of artifacts:
+
+================================================================
+1) Code (everything under tools/ and site/):  MIT License
+================================================================
+
+Copyright (c) 2026 Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+================================================================
+2) Content (data/, docs/canonical_facts.md):
+   Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+================================================================
+
+The content described above (compiled question bank, topic explanations,
+fact citations) is licensed under CC BY-NC 4.0. Summary:
+  - You may share and adapt the content.
+  - You must give appropriate credit.
+  - You may NOT use the content for commercial purposes.
+
+Full license text: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+NOTE: The underlying facts cited from the NJ Driver Manual remain in the
+public domain (U.S. government works). The CC BY-NC scope is the compilation,
+selection, and bilingual explanations only.
+
+
+================================================================
+3) Source materials (everything under sources/):
+   Third-party — NOT covered by the licenses above
+================================================================
+
+Files under sources/ are reference materials authored by third parties
+(community-compiled question sets and similar). Their copyright belongs to the
+respective original authors. They are included here only as provenance for the
+compiled question bank and are NOT licensed under MIT or CC BY-NC by this
+project. If you are a rights holder and want a file removed, please open an
+issue.
+
+
+================================================================
+DISCLAIMER
+================================================================
+
+This project is NOT affiliated with the New Jersey Motor Vehicle Commission,
+any government agency, law firm, or training program. Questions and answers
+are provided for educational reference only. Passing this practice does NOT
+guarantee passing the actual NJ driver knowledge test. The maintainers make
+no warranty of accuracy and assume no liability for errors, omissions, or
+outdated information. Users should always consult the official NJ Driver
+Manual and current law before acting on any information presented here.

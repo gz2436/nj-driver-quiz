@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="/site/">
+<title>练习　新泽西驾照笔试</title>
+<meta name="description" content="新泽西 NJ 驾照笔试在线练习，模拟考试、易错题、按分类、错题本。">
+<meta name="theme-color" content="#1a1a1a">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="新泽西驾照笔试 · NJ Driver Quiz">
+<meta property="og:description" content="567 题中英对照，模拟考试 + 易错题 + 错题本。">
+<meta property="og:image" content="/site/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script>/* pre-paint theme: read stored preference before CSS applies, avoiding light→dark flash */try{var s=JSON.parse(localStorage.getItem('nj_quiz_v1')||'{}');if(s.theme==='light'||s.theme==='dark')document.documentElement.dataset.theme=s.theme;}catch(e){}</script>
+<link rel="stylesheet" href="style.css">
+<script async src="https://tally.so/widgets/embed.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <!-- Header -->
+  <header class="quiz-header">
+    <div class="left">
+      <button class="back-btn" id="back-btn" aria-label="返回首页" title="返回首页">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        <span>返回</span>
+      </button>
+      <h2 id="mode-title">练习</h2>
+    </div>
+    <div class="header-right">
+      <label class="auto-switch" id="auto-switch" title="答题后自动跳到下一题">
+        <input type="checkbox" id="auto-cb">
+        <span class="auto-switch-track"><span class="auto-switch-thumb"></span></span>
+        <span class="auto-switch-label">自动</span>
+      </label>
+      <div class="lang-toggle" id="lang-toggle" title="题目显示语言">
+        <button data-lang="bilingual">双语</button>
+        <button data-lang="zh">中</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <div class="lang-toggle hidden" id="order-toggle" title="出题顺序">
+        <button data-order="random">随机</button>
+        <button data-order="sequential">默认</button>
+      </div>
+      <div class="stats">
+        <span id="progress-text"><span class="prog-cur" id="prog-cur">0</span><span class="prog-sep"> / </span><span class="prog-tot" id="prog-tot">0</span></span>
+        <span class="score-correct" id="correct-count">0</span>
+        <span class="score-wrong" id="wrong-count">0</span>
+        <span id="mock-timer" class="mock-timer hidden" title="模拟考试用时">--:--</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="progress"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+
+  <!-- Mock exam intro -->
+  <div id="mock-intro-view" class="hidden">
+    <div class="card mock-intro">
+      <div class="mock-intro-kicker">NJ Mock Exam</div>
+      <h2 class="mock-intro-title">模拟考试</h2>
+
+      <dl class="mock-intro-meta">
+        <div><dt>题量</dt><dd>50</dd></div>
+        <div><dt>通过</dt><dd>40 / 50</dd></div>
+        <div><dt>建议</dt><dd>30 <span class="unit">分钟</span></dd></div>
+      </dl>
+
+      <p class="mock-intro-desc">
+        作答过程不显示对错，提交后才出分。
+      </p>
+
+      <div id="mock-intro-history" class="mock-intro-history hidden"></div>
+
+      <button class="btn primary mock-intro-cta" id="mock-start-btn">
+        <span>开始考试</span>
+        <svg class="cta-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Quiz card -->
+  <div id="quiz-view" class="hidden">
+    <div class="card">
+      <div class="q-toolbar">
+        <div class="qnum-row">
+          <div class="qnum" id="qnum">第 1 题</div>
+          <span class="img-badge hidden" id="img-badge" title="此题含图片">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="1.5"/><path d="M21 17l-5-5-7 7"/></svg>
+          </span>
+        </div>
+        <div class="actions">
+          <button id="tts-btn" class="icon-action" title="朗读" aria-label="朗读">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          </button>
+          <button id="report-btn" class="icon-action" title="报错" aria-label="报错">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="stem-row" id="stem-row">
+        <div class="stem-img-wrap" id="stem-img-wrap">
+          <img id="stem-img" class="stem-img" alt="">
+        </div>
+        <div class="stem" id="stem"></div>
+      </div>
+      <div class="options" id="options"></div>
+      <div class="controls">
+        <button class="btn" id="prev-btn" aria-label="上一题" title="上一题 (←)">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          <span>上一题</span>
+        </button>
+        <div class="jumper">
+          <input type="number" id="jump-input" min="1" aria-label="跳转到第几题" title="跳转到第几题">
+          <span class="jumper-total" id="jumper-total">/ --</span>
+        </div>
+        <button class="btn primary" id="next-btn" aria-label="下一题" title="下一题 (→ / Enter)">
+          <span>下一题</span>
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="swipe-hint" aria-hidden="true">← 左右滑动切题 →</div>
+
+    <div class="below-card">
+      <div class="ek-card">
+        <div class="explanation hidden" id="explanation"></div>
+        <div class="knowledge-card hidden" id="knowledge"></div>
+      </div>
+      <div class="hint">键盘 <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> <kbd>F</kbd> 或 <kbd>1</kbd>-<kbd>4</kbd> 选答，<kbd>←</kbd> <kbd>→</kbd> 翻题，<kbd>Enter</kbd> 下一题</div>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div id="summary-view" class="hidden">
+    <div class="card result-card">
+      <div class="result-mark" id="result-mark" aria-hidden="true"></div>
+      <div class="result-kicker" id="result-kicker">完成</div>
+      <div class="result-score hidden" id="result-score"></div>
+      <h2 class="result-title hidden" id="result-title"></h2>
+      <div class="result-badge hidden" id="result-badge"></div>
+      <p class="result-desc" id="result-desc"></p>
+      <div class="result-actions">
+        <button class="btn primary" id="redo-btn">重新开始</button>
+        <button class="btn hidden" id="review-btn">复习错题</button>
+      </div>
+      <button class="result-back" id="home-btn">← 回首页</button>
+      <div class="review-list hidden" id="review-list"></div>
+    </div>
+
+    <!-- Mock detailed review -->
+    <div id="mock-review-card" class="card hidden">
+      <div class="review-head">
+        <h3>逐题回顾</h3>
+        <div class="review-filter" id="review-filter">
+          <button data-f="all" class="active">全部 <span id="rf-all">0</span></button>
+          <button data-f="wrong">错题 <span id="rf-wrong">0</span></button>
+          <button data-f="correct">正确 <span id="rf-correct">0</span></button>
+          <button data-f="skipped">未答 <span id="rf-skipped">0</span></button>
+        </div>
+      </div>
+      <div id="mock-review-list" class="mock-review-list"></div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script src="quiz.js"></script>
+</body>
+</html>

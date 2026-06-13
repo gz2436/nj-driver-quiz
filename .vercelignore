@@ -1,0 +1,31 @@
+# What NOT to upload to Vercel (the deployed site).
+# When this file exists, Vercel uses it INSTEAD of .gitignore. These files all live in
+# the public git repo, but the site itself only needs site/ + data/ — so reference
+# materials, tooling and docs are kept out of the CDN deploy to keep it lean.
+
+# Source materials and build inputs
+sources/
+tools/
+docs/
+*.docx
+*.doc
+*.pdf
+*.md
+!README.md
+
+# Dev / OS / editor cruft
+/tmp/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local-only directories
+.claude/
+.github/

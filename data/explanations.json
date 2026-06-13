@@ -1,0 +1,602 @@
+{
+  "_meta": {
+    "version": "2026-05-12",
+    "description": "Topic-level bilingual explanations + knowledge-point cards for NJ driver quiz answers.",
+    "source_primary": "NJ Driver Manual (https://www.nj.gov/mvc/pdf/license/drivermanual.pdf)",
+    "source_secondary": "N.J.S.A. (New Jersey Statutes Annotated)"
+  },
+  "adult_bac": {
+    "zh": "NJ 成年司机（21 岁及以上）的 BAC 限值是 0.08%；达到或超过即构成酒驾（DUI）。",
+    "en": "For NJ drivers 21 and older, the BAC limit is 0.08%. At or above this is DUI.",
+    "source_label": "NJ Driver Manual p117",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "NJ BAC 限值　BAC Limits",
+      "rows": [
+        ["成人 21+　Adult", "0.08%"],
+        ["未满 21　Under 21", "0.01%"],
+        ["商用车　Commercial", "0.04%"],
+        ["点火互锁阈值　Interlock", "0.05%"]
+      ]
+    }
+  },
+  "under21_bac": {
+    "zh": "NJ 对未满 21 岁司机零容忍：BAC 0.01% 或以上（任何可检测的酒精量）即违法。",
+    "en": "NJ has zero-tolerance for under-21 drivers: BAC ≥ 0.01% (any detectable amount) is a violation.",
+    "source_label": "NJ Driver Manual p117",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "NJ BAC 限值　BAC Limits",
+      "rows": [
+        ["成人 21+　Adult", "0.08%"],
+        ["未满 21　Under 21", "0.01%"],
+        ["商用车　Commercial", "0.04%"],
+        ["点火互锁阈值　Interlock", "0.05%"]
+      ]
+    }
+  },
+  "alcohol_equivalent": {
+    "zh": "一杯标准饮品的酒精含量大致相等：12 盎司啤酒 ≈ 5 盎司葡萄酒（12%）≈ 1.5 盎司 86 度烈酒。",
+    "en": "Standard drink equivalents: 12 oz beer ≈ 5 oz wine (12%) ≈ 1.5 oz 86-proof liquor.",
+    "source_label": "NJ Driver Manual p116",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "一杯标准饮品　One Standard Drink",
+      "rows": [
+        ["啤酒　Beer", "12 oz"],
+        ["葡萄酒 12%　Wine", "5 oz"],
+        ["86 度烈酒　Liquor (86-proof)", "1.5 oz"]
+      ]
+    }
+  },
+  "dui_first_offense": {
+    "zh": "现行规则（2019/12/01 后）：首次酒驾 BAC<.10% 罚款 $250-$400；BAC ≥.10% 罚款 $300-$500。安装点火互锁装置（IID），装好后才能恢复驾照。3 年附加费 $1,000/年。",
+    "en": "First DUI (post-12/1/19): BAC 0.08-0.10% → $250-$400 fine; BAC ≥0.10% → $300-$500. Ignition Interlock required; license suspended until IID installed. $1,000/year surcharge × 3 years.",
+    "source_label": "NJ Driver Manual p125-126",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "首次酒驾处罚　First DUI",
+      "rows": [
+        ["罚款 BAC <.10%", "$250 – $400"],
+        ["罚款 BAC ≥.10%", "$300 – $500"],
+        ["监禁最高　Jail max", "30 days"],
+        ["吊销驾照　Suspension", "至装好 IID"],
+        ["年度附加费 × 3　Surcharge", "$1,000/yr"]
+      ]
+    }
+  },
+  "dui_second_offense": {
+    "zh": "第二次酒驾（10 年内）：罚款 $500-$1,000、监禁可达 90 天、吊销驾照 1-2 年。社区服务 30 天。",
+    "en": "Second DUI (within 10 years): $500-$1,000 fine, up to 90 days jail, 1-2 year license loss. 30 days community service.",
+    "source_label": "NJ Driver Manual p127",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "第二次酒驾　Second DUI (内 10 年)",
+      "rows": [
+        ["罚款　Fine", "$500 – $1,000"],
+        ["监禁最高　Jail max", "90 days"],
+        ["社区服务　Community svc", "30 days"],
+        ["吊销驾照　Suspension", "1 – 2 years"],
+        ["年度附加费 × 3　Surcharge", "$1,000/yr"]
+      ]
+    }
+  },
+  "dui_third_offense": {
+    "zh": "第三次酒驾（10 年内）：罚款 $1,000、监禁可达 180 天、吊销驾照 8 年。",
+    "en": "Third DUI (within 10 years): $1,000 fine, up to 180 days jail, 8-year license loss.",
+    "source_label": "NJ Driver Manual p128",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "第三次酒驾　Third DUI (内 10 年)",
+      "rows": [
+        ["罚款　Fine", "$1,000"],
+        ["监禁最高　Jail max", "180 days"],
+        ["吊销驾照　Suspension", "8 years"],
+        ["年度附加费 × 3　Surcharge", "$1,500/yr"]
+      ]
+    }
+  },
+  "dui_refusal": {
+    "zh": "拒绝化学测试（呼气测试）的初犯处罚与 BAC ≥ 0.10% 的酒驾相同，外加 3 年 $1,000/年的保险附加费。",
+    "en": "Refusing chemical test on first offense matches DUI with BAC ≥ 0.10%, plus $1,000/year surcharge × 3 years.",
+    "source_label": "NJ Driver Manual p129",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "拒绝化学测试　Refusal",
+      "rows": [
+        ["处罚等同于　Equivalent to", "DUI BAC ≥.10%"],
+        ["附加费 × 3　Surcharge", "$1,000/yr"],
+        ["点火互锁　IID", "Required"]
+      ]
+    }
+  },
+  "park_fire_hydrant": {
+    "zh": "离消防栓 10 英尺（约 3 米）内不可停车。",
+    "en": "No parking within 10 feet (≈3 m) of a fire hydrant.",
+    "source_label": "N.J.S.A. 39:4-138; NJ Manual p86",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "NJ 停车距离　Parking Distances",
+      "rows": [
+        ["消防栓　Fire hydrant", "10 ft (3 m)"],
+        ["路口人行横道　Crosswalk", "25 ft (7.6 m)"],
+        ["停车标志　Stop sign", "50 ft (15 m)"],
+        ["铁路平交道　Railroad", "50 ft (15 m)"],
+        ["消防站车道（同侧）　Fire station", "20 ft"],
+        ["消防站车道（对侧）", "75 ft"]
+      ]
+    }
+  },
+  "park_crosswalk": {
+    "zh": "离十字路口的人行横道 25 英尺（约 7.6 米）内不可停车。",
+    "en": "No parking within 25 feet (≈7.6 m) of a crosswalk at an intersection.",
+    "source_label": "N.J.S.A. 39:4-138; NJ Manual p86",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "NJ 停车距离　Parking Distances",
+      "rows": [
+        ["消防栓　Fire hydrant", "10 ft (3 m)"],
+        ["路口人行横道　Crosswalk", "25 ft (7.6 m)"],
+        ["停车标志　Stop sign", "50 ft (15 m)"],
+        ["铁路平交道　Railroad", "50 ft (15 m)"],
+        ["消防站车道（同侧）　Fire station", "20 ft"],
+        ["消防站车道（对侧）", "75 ft"]
+      ]
+    }
+  },
+  "park_stop_sign": {
+    "zh": "离停车标志（STOP 标志）50 英尺（约 15 米）内不可停车。",
+    "en": "No parking within 50 feet (≈15 m) of a stop sign.",
+    "source_label": "N.J.S.A. 39:4-138; NJ Manual p86",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "NJ 停车距离　Parking Distances",
+      "rows": [
+        ["消防栓　Fire hydrant", "10 ft (3 m)"],
+        ["路口人行横道　Crosswalk", "25 ft (7.6 m)"],
+        ["停车标志　Stop sign", "50 ft (15 m)"],
+        ["铁路平交道　Railroad", "50 ft (15 m)"],
+        ["消防站车道（同侧）　Fire station", "20 ft"],
+        ["消防站车道（对侧）", "75 ft"]
+      ]
+    }
+  },
+  "park_fire_station": {
+    "zh": "消防站车道同侧 20 英尺、对侧 75 英尺范围内不可停车。",
+    "en": "No parking within 20 feet of a fire station driveway on the same side, or 75 feet on the opposite side.",
+    "source_label": "NJ Manual p86",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "NJ 停车距离　Parking Distances",
+      "rows": [
+        ["消防栓　Fire hydrant", "10 ft (3 m)"],
+        ["路口人行横道　Crosswalk", "25 ft (7.6 m)"],
+        ["停车标志　Stop sign", "50 ft (15 m)"],
+        ["铁路平交道　Railroad", "50 ft (15 m)"],
+        ["消防站车道（同侧）　Fire station", "20 ft"],
+        ["消防站车道（对侧）", "75 ft"]
+      ]
+    }
+  },
+  "park_railroad": {
+    "zh": "离铁路平交道 50 英尺（约 15 米）内不可停车。",
+    "en": "No parking within 50 feet (≈15 m) of a railroad crossing.",
+    "source_label": "NJ Manual p86",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "NJ 停车距离　Parking Distances",
+      "rows": [
+        ["消防栓　Fire hydrant", "10 ft (3 m)"],
+        ["路口人行横道　Crosswalk", "25 ft (7.6 m)"],
+        ["停车标志　Stop sign", "50 ft (15 m)"],
+        ["铁路平交道　Railroad", "50 ft (15 m)"],
+        ["消防站车道（同侧）　Fire station", "20 ft"],
+        ["消防站车道（对侧）", "75 ft"]
+      ]
+    }
+  },
+  "speed_points": {
+    "zh": "NJ 超速扣分档：超速 1-14 mph 扣 2 分；15-29 mph 扣 4 分；30+ mph 扣 5 分。",
+    "en": "NJ speeding points: 1-14 mph over = 2 points; 15-29 mph over = 4 points; 30+ mph over = 5 points.",
+    "source_label": "NJ Manual p140",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "NJ 超速扣分　Speeding Points",
+      "rows": [
+        ["1 – 14 mph 超速　over", "2 分　pts"],
+        ["15 – 29 mph 超速　over", "4 分　pts"],
+        ["30+ mph 超速　over", "5 分　pts"]
+      ]
+    }
+  },
+  "speed_limits": {
+    "zh": "NJ 默认限速：学校/商业/居民区 25 mph；郊区 35 mph；非张贴乡村道路 50 mph；州/州际公路 55 mph；部分州际 65 mph。",
+    "en": "NJ default speed limits: school/business/residential 25; suburban 35; non-posted rural 50; state highway/interstate 55; some interstates 65.",
+    "source_label": "NJ Manual p64",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "NJ 默认限速　Default Speed Limits",
+      "rows": [
+        ["学校/商业/居民　School/biz/res", "25 mph"],
+        ["郊区　Suburban", "35 mph"],
+        ["非张贴乡村　Non-posted rural", "50 mph"],
+        ["州 / 州际　State / Interstate", "55 mph"],
+        ["部分州际　Some interstates", "65 mph"]
+      ]
+    }
+  },
+  "tailgating_points": {
+    "zh": "紧贴跟车（tailgating）被定罪扣 5 分。",
+    "en": "Tailgating conviction = 5 points.",
+    "source_label": "NJ Manual p141",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "NJ 移动违规扣分　Moving Violations",
+      "rows": [
+        ["紧贴跟车　Tailgating", "5 分　pts"],
+        ["鲁莽驾驶　Reckless", "5 分　pts"],
+        ["公路赛车　Racing", "5 分　pts"],
+        ["不当超车　Improper passing", "4 分　pts"],
+        ["低速阻碍　Slow speed", "2 分　pts"],
+        ["单行道逆行　Wrong way", "2 分　pts"],
+        ["人行道不停　No stop crosswalk", "2 分　pts"]
+      ]
+    }
+  },
+  "reckless_racing_points": {
+    "zh": "鲁莽驾驶（reckless driving）和公路上赛车（racing）各扣 5 分。",
+    "en": "Reckless driving and racing on a highway each = 5 points.",
+    "source_label": "NJ Manual p140-141",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "NJ 移动违规扣分　Moving Violations",
+      "rows": [
+        ["紧贴跟车　Tailgating", "5 分　pts"],
+        ["鲁莽驾驶　Reckless", "5 分　pts"],
+        ["公路赛车　Racing", "5 分　pts"],
+        ["不当超车　Improper passing", "4 分　pts"],
+        ["低速阻碍　Slow speed", "2 分　pts"],
+        ["单行道逆行　Wrong way", "2 分　pts"],
+        ["人行道不停　No stop crosswalk", "2 分　pts"]
+      ]
+    }
+  },
+  "improper_passing_points": {
+    "zh": "不当超车（improper passing）扣 4 分。",
+    "en": "Improper passing = 4 points.",
+    "source_label": "NJ Manual p141",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "NJ 移动违规扣分　Moving Violations",
+      "rows": [
+        ["紧贴跟车　Tailgating", "5 分　pts"],
+        ["鲁莽驾驶　Reckless", "5 分　pts"],
+        ["公路赛车　Racing", "5 分　pts"],
+        ["不当超车　Improper passing", "4 分　pts"],
+        ["低速阻碍　Slow speed", "2 分　pts"],
+        ["单行道逆行　Wrong way", "2 分　pts"],
+        ["人行道不停　No stop crosswalk", "2 分　pts"]
+      ]
+    }
+  },
+  "slow_speed_points": {
+    "zh": "因低速阻碍交通扣 2 分；单行道上逆行扣 2 分；未在人行横道停让行人扣 2 分。",
+    "en": "Slow speed blocking traffic = 2 points; wrong way on one-way = 2 points; failure to stop at crosswalk = 2 points.",
+    "source_label": "NJ Manual p140-141",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "NJ 移动违规扣分　Moving Violations",
+      "rows": [
+        ["紧贴跟车　Tailgating", "5 分　pts"],
+        ["鲁莽驾驶　Reckless", "5 分　pts"],
+        ["公路赛车　Racing", "5 分　pts"],
+        ["不当超车　Improper passing", "4 分　pts"],
+        ["低速阻碍　Slow speed", "2 分　pts"],
+        ["单行道逆行　Wrong way", "2 分　pts"],
+        ["人行道不停　No stop crosswalk", "2 分　pts"]
+      ]
+    }
+  },
+  "stopping_distance": {
+    "zh": "干燥路面总制动距离（思考距离 + 刹车距离）的近似值：30 mph ≈ 88 ft；40 mph ≈ 149 ft；50 mph ≈ 243 ft。雨雪天距离会大幅增加。",
+    "en": "Approximate total stopping distance on dry road: 30 mph ≈ 88 ft; 40 mph ≈ 149 ft; 50 mph ≈ 243 ft. Much greater in rain/snow.",
+    "source_label": "NJ Manual / third-party prep references",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "干燥路面制动距离　Stopping Distance (Dry)",
+      "rows": [
+        ["30 mph", "≈ 88 ft (27 m)"],
+        ["40 mph", "≈ 149 ft (45 m)"],
+        ["50 mph", "≈ 243 ft (74 m)"]
+      ]
+    }
+  },
+  "gdl_age_summary": {
+    "zh": "NJ GDL 年龄：特别学员准证 16 岁；考试准证 / 实习驾照 17 岁；基本驾照（GDL 路径）18 岁；成人路径基本驾照 21 岁。",
+    "en": "NJ GDL ages: Special Learner Permit at 16; Examination Permit / Probationary at 17; Basic License (GDL path) at 18; Basic License (Adult path) at 21.",
+    "source_label": "NJ Manual p16-19",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "NJ GDL 阶段　Driver License Stages",
+      "rows": [
+        ["特别学员准证　Special Learner", "16 岁"],
+        ["考试准证　Examination Permit", "17 岁"],
+        ["实习驾照　Probationary", "17 岁"],
+        ["基本驾照 GDL 路径　Basic (GDL)", "18 岁"],
+        ["基本驾照 成人路径　Basic (Adult)", "21 岁"]
+      ]
+    }
+  },
+  "gdl_decal": {
+    "zh": "21 岁以下的学员/实习驾照持有人必须在前后车牌左上角各贴一张红色反光小牌（一对 $4），提示其他司机。",
+    "en": "Under-21 permit/probationary drivers must display red reflective decals on top-left of front and rear plates ($4/pair).",
+    "source_label": "NJ Manual p21",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "GDL 红牌　Red Decal",
+      "rows": [
+        ["颜色　Color", "红色反光"],
+        ["位置　Position", "前后牌左上角"],
+        ["价格　Cost", "$4 / pair"],
+        ["适用　Required for", "21 以下持准证 / 实习"]
+      ]
+    }
+  },
+  "gdl_practice": {
+    "zh": "特别学员准证和考试准证都需要至少 6 个月的有监督驾驶练习。监督人需持 NJ 驾照、至少 3 年驾龄、21 岁以上。",
+    "en": "Special Learner and Examination Permits require ≥6 months supervised practice. Supervisor must hold NJ license, have ≥3 years experience, and be 21+.",
+    "source_label": "NJ Manual p17-18",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "GDL 监督练习　Supervised Practice",
+      "rows": [
+        ["最短练习　Min duration", "6 months"],
+        ["监督人年龄　Supervisor age", "21+"],
+        ["监督人驾龄　Supervisor exp", "≥ 3 years"],
+        ["监督人驾照　License", "Valid NJ license"]
+      ]
+    }
+  },
+  "address_change": {
+    "zh": "地址变更必须在 1 周（7 天）内向 MVC 报告。",
+    "en": "Address change must be reported to MVC within 1 week (7 days).",
+    "source_label": "NJ Manual p6",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "MVC 报告时限　MVC Reporting",
+      "rows": [
+        ["地址变更　Address change", "1 week"],
+        ["姓名变更　Name change", "2 weeks"],
+        ["外州迁入验车　Out-of-state move", "14 days"]
+      ]
+    }
+  },
+  "name_change": {
+    "zh": "姓名变更必须在 2 周内向 MVC 报告。",
+    "en": "Name change must be reported to MVC within 2 weeks.",
+    "source_label": "NJ Manual p6",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "MVC 报告时限　MVC Reporting",
+      "rows": [
+        ["地址变更　Address change", "1 week"],
+        ["姓名变更　Name change", "2 weeks"],
+        ["外州迁入验车　Out-of-state move", "14 days"]
+      ]
+    }
+  },
+  "inspection_after_move": {
+    "zh": "从外州搬到 NJ 后，必须在车辆登记后 14 天内完成验车。",
+    "en": "After moving to NJ from out-of-state, vehicle inspection must be completed within 14 days of registration.",
+    "source_label": "NJ Manual p162",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "NJ 车辆检查　Inspection",
+      "rows": [
+        ["燃油/柴油客车　Passenger", "每 2 年"],
+        ["商用车　Commercial", "每年"],
+        ["新车前 5 年　New car", "免检"],
+        ["外州迁入　Out-of-state move", "14 days"]
+      ]
+    }
+  },
+  "inspection_freq": {
+    "zh": "NJ 燃油/柴油载客车辆每 2 年验车一次。新车前 5 年免检。商用车每年验车一次。",
+    "en": "NJ gas/diesel passenger vehicles: every 2 years. New cars exempt first 5 years. Commercial: yearly.",
+    "source_label": "NJ Manual p162",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "NJ 车辆检查　Inspection",
+      "rows": [
+        ["燃油/柴油客车　Passenger", "每 2 年"],
+        ["商用车　Commercial", "每年"],
+        ["新车前 5 年　New car", "免检"],
+        ["外州迁入　Out-of-state move", "14 days"]
+      ]
+    }
+  },
+  "uninsured": {
+    "zh": "无保险驾车：首次罚款 $300–$1,000、吊销驾照 1 年、3 年附加费 $250/年。第二次罚款最高 $5,000、吊销驾照 2 年、监禁 14 天。",
+    "en": "Driving uninsured: 1st = $300-$1,000 fine, 1-year suspension, $250/yr surcharge × 3. 2nd = up to $5,000 fine, 2-year suspension, 14 days jail.",
+    "source_label": "NJ Manual p127",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "无保险驾车　Uninsured Driving",
+      "rows": [
+        ["首次罚款　1st fine", "$300 – $1,000"],
+        ["首次吊销　1st suspension", "1 year"],
+        ["再犯罚款　2nd fine", "up to $5,000"],
+        ["再犯吊销　2nd suspension", "2 years"],
+        ["再犯监禁　2nd jail", "14 days"],
+        ["附加费 × 3　Surcharge", "$250/yr"]
+      ]
+    }
+  },
+  "skid_recovery": {
+    "zh": "车辆打滑时：松开油门和刹车，将方向盘转向打滑（车尾甩出）的方向。绝不能猛踩刹车或反向打方向。",
+    "en": "If your car skids: ease off gas and brake, steer in the direction the rear is skidding. Never slam brakes or steer opposite.",
+    "source_label": "NJ Manual (defensive driving)",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf"
+  },
+  "blowout_action": {
+    "zh": "爆胎时：紧握方向盘保持直行，不要急刹车，松油门让车自然减速，再缓慢驶向路肩停车。",
+    "en": "Tire blowout: grip wheel firmly, keep straight, don't slam brakes. Ease off gas to slow gradually, then steer carefully to shoulder.",
+    "source_label": "NJ Manual (defensive driving)",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf"
+  },
+  "hill_parking_wheels": {
+    "zh": "坡道停车（无路沿时）：车轮一律朝路边方向。下坡有路沿时车轮朝路沿；上坡有路沿时车轮反向（远离路沿）。",
+    "en": "Hill parking (no curb): turn wheels toward road edge. Downhill with curb: toward curb. Uphill with curb: away from curb.",
+    "source_label": "NJ Manual p87",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "坡道停车　Hill Parking",
+      "rows": [
+        ["下坡有路沿", "轮 → 路沿"],
+        ["上坡有路沿", "轮 → 远离路沿"],
+        ["无路沿（任何方向）", "轮 → 路边"]
+      ]
+    }
+  },
+  "emergency_vehicle": {
+    "zh": "见到亮警灯/鸣笛的警车、消防车、救护车时：立即让行，靠右停车直到通过。",
+    "en": "Emergency vehicles with lights/sirens: yield immediately, pull right and stop until they pass.",
+    "source_label": "NJ Manual",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf"
+  },
+  "school_bus_stopped": {
+    "zh": "见到亮红灯停下的校车（任何方向）：必须停车至少 25 英尺远，等所有红灯停止后才能继续。",
+    "en": "School bus stopped with red lights (either direction): stop at least 25 ft away, wait for red lights to stop.",
+    "source_label": "NJ Manual p79",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "校车停车规则　School Bus",
+      "rows": [
+        ["红灯闪烁时", "必须停车"],
+        ["停车距离　Stop distance", "≥ 25 ft"],
+        ["何时继续", "红灯停止后"]
+      ]
+    }
+  },
+  "flashing_red_signal": {
+    "zh": "闪烁红灯：完全停车，让行后方可通过（同 STOP 标志）。闪烁黄灯：减速通过，注意路况。",
+    "en": "Flashing red: full stop, yield, then proceed (like STOP). Flashing yellow: slow down, proceed with caution.",
+    "source_label": "NJ Manual",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "信号灯闪烁　Flashing Signals",
+      "rows": [
+        ["闪烁红　Flashing red", "停车 → 让行 → 通过"],
+        ["闪烁黄　Flashing yellow", "减速通过"]
+      ]
+    }
+  },
+  "right_on_red": {
+    "zh": "红灯右转：除非有 \"No turn on red\" 标志，完全停车并确认安全后允许右转。",
+    "en": "Right on red: allowed unless \"No turn on red\" sign. Full stop, confirm safe, then turn.",
+    "source_label": "NJ Manual",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf"
+  },
+  "right_of_way_intersection": {
+    "zh": "无信号路口、两车同时到达：右侧车辆优先。所有方向都停（4-way stop）：先到的先走；同时到的右侧优先。",
+    "en": "Uncontrolled intersection, two cars same time: car on the right has right-of-way. 4-way stop: first arrived goes first; tied → right priority.",
+    "source_label": "NJ Manual",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf"
+  },
+  "follow_distance": {
+    "zh": "正常天气保持 2 秒车距（前车经过某点后数 2 秒）。雨雪、能见度差时增加到 3-4 秒。",
+    "en": "Normal: 2-second following distance (count 2s after lead passes a point). Rain/snow/poor vis: 3-4 seconds.",
+    "source_label": "NJ Manual",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "跟车距离　Following Distance",
+      "rows": [
+        ["正常天气　Normal", "2 sec"],
+        ["雨雪 / 能见度差　Bad weather", "3 – 4 sec"]
+      ]
+    }
+  },
+  "headlight_use": {
+    "zh": "近光灯：双向道路对向有车、城市道路、雨雾天必须使用。远光灯：空旷夜间道路，但接近对向车 500 ft 内必须切回近光。",
+    "en": "Low beam: required with oncoming traffic on two-way roads, urban driving, rain/fog. High beam: open dark road; switch back to low within 500 ft of oncoming car.",
+    "source_label": "NJ Manual",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "车灯使用　Headlights",
+      "rows": [
+        ["近光灯　Low beam", "对向车 / 城市 / 雨雾"],
+        ["远光灯　High beam", "空旷夜路"],
+        ["切回近光　Switch back", "对向 500 ft 内"]
+      ]
+    }
+  },
+  "seat_belt_law": {
+    "zh": "NJ 全员安全带法：所有前排乘员必须系安全带；18 岁以下后排乘客也必须系。8 岁以下且不足 80 磅儿童必须坐儿童安全座椅。",
+    "en": "NJ universal seat belt law: all front-seat occupants must buckle; rear under-18 must too. Under 8 and under 80 lbs needs child seat.",
+    "source_label": "NJ Manual",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "安全带与儿童座椅　Seat Belt & Child Seat",
+      "rows": [
+        ["前排所有人　Front", "必须系"],
+        ["后排 18 以下　Rear < 18", "必须系"],
+        ["儿童 < 8 岁 & < 80 lbs", "儿童座椅"]
+      ]
+    }
+  },
+  "hand_signals": {
+    "zh": "手势信号（转向灯失灵时）：左转：左臂平伸；右转：左臂向上弯成 L；停车/减速：左臂向下弯成倒 L。",
+    "en": "Hand signals (when turn signals fail): Left turn: arm straight out. Right turn: arm bent up (L). Stop/slow: arm bent down (inverted L).",
+    "source_label": "NJ Manual",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "手势信号　Hand Signals",
+      "rows": [
+        ["左转　Left turn", "左臂平伸"],
+        ["右转　Right turn", "左臂向上弯 (L)"],
+        ["停车 / 减速　Stop / slow", "左臂向下弯"]
+      ]
+    }
+  },
+  "curve_driving": {
+    "zh": "进入弯道前减速，过弯时保持稳定速度，出弯后再加速。",
+    "en": "Slow down BEFORE entering the curve; maintain steady speed; accelerate after exiting.",
+    "source_label": "NJ Manual",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf"
+  },
+  "sign_shapes": {
+    "zh": "标志形状：八边形 STOP；倒三角 YIELD 让行；菱形 警告；竖矩形 法规（白底）；横矩形 导向/服务；五边形 学校区。",
+    "en": "Sign shapes: Octagon = STOP. Inverted triangle = YIELD. Diamond = warning. Vertical rectangle = regulatory. Horizontal rectangle = guide/service. Pentagon = school zone.",
+    "source_label": "NJ Manual p213-224",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "标志形状　Sign Shapes",
+      "rows": [
+        ["八边形 Octagon", "STOP 停车"],
+        ["倒三角 Inverted △", "YIELD 让行"],
+        ["菱形 Diamond", "警告 Warning"],
+        ["五边形 Pentagon", "学校区"],
+        ["竖矩形 Vertical", "法规 Regulatory"],
+        ["横矩形 Horizontal", "导向 / 服务"]
+      ]
+    }
+  },
+  "sign_colors": {
+    "zh": "标志颜色：红 禁令/停车；黄 警告；橙 施工区；绿 导向/允许；蓝 服务设施；棕 公园/休闲；白 法规。",
+    "en": "Sign colors: Red = prohibition/stop. Yellow = warning. Orange = construction. Green = directions. Blue = services. Brown = recreation. White = regulatory.",
+    "source_label": "NJ Manual p213-224",
+    "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+    "card": {
+      "title": "标志颜色　Sign Colors",
+      "rows": [
+        ["红 Red", "禁令 / 停车"],
+        ["黄 Yellow", "警告"],
+        ["橙 Orange", "施工区"],
+        ["绿 Green", "导向 / 允许"],
+        ["蓝 Blue", "服务"],
+        ["棕 Brown", "公园 / 休闲"],
+        ["白 White", "法规"]
+      ]
+    }
+  }
+}

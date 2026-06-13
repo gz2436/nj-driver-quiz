@@ -1,0 +1,82 @@
+{
+  "signs": {
+    "zh": "交通标志",
+    "en": "Traffic Signs"
+  },
+  "alcohol_equivalent": {
+    "zh": "酒精等量换算",
+    "en": "Alcohol Equivalence"
+  },
+  "bac_levels": {
+    "zh": "BAC 血液酒精",
+    "en": "BAC Levels"
+  },
+  "dui_offenses": {
+    "zh": "酒驾处罚",
+    "en": "DUI Penalties"
+  },
+  "parking_distance": {
+    "zh": "停车距离",
+    "en": "Parking Distances"
+  },
+  "stopping_distance": {
+    "zh": "制动距离",
+    "en": "Stopping Distance"
+  },
+  "gdl_stages": {
+    "zh": "GDL 阶段",
+    "en": "Graduated License"
+  },
+  "insurance": {
+    "zh": "车辆保险",
+    "en": "Insurance"
+  },
+  "speed_points": {
+    "zh": "超速 / 扣分",
+    "en": "Speed & Points"
+  },
+  "right_of_way": {
+    "zh": "让行规则",
+    "en": "Right of Way"
+  },
+  "emergency_vehicle": {
+    "zh": "紧急车辆 / 校车",
+    "en": "Emergency & School Buses"
+  },
+  "hand_signals": {
+    "zh": "手势信号",
+    "en": "Hand Signals"
+  },
+  "seat_belt": {
+    "zh": "安全带 / 儿童座椅",
+    "en": "Seat Belt & Child Seat"
+  },
+  "night_driving": {
+    "zh": "夜间驾驶",
+    "en": "Night Driving"
+  },
+  "license_admin": {
+    "zh": "驾照 / 注册管理",
+    "en": "License & Registration"
+  },
+  "skid_blowout": {
+    "zh": "打滑 / 爆胎",
+    "en": "Skid & Blowout"
+  },
+  "turning_lanes": {
+    "zh": "转向 / 车道",
+    "en": "Turning & Lanes"
+  },
+  "curves_hills": {
+    "zh": "弯道 / 坡道",
+    "en": "Curves & Hills"
+  },
+  "general": {
+    "zh": "综合",
+    "en": "General"
+  },
+  "unclassified": {
+    "zh": "未分类",
+    "en": "Unclassified"
+  }
+}

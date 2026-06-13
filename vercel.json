@@ -1,0 +1,51 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/", "destination": "/site/index.html" },
+    { "source": "/quiz", "destination": "/site/quiz.html" },
+    { "source": "/signs", "destination": "/site/signs.html" },
+    { "source": "/cheatsheet", "destination": "/site/cheatsheet.html" }
+  ],
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/site/index.html", "destination": "/", "permanent": true },
+    { "source": "/site/quiz.html", "destination": "/quiz", "permanent": true },
+    { "source": "/site/signs.html", "destination": "/signs", "permanent": true },
+    { "source": "/site/cheatsheet.html", "destination": "/cheatsheet", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/site/style.css",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/site/app.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/data/images/:path*",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=604800, immutable" }
+      ]
+    },
+    {
+      "source": "/data/questions.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }
+      ]
+    },
+    {
+      "source": "/data/explanations.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }
+      ]
+    }
+  ]
+}
