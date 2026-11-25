@@ -46,6 +46,24 @@ function applyLanguage(lang) {
   document.body.setAttribute('data-lang', lang);
 }
 
+// Preferred accessors: the question bank stores English and Chinese separately
+// (stem_en / stem_zh, options_en[] / options_zh[]). Use those; fall back to the
+// heuristic split of the combined string only for records that lack them.
+function stemParts(q) {
+  if (typeof q.stem_en === 'string' && typeof q.stem_zh === 'string' && (q.stem_en || q.stem_zh)) {
+    return { en: q.stem_en.trim(), zh: q.stem_zh.trim() };
+  }
+  return splitBilingual(q.stem);
+}
+function optionParts(q, i) {
+  const en = Array.isArray(q.options_en) ? q.options_en[i] : undefined;
+  const zh = Array.isArray(q.options_zh) ? q.options_zh[i] : undefined;
+  if (typeof en === 'string' && typeof zh === 'string' && (en || zh)) {
+    return { en: en.trim(), zh: zh.trim() };
+  }
+  return splitBilingual(q.options[i] || '');
+}
+
 // Split a bilingual string heuristically into English + Chinese parts.
 // Examples:
 //   "The minimum age: 获取驾照最小年龄为：" → ["The minimum age:", "获取驾照最小年龄为："]
@@ -168,16 +186,16 @@ const DISCLAIMER_HTML = `
       <span class="num">1</span>
       <span class="lbl">来源 <em>Source</em></span>
     </div>
-    <p class="zh">整理自 <a href="https://www.aiqiang.org/post/nj-driverlicense-written-exam-practice" target="_blank" rel="noopener">aiqiang.org</a>，与 NJ Driver Manual 逐题校验。</p>
-    <p class="en">Compiled from aiqiang.org, cross-verified against the NJ Driver Manual.</p>
+    <p class="zh">整理自 <a href="https://www.aiqiang.org/post/nj-driverlicense-written-exam-practice" target="_blank" rel="noopener">aiqiang.org</a>。<span data-bank-status="zh">正在对照 2026 版 NJ Driver Manual 逐题核对。</span></p>
+    <p class="en">Compiled from aiqiang.org. <span data-bank-status="en">Being checked question by question against the 2026 NJ Driver Manual.</span></p>
   </li>
   <li>
     <div class="clause-head">
       <span class="num">2</span>
       <span class="lbl">隐私 <em>Privacy</em></span>
     </div>
-    <p class="zh">不上传任何数据，进度仅存于本地浏览器。</p>
-    <p class="en">No data uploaded; all progress stays in your browser.</p>
+    <p class="zh">做题进度只存在本地浏览器，不上传。站点用 Vercel Analytics 统计匿名访问量，不使用 cookie。点&ldquo;报错&rdquo;提交的题号和错误类型会发给 Tally。</p>
+    <p class="en">Your progress stays in your browser. The site counts anonymous page views with Vercel Analytics (no cookies). Error reports you submit (question number and error type) go to Tally.</p>
   </li>
   <li>
     <div class="clause-head">
@@ -202,9 +220,21 @@ const DISCLAIMER_HTML = `
 </div>
 `;
 
+// Fill the "N of 567 checked" line from data/version.json (written by tools/check_corrections.py),
+// so the claim on the page always matches the state of the question bank.
+async function fillBankStatus(root) {
+  try {
+    const v = await fetchData('../data/version.json');
+    const zh = `${v.checked_against_manual + v.not_in_manual} / ${v.total} 道已逐题核对（${v.checked_against_manual} 道对照 2026 版 NJ Driver Manual，${v.not_in_manual} 道手册未收、另注出处），其余核对中。题库版本 ${v.bank_version}。`;
+    const en = `${v.checked_against_manual + v.not_in_manual} of ${v.total} questions checked so far (${v.checked_against_manual} against the 2026 NJ Driver Manual, ${v.not_in_manual} not covered by it and sourced separately). Bank version ${v.bank_version}.`;
+    root.querySelectorAll('[data-bank-status="zh"]').forEach(el => { el.textContent = zh; });
+    root.querySelectorAll('[data-bank-status="en"]').forEach(el => { el.textContent = en; });
+  } catch (e) { /* keep the static fallback sentence */ }
+}
+
 function showDisclaimer(state, onAccept) {
   // Disclaimer is mandatory: no Esc / no click-outside dismissal.
-  const { close } = openModal(`
+  const { backdrop, close } = openModal(`
     <div class="modal modal-disclaimer">
       <header class="disc-header">
         <h2>免责声明</h2>
@@ -216,6 +246,7 @@ function showDisclaimer(state, onAccept) {
       </div>
     </div>
   `, { closeOnEsc: false, closeOnBackdrop: false, onClose: onAccept });
+  fillBankStatus(backdrop);
   document.getElementById('disclaimer-agree').addEventListener('click', () => {
     state.disclaimerAccepted = new Date().toISOString().slice(0, 10);
     saveState(state);
@@ -267,7 +298,7 @@ function openErrorReport(questionId) {
 async function shareSite() {
   const url = location.origin + (location.pathname.replace(/\/[^/]*$/, '/') || '/');
   const title = '新泽西驾照笔试练习';
-  const text = '中英对照 NJ 驾照笔试练习，与官方手册交叉校验。';
+  const text = '中英对照 NJ 驾照笔试练习，免费，不用注册。';
   if (navigator.share) {
     try {
       await navigator.share({ title, text, url });

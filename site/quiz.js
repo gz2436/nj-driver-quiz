@@ -185,7 +185,7 @@
 
     // Stem text (split bilingual; if only one language present, render as primary text)
     const stemEl = document.getElementById('stem');
-    const parts = splitBilingual(q.stem);
+    const parts = stemParts(q);
     stemEl.innerHTML = '';
     stemEl.classList.toggle('bilingual', !!(parts.en && parts.zh));
     if (parts.en) {
@@ -238,7 +238,7 @@
         srState.textContent = letter === q.answer ? ' 正确答案' : (letter === userAns ? ' 你的错误答案' : '');
         if (srState.textContent) btn.appendChild(srState);
       }
-      const oparts = splitBilingual(text);
+      const oparts = optionParts(q, i);
       if (oparts.en && oparts.zh) textEl.classList.add('bilingual');
       if (oparts.en) {
         const e = document.createElement('span');
@@ -543,8 +543,8 @@
       const a = session.answers[q.id];
       const status = !a ? 'skipped' : (a === q.answer ? 'correct' : 'wrong');
       const statusLabel = !a ? '·' : (a === q.answer ? '✓' : '✗');
-      const stemParts = splitBilingual(q.stem);
-      const stemTxt = (stemParts.zh || stemParts.en || q.stem).replace(/</g, '&lt;');
+      const sp = stemParts(q);
+      const stemTxt = (sp.zh || sp.en || q.stem).replace(/</g, '&lt;');
 
       const item = document.createElement('div');
       item.className = 'mr-item';
@@ -564,13 +564,13 @@
       const correctTxt = q.options[letters.indexOf(q.answer)] || '';
       let html = '';
       if (a) {
-        const yp = splitBilingual(yourTxt);
+        const yp = optionParts(q, letters.indexOf(a));
         html += `<div class="mr-d-row"><span class="mr-d-tag ${a === q.answer ? 'correct' : 'your'}">你答 ${a}</span><span class="mr-d-text">${(yp.zh || yp.en || yourTxt).replace(/</g, '&lt;')}</span></div>`;
       } else {
         html += `<div class="mr-d-row"><span class="mr-d-tag skipped">未答</span><span class="mr-d-text">—</span></div>`;
       }
       if (!a || a !== q.answer) {
-        const cp = splitBilingual(correctTxt);
+        const cp = optionParts(q, letters.indexOf(q.answer));
         html += `<div class="mr-d-row"><span class="mr-d-tag correct">正确 ${q.answer}</span><span class="mr-d-text">${(cp.zh || cp.en || correctTxt).replace(/</g, '&lt;')}</span></div>`;
       }
       if (q.explanation_key && explanations[q.explanation_key]) {
@@ -784,7 +784,7 @@
   // TTS
   document.getElementById('tts-btn').addEventListener('click', () => {
     const q = session.questions[session.current];
-    const parts = splitBilingual(q.stem);
+    const parts = stemParts(q);
     const lang = state.languageDisplay === 'zh' ? 'zh' : 'en';
     const text = (lang === 'zh' ? parts.zh : parts.en) || q.stem;
     speakText(text, lang);

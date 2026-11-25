@@ -17,6 +17,9 @@
 <script>/* pre-paint theme: read stored preference before CSS applies, avoiding light→dark flash */try{var s=JSON.parse(localStorage.getItem('nj_quiz_v1')||'{}');if(s.theme==='light'||s.theme==='dark')document.documentElement.dataset.theme=s.theme;}catch(e){}</script>
 <link rel="stylesheet" href="style.css">
 <script async src="https://tally.so/widgets/embed.js"></script>
+<!-- Vercel Web Analytics (cookieless page views). Needs "Enable" in the Vercel project's Analytics tab; until then this path returns 404 and nothing is sent. -->
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
