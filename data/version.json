@@ -1,0 +1,10 @@
+{
+  "bank_version": "2026-11-25",
+  "manual_edition": "NJ Driver Manual 2026（2026 年 4 月修订）",
+  "manual_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
+  "total": 567,
+  "checked_against_manual": 109,
+  "not_in_manual": 53,
+  "unverified": 405,
+  "corrections": 307
+}

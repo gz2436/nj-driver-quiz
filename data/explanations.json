@@ -312,18 +312,17 @@
     }
   },
   "gdl_age_summary": {
-    "zh": "NJ GDL 年龄：特别学员准证 16 岁；考试准证 / 实习驾照 17 岁；基本驾照（GDL 路径）18 岁；成人路径基本驾照 21 岁。",
-    "en": "NJ GDL ages: Special Learner Permit at 16; Examination Permit / Probationary at 17; Basic License (GDL path) at 18; Basic License (Adult path) at 21.",
-    "source_label": "NJ Manual p16-19",
+    "zh": "NJ 驾照的最低年龄：特殊学习者许可证 16 岁；考试许可证 17 岁（成人路径 21 岁）；见习驾照 17 岁；基本驾驶执照 18 岁，并且要先完成一年无人监督驾驶。",
+    "en": "NJ minimum ages: Special Learner Permit 16; Examination Permit 17 (21 on the adult road); Probationary License 17; Basic Driver License 18, after one year of unsupervised driving.",
+    "source_label": "NJ Driver Manual 2026, PDF p17–19 / printed p15–17",
     "source_url": "https://www.nj.gov/mvc/pdf/license/drivermanual.pdf",
     "card": {
-      "title": "NJ GDL 阶段　Driver License Stages",
+      "title": "NJ 驾照阶段　Driver License Stages",
       "rows": [
-        ["特别学员准证　Special Learner", "16 岁"],
-        ["考试准证　Examination Permit", "17 岁"],
-        ["实习驾照　Probationary", "17 岁"],
-        ["基本驾照 GDL 路径　Basic (GDL)", "18 岁"],
-        ["基本驾照 成人路径　Basic (Adult)", "21 岁"]
+        ["特殊学习者许可证　Special Learner Permit", "16 岁"],
+        ["考试许可证　Examination Permit", "17 岁（成人路径 21 岁）"],
+        ["见习驾照　Probationary License", "17 岁"],
+        ["基本驾驶执照　Basic Driver License", "18 岁，且完成一年无人监督驾驶"]
       ]
     }
   },
@@ -598,5 +597,11 @@
         ["白 White", "法规"]
       ]
     }
+  },
+  "sign_two_direction_arrow": {
+    "zh": "黄底双向大箭头立在丁字路口的尽头，告诉你前面的路到头了，只能左转或右转。NJ 手册的标志页没有收这块牌，依据是联邦《统一交通控制设施手册》（MUTCD）。",
+    "en": "The yellow Two-Direction Large Arrow sign stands on the far side of a T-intersection: the road ahead ends and you must turn left or right. The NJ manual's sign pages do not include it; the source is the federal MUTCD.",
+    "source_label": "MUTCD 11th Edition, W1-7, Section 2C.43",
+    "source_url": "https://mutcd.fhwa.dot.gov/kno_11th_Edition.htm"
   }
 }

@@ -360,7 +360,7 @@
       "",
       ""
     ],
-    "answer": "B",
+    "answer": "C",
     "answer_text": null,
     "answer_text_en": "",
     "answer_text_zh": "",
@@ -368,14 +368,19 @@
       "unclassified"
     ],
     "is_common_mistake": true,
-    "explanation_key": null,
+    "explanation_key": "gdl_age_summary",
     "verified": false,
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 36,
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-added from audit (single-line stem+options+answer format)"
+    "notes": "auto-added from audit (single-line stem+options+answer format)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订） PDF p17–18 / 印刷 p15–16",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 10,
@@ -464,15 +469,15 @@
   {
     "id": 12,
     "type": "mc",
-    "stem": "Special Driver Examination Permit may be issued at age 16 when: 在什么情况下，16岁时可以被授予“特别驾驶考试许可证”？",
+    "stem": "Special Driver Examination Permit may be issued at age 16 when: 在什么情况下，16 岁可以获发特殊学习者许可证？",
     "stem_img": null,
     "options": [
-      "the applicant is enrolled in a Behind the Wheel Driver Education Course of Department of Education 申请者参加由教育部门举办的“特别驾驶教育课程”",
-      "the applicant is enrolled in a Commercial Driving Education Course B.申请者参加“商用驾驶教育课程”",
-      "purchased by an Approved Driving Instructor C. 合格的驾驶教练准许",
+      "the applicant is enrolled in a Behind the Wheel Driver Education Course of Department of Education 申请者参加教育部批准的实际驾驶培训课程",
+      "the applicant is enrolled in a Commercial Driving Education Course 申请者参加商业驾校的驾驶培训课程",
+      "purchased by an Approved Driving Instructor 许可证由经批准的驾驶教练购买",
       "all of the above 以上皆是"
     ],
-    "answer": "A",
+    "answer": "D",
     "answer_text": null,
     "topics": [
       "gdl_stages"
@@ -484,7 +489,7 @@
     "source_doc": "complete",
     "source_para_idx": 48,
     "stem_en": "Special Driver Examination Permit may be issued at age 16 when:",
-    "stem_zh": "在什么情况下，16岁时可以被授予“特别驾驶考试许可证”？",
+    "stem_zh": "在什么情况下，16 岁可以获发特殊学习者许可证？",
     "options_en": [
       "the applicant is enrolled in a Behind the Wheel Driver Education Course of Department of Education",
       "the applicant is enrolled in a Commercial Driving Education Course",
@@ -492,16 +497,21 @@
       "all of the above"
     ],
     "options_zh": [
-      "申请者参加由教育部门举办的“特别驾驶教育课程”",
-      "B.申请者参加“商用驾驶教育课程”",
-      "C. 合格的驾驶教练准许",
+      "申请者参加教育部批准的实际驾驶培训课程",
+      "申请者参加商业驾校的驾驶培训课程",
+      "许可证由经批准的驾驶教练购买",
       "以上皆是"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订） PDF p17 / 印刷 p15；PDF p21 / 印刷 p19",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 13,
@@ -548,7 +558,7 @@
   {
     "id": 14,
     "type": "mc",
-    "stem": "6.If a person gets drunk in your home and has a motor vehicle accident, after leaving your home you could: 如果某人在你家喝醉酒，且在离开你家后发生车祸，你将",
+    "stem": "If a person gets drunk in your home and has a motor vehicle accident, after leaving your home you could: 如果某人在你家喝醉酒，且在离开你家后发生车祸，你将",
     "stem_img": null,
     "options": [
       "be charged with a crime 被刑事起诉",
@@ -567,7 +577,7 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 59,
-    "stem_en": "6.If a person gets drunk in your home and has a motor vehicle accident, after leaving your home you could:",
+    "stem_en": "If a person gets drunk in your home and has a motor vehicle accident, after leaving your home you could:",
     "stem_zh": "如果某人在你家喝醉酒，且在离开你家后发生车祸，你将",
     "options_en": [
       "be charged with a crime",
@@ -850,7 +860,7 @@
       "4 drinks of whiskey or gin 4杯威士忌或松子酒",
       "4 ounces of table wine 4盎司淡酒"
     ],
-    "answer": "B",
+    "answer": "C",
     "answer_text": null,
     "topics": [
       "alcohol_equivalent"
@@ -879,7 +889,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订） PDF p116–117 / 印刷 p114–115",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 22,
@@ -1029,8 +1044,8 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 105,
-    "stem_en": "If a driver has a BAC of ____.15%, he or she is ____ times more likely to cause a crash.",
-    "stem_zh": "如果一名司机的血液酒精含量为 0.15%，其造成交通事故的可能提高 倍。",
+    "stem_en": "If a driver has a BAC of 0.15%, he or she is ____ times more likely to cause a crash.",
+    "stem_zh": "如果一名司机的血液酒精含量为 0.15%，其造成交通事故的可能提高 ____ 倍。",
     "options_en": [
       "25",
       "10",
@@ -1262,7 +1277,7 @@
   {
     "id": 31,
     "type": "mc",
-    "stem": "23.For driving purpose you are on legal limit when amount of alcohol in your blood (BAC) reached what level? 根据驾车安全法规驾车者血液中的酒精限量是多少？",
+    "stem": "For driving purpose you are on legal limit when amount of alcohol in your blood (BAC) reached what level? 根据驾车安全法规驾车者血液中的酒精限量是多少？",
     "stem_img": null,
     "options": [
       "0.5%",
@@ -1281,7 +1296,7 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 131,
-    "stem_en": "23.For driving purpose you are on legal limit when amount of alcohol in your blood (BAC) reached what level?",
+    "stem_en": "For driving purpose you are on legal limit when amount of alcohol in your blood (BAC) reached what level?",
     "stem_zh": "根据驾车安全法规驾车者血液中的酒精限量是多少？",
     "options_en": [
       "0.5%",
@@ -1304,7 +1319,7 @@
   {
     "id": 32,
     "type": "mc",
-    "stem": "A person who refuses a Breathalyzer Test in conjunction with a first offense for driving under  the influence is subject to: 拒绝酒精测试的第一次后果是",
+    "stem": "A person who refuses a Breathalyzer Test in conjunction with a first offense for driving under the influence is subject to: 拒绝酒精测试的第一次后果是",
     "stem_img": null,
     "options": [
       "A fine of $50 罚款$50",
@@ -1323,7 +1338,7 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 133,
-    "stem_en": "A person who refuses a Breathalyzer Test in conjunction with a first offense for driving under  the influence is subject to:",
+    "stem_en": "A person who refuses a Breathalyzer Test in conjunction with a first offense for driving under the influence is subject to:",
     "stem_zh": "拒绝酒精测试的第一次后果是",
     "options_en": [
       "A fine of $50",
@@ -1853,12 +1868,12 @@
     "stem": "Altering a driver’s license, or showing an altered driver’s license, may result in: 篡改驾照或使用篡改的驾照，会导致",
     "stem_img": null,
     "options": [
-      "a fine of up to $1,000 低于$1000的罚款",
-      "up to 6 months imprisonment 不多于6个月的监禁",
+      "a fine of up to $1,000 最高 $1,000 的罚款",
+      "up to 6 months imprisonment 最长 6 个月的监禁",
       "loss of your driving privileges 失去驾驶权",
       "all of the above 以上皆是"
     ],
-    "answer": "C",
+    "answer": "D",
     "answer_text": null,
     "topics": [
       "general"
@@ -1878,8 +1893,8 @@
       "all of the above"
     ],
     "options_zh": [
-      "低于$1000的罚款",
-      "不多于6个月的监禁",
+      "最高 $1,000 的罚款",
+      "最长 6 个月的监禁",
       "失去驾驶权",
       "以上皆是"
     ],
@@ -1887,7 +1902,13 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订） PDF p8 / 印刷 p6",
+      "date": "2026-11-24",
+      "note": "B 选项的“6 个月”现行手册没有写，手册只写 imprisonment。"
+    }
   },
   {
     "id": 46,
@@ -4141,7 +4162,7 @@
     "stem_en": "In order to drive in New Jersey, your car must be insured for:",
     "stem_zh": "新泽西州驾车必须有的保险是",
     "options_en": [
-      "thef",
+      "theft",
       "fire damage",
       "collision",
       "liability"
@@ -4393,13 +4414,13 @@
     "stem_en": "If you fail the road test, how long before you can take the test over?",
     "stem_zh": "如果你路考没通过，需要过多久才能参加重考？",
     "options_en": [
-      "2 months 2",
+      "2 months",
       "minimum 2 weeks",
       "1 week",
       "3 weeks"
     ],
     "options_zh": [
-      "个月",
+      "2 个月",
       "至少两个星期",
       "一星期",
       "三星期"
@@ -5025,14 +5046,14 @@
     "options_en": [
       "annually",
       "every six months",
-      "two years 2",
-      "five years 5"
+      "two years",
+      "five years"
     ],
     "options_zh": [
       "每年",
       "每六个月",
-      "年",
-      "年"
+      "2 年",
+      "5 年"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
@@ -5882,7 +5903,7 @@
   },
   {
     "id": 141,
-    "type": "mc_image",
+    "type": "mc",
     "stem": "As you drive, you must turn your headlights on:  驾车时你何时应打开车灯？",
     "stem_img": null,
     "options": [
@@ -5923,7 +5944,7 @@
   },
   {
     "id": 142,
-    "type": "mc",
+    "type": "mc_image",
     "stem": "What does this sign mean? 这个标志什么意思？",
     "stem_img": "img_complete_001.jpg",
     "options": [
@@ -5961,7 +5982,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'Stop Sign Ahead' (symbol version of the same warning)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 143,
@@ -6003,7 +6029,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'Cross Road'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 144,
@@ -6045,7 +6076,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'Do Not Enter'; description under Regulatory Signs on PDF p.218 / printed p.216",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 145,
@@ -6087,7 +6123,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'Do Not Pass'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 146,
@@ -6129,7 +6170,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） R4-3, Section 2B.38 (KEEP RIGHT EXCEPT TO PASS, SLOWER TRAFFIC KEEP RIGHT and TRUCKS USE RIGHT LANE signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 147,
@@ -6171,7 +6217,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'Left Turn Only' (same sign)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 148,
@@ -6213,7 +6264,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W3-5 / W3-5a, Section 2C.40 (Reduced Speed Limit Ahead and Speed Zone Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 149,
@@ -6255,7 +6311,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.224 / printed p.222: sign grid label 'Yield'; yield-sign rule under Intersections > Controlled, PDF p.69 / printed p.67",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 150,
@@ -6297,7 +6358,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'Merge' (symbol version)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 151,
@@ -6339,7 +6405,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W6-2, Section 2C.21 (Divided Highway Ends Sign)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 152,
@@ -6381,13 +6452,18 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'Two-Lane Traffic' (two opposing arrows, MUTCD W6-3)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 153,
     "type": "mc_image",
     "stem": "What does this sign mean? 这个标志什么意思？",
-    "stem_img": "img_complete_012.png",
+    "stem_img": "img_q153.jpg",
     "options": [
       "Caution slow down ahead. 小心前方减速",
       "Caution school ahead. 小心前方有学校",
@@ -6423,7 +6499,13 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订） PDF p217 / 印刷 p215",
+      "date": "2026-11-24",
+      "note": "橙色菱形施工区警告标志。"
+    }
   },
   {
     "id": 154,
@@ -6465,7 +6547,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） R3-2 (No Left Turn), Section 2B.26 (Movement Prohibition Signs R3-1 through R3-4)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 155,
@@ -6507,7 +6594,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W5-2, Section 2C.18 (NARROW BRIDGE and NARROW UNDERPASS Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 156,
@@ -6549,7 +6641,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.67 / printed p.65: 'Keeping to the Right': NJ law requires keeping right except when passing",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 157,
@@ -6591,7 +6688,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'School'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 158,
@@ -6675,7 +6777,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.66 / printed p.64: 'Passing': a broken centre line means passing is allowed on that side; also 'Dashed lines' on PDF p.218 / printed p.216",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 160,
@@ -6717,7 +6824,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.216 / printed p.214: shape/colour table: white vertical rectangle = regulation; 'Regulatory Signs' on PDF p.217 / printed p.215",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 161,
@@ -6759,7 +6871,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） Section 3B.05 (Pavement Markings for Two-Way Left-Turn Lanes)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 162,
@@ -6801,7 +6918,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） S5-1 with 'When Children Are Present' plaque S4-2P, Section 7B.05 (School Speed Limit Signs and Plaques)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 163,
@@ -6843,7 +6965,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） R3-9b, Section 2B.32 (Two-Way Left-Turn-Only Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 164,
@@ -6885,7 +7012,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.66 / printed p.64: 'Passing': broken centre line = passing allowed when safe",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 165,
@@ -6896,7 +7028,7 @@
       "The indicated lane is permitted for high occupancy vehicles during specified timings 在指定时间允许高承载车辆使用指示的车道",
       "High occupancy vehicles are not allowed during specified times 在指定时间不允许高承载车辆",
       "The indicated lane is permitted for heavy trucks 指示的车道允许重型卡车通行",
-      "No cars or buses are allowed during specified times D.在规定的时间内不允许汽车或公共汽车进入"
+      "No cars or buses are allowed during specified times 在规定的时间内不允许汽车或公共汽车进入"
     ],
     "answer": "A",
     "answer_text": null,
@@ -6921,13 +7053,18 @@
       "在指定时间允许高承载车辆使用指示的车道",
       "在指定时间不允许高承载车辆",
       "指示的车道允许重型卡车通行",
-      "D.在规定的时间内不允许汽车或公共汽车进入"
+      "在规定的时间内不允许汽车或公共汽车进入"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.224 / printed p.222: sign grid label 'Bus/Car Pool Lane'; 'White diamonds' (HOV lanes, hours shown on signs) on PDF p.219 / printed p.217",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 166,
@@ -6969,7 +7106,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.224 / printed p.222: sign grid label 'Keep Right'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 167,
@@ -6978,9 +7120,9 @@
     "stem_img": "img_complete_025.jpg",
     "options": [
       "Vehicles on the left must turn left and vehicles on the right may go straight or turn right 左边的车辆必须左转，右边的车辆可以直行或右转",
-      "B.Vehicles on the left must turn left and vehicles on the right must go straight 左边的车辆必须左转，右边的车辆必须直行",
+      "Vehicles on the left must turn left and vehicles on the right must go straight 左边的车辆必须左转，右边的车辆必须直行",
       "Vehicles on the left must turn left and vehicles on the right must merge with the right lane 左边的车辆必须左转，右边的车辆必须与右边的车道合并",
-      "D.Vehicles on the left must turn left and vehicles on the right must turn right 左边的车辆必须左转，右边的车辆必须右转"
+      "Vehicles on the left must turn left and vehicles on the right must turn right 左边的车辆必须左转，右边的车辆必须右转"
     ],
     "answer": "A",
     "answer_text": null,
@@ -6997,9 +7139,9 @@
     "stem_zh": "这个标志表示什么？",
     "options_en": [
       "Vehicles on the left must turn left and vehicles on the right may go straight or turn right",
-      "B.Vehicles on the left must turn left and vehicles on the right must go straight",
+      "Vehicles on the left must turn left and vehicles on the right must go straight",
       "Vehicles on the left must turn left and vehicles on the right must merge with the right lane",
-      "D.Vehicles on the left must turn left and vehicles on the right must turn right"
+      "Vehicles on the left must turn left and vehicles on the right must turn right"
     ],
     "options_zh": [
       "左边的车辆必须左转，右边的车辆可以直行或右转",
@@ -7011,7 +7153,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'Multiple Turning Lanes'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 168,
@@ -7052,13 +7199,18 @@
     "answer_text_en": "",
     "answer_text_zh": "",
     "lang_primary": "en",
-    "needs_translation": null
+    "needs_translation": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'Multiple Turning Lanes' (same sign)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 169,
     "type": "mc_image",
     "stem": "If you see this sign and you are driving in the left lane, you: 如果你看到这个标志，并且你在左边的车道上行驶，你",
-    "stem_img": "img_complete_027.png",
+    "stem_img": "img_q169.jpg",
     "options": [
       "go straight 直行",
       "turn right 右转",
@@ -7094,7 +7246,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'Multiple Turning Lanes'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 170,
@@ -7136,12 +7293,17 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.219 / printed p.217: 'White diamonds': lanes reserved for a particular vehicle type or multi-occupant vehicles",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 171,
     "type": "mc_image",
-    "stem": "176.You arrive at a railroad crossing. The crossing has lights and a bell that are not activated at the moment. You cannot see a train approaching. Which of the following is true? 你来到了一个铁道口。该路口有灯光和铃声，但目前没有启动。你无法看到一辆火车正在接近。以下哪项是真的？",
+    "stem": "You arrive at a railroad crossing. The crossing has lights and a bell that are not activated at the moment. You cannot see a train approaching. Which of the following is true? 你来到了一个铁道口。该路口有灯光和铃声，但目前没有启动。你无法看到一辆火车正在接近。以下哪项是真的？",
     "stem_img": "img_complete_029.jpg",
     "options": [
       "You can proceed even if the flashing lights are on but you do not see a train approaching 即使闪烁的灯亮着，但你没有看到有火车驶来，你也可以继续前进",
@@ -7160,7 +7322,7 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 845,
-    "stem_en": "176.You arrive at a railroad crossing. The crossing has lights and a bell that are not activated at the moment. You cannot see a train approaching. Which of the following is true?",
+    "stem_en": "You arrive at a railroad crossing. The crossing has lights and a bell that are not activated at the moment. You cannot see a train approaching. Which of the following is true?",
     "stem_zh": "你来到了一个铁道口。该路口有灯光和铃声，但目前没有启动。你无法看到一辆火车正在接近。以下哪项是真的？",
     "options_en": [
       "You can proceed even if the flashing lights are on but you do not see a train approaching",
@@ -7178,7 +7340,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.78 / printed p.76: 'Stop at Railroad Crossings' > Special Circumstances: school buses, buses and hazmat vehicles must always stop; crossbuck in grid PDF p.224",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 172,
@@ -7220,7 +7387,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） R3-5 series (Mandatory Movement Lane Control), Section 2B.28 (Mandatory Movement Lane Control Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 173,
@@ -7262,7 +7434,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.224 / printed p.222: sign grid label 'Left or Straight Only'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 174,
@@ -7304,7 +7481,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'Do Not Enter'; description on PDF p.218 / printed p.216",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 175,
@@ -7346,7 +7528,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.224 / printed p.222: sign grid label 'Yield'; shape table PDF p.216 / printed p.214 (red triangle = YIELD)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 176,
@@ -7388,7 +7575,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.224 / printed p.222: sign grid label 'Wrong Way'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 177,
@@ -7430,11 +7622,16 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'Stop'; shape table PDF p.216 / printed p.214 (red octagon = STOP only)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 178,
-    "type": "mc",
+    "type": "mc_image",
     "stem": "You drive up to an intersection and you see this sign. What should you do? 你开车到一个十字路口，看到这个标志。你应该怎么做？",
     "stem_img": "img_complete_149.jpg",
     "options": [
@@ -7457,21 +7654,27 @@
     "stem_en": "You drive up to an intersection and you see this sign. What should you do?",
     "stem_zh": "你开车到一个十字路口，看到这个标志。你应该怎么做？",
     "options_en": [
-      "",
       "Slow down and only proceed if the intersection is clear",
-      "",
-      "Find another route, you cannot proceed through here"
+      "Find another route, you cannot proceed through here",
+      "Come to a complete stop and yield to any traffic before proceeding",
+      "Come to a complete stop and then go"
     ],
     "options_zh": [
-      "你开车到一个十字路口，看到这个标志。你应该怎么做？",
-      "",
       "放慢速度，只有在十字路口畅通的情况下才能继续前进",
-      "寻找其他路线，你不能通过这里继续前进 Come to a complete stop and yield to any traffic before proceeding 完全停止，并在继续前行前让开任何车辆 Come to a complete stop and then go  完全停止后再走"
+      "寻找其他路线，你不能通过这里继续前进",
+      "完全停止，并在继续前行前让开任何车辆",
+      "完全停止后再走"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
     "lang_primary": "en",
-    "needs_translation": "en_to_zh"
+    "needs_translation": "en_to_zh",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.69 / printed p.67: 'Intersections' > Controlled: at a stop sign bring the vehicle to a complete stop, yield, then proceed",
+      "date": "2026-11-24",
+      "note": "独立核对时这题的英文选项字段还是错位的旧数据；选项按源文件重建后，标注的答案与出处一致。"
+    }
   },
   {
     "id": 179,
@@ -7513,7 +7716,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.216 / printed p.214: shape table: red octagon, 8 sides = STOP signs only",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 180,
@@ -7555,7 +7763,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.219 / printed p.217: 'Special Warning Signs': orange triangular sign marks slow-moving vehicles",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 181,
@@ -7597,7 +7810,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'No Trucks'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 182,
@@ -7639,7 +7857,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'No Parking Any Time'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 183,
@@ -7681,7 +7904,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'No Parking Any Time' (same symbol; pictured sign limits it to the posted hours)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 184,
@@ -7723,7 +7951,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.224 / printed p.222: sign grid label 'No Pedestrians'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 185,
@@ -7765,7 +7998,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） R3-2 (No Left Turn), Section 2B.26 (Movement Prohibition Signs R3-1 through R3-4)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 186,
@@ -7807,7 +8045,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'No U-Turns'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 187,
@@ -7849,7 +8092,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） R7-1, Section 2B.53 (Design of Parking, Standing, and Stopping Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 188,
@@ -7858,7 +8106,7 @@
     "stem_img": "img_complete_045.jpg",
     "options": [
       "Left turn is allowed, provided the circular green signal is lit and there is no approaching traffic 允许左转，条件是圆形绿色信号灯亮起，并且没有接近的车辆",
-      "B.Left turn is allowed only when the circular green signal is not lit 只有在圆形绿灯未亮时才允许左转",
+      "Left turn is allowed only when the circular green signal is not lit 只有在圆形绿灯未亮时才允许左转",
       "Left turn is not allowed when green arrow goes out 绿色箭头熄灭时不允许左转",
       "Left turn is allowed when green arrow is on 当绿色箭头亮起时，允许左转"
     ],
@@ -7877,7 +8125,7 @@
     "stem_zh": "这个标志表明了什么？",
     "options_en": [
       "Left turn is allowed, provided the circular green signal is lit and there is no approaching traffic",
-      "B.Left turn is allowed only when the circular green signal is not lit",
+      "Left turn is allowed only when the circular green signal is not lit",
       "Left turn is not allowed when green arrow goes out",
       "Left turn is allowed when green arrow is on"
     ],
@@ -7891,7 +8139,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.214 / printed p.212: 'Green Light': before a left turn, yield to approaching vehicles",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 189,
@@ -7933,7 +8186,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.214 / printed p.212: 'Green Light': proceed, yielding to pedestrians and vehicles still in the intersection",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 190,
@@ -7975,7 +8233,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） M3-1P cardinal plaque + state route sign + M6-series arrow, Section 2D.28 (Directional Arrow Auxiliary Plaques; cardinal plaques in Section 2D.15)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 191,
@@ -8017,7 +8280,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） R3-5a (Through Only), Section 2B.28 (Mandatory Movement Lane Control Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 192,
@@ -8059,13 +8327,18 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.216 / printed p.214: shape table: white vertical rectangle = regulation (such as speed signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 193,
     "type": "mc_image",
     "stem": "What does this arrow-marked sign mean? 这个箭头标记的标志是什么意思？",
-    "stem_img": "img_complete_050.jpg",
+    "stem_img": "img_q193.jpg",
     "options": [
       "A sharp left turn ahead 前方有一个急速的左转弯",
       "A sharp U-turn ahead 前面是一个急转弯",
@@ -8101,7 +8374,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） M5-1P, Section 2D.26 (Advance Turn Arrow Auxiliary Plaques)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 194,
@@ -8144,7 +8422,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.65 / printed p.63: 'Driving Too Slowly': keep up with traffic; pull off with hazard lights if the vehicle cannot; blocking traffic by slow driving is prohibited",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 195,
@@ -8186,7 +8469,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） R6-5P, Section 2B.51 (Roundabout Circulation Plaque)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 196,
@@ -8228,7 +8516,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.214 / printed p.212: 'Flashing Amber/Yellow Light': slow down and proceed with care",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 197,
@@ -8270,7 +8563,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） Type 3 object marker (OM3), Section 2C.70 (Object Marker Design and Placement Height; use within the roadway in Section 2C.71)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 198,
@@ -8278,10 +8576,10 @@
     "stem": "Which of the following signs represents two-way traffic? 以下哪个标志代表双向交通？",
     "stem_img": "img_complete_055.jpg",
     "options": [
-      "标志 A",
-      "标志 B",
-      "标志 C",
-      "标志 D"
+      "Top left 左上",
+      "Top right 右上",
+      "Bottom left 左下",
+      "Bottom right 右下"
     ],
     "answer": "C",
     "answer_text": null,
@@ -8297,26 +8595,32 @@
     "stem_en": "Which of the following signs represents two-way traffic?",
     "stem_zh": "以下哪个标志代表双向交通？",
     "options_en": [
-      "（此题无选项）",
-      "",
-      "",
-      ""
+      "Top left",
+      "Top right",
+      "Bottom left",
+      "Bottom right"
     ],
     "options_zh": [
-      "",
-      "",
-      "",
-      ""
+      "左上",
+      "右上",
+      "左下",
+      "右下"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'Two-Lane Traffic' (two opposing arrows)",
+      "date": "2026-11-24",
+      "note": "选项是图中位置（左上、右上、左下、右下），源文件没有文字选项。"
+    }
   },
   {
     "id": 199,
-    "type": "mc",
+    "type": "mc_image",
     "stem": "What does this sign indicate? 这个标志表示什么？",
     "stem_img": "img_complete_150.jpg",
     "options": [
@@ -8354,7 +8658,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.220 / printed p.218: 'Roundabouts': a one-way, circular intersection around a centre island",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 200,
@@ -8396,7 +8705,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） R2-3P, Section 2B.23 (Night Speed Limit Plaque)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 201,
@@ -8438,7 +8752,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） Section 6D.05 (Flagger Procedures; Figure 6D-1)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 202,
@@ -8480,7 +8799,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.218 / printed p.216: 'White dashed lines' separate lanes on multi-lane highways; 'White lines' separate traffic going the same way",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 203,
@@ -8522,7 +8846,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.218 / printed p.216: 'White lines' separate traffic going the same way; 'White dashed lines' separate lanes on multi-lane highways",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 204,
@@ -8564,7 +8893,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.66 / printed p.64: 'Passing': broken centre line = passing allowed; 'Dashed lines' on PDF p.218 / printed p.216",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 205,
@@ -8572,12 +8906,12 @@
     "stem": "This sign is a/an: 这是什么标志？",
     "stem_img": "img_complete_061.jpg",
     "options": [
-      "Sharp curve sign 急转弯",
+      "Sharp curve sign 急弯道标志",
       "crossover sign 交叉标志",
-      "sharp turn sign 急调头标志",
+      "sharp turn sign 急转弯标志",
       "emergency stop sign 紧急停车标志"
     ],
-    "answer": "A",
+    "answer": "C",
     "answer_text": null,
     "topics": [
       "signs"
@@ -8597,20 +8931,26 @@
       "emergency stop sign"
     ],
     "options_zh": [
-      "急转弯",
+      "急弯道标志",
       "交叉标志",
-      "急调头标志",
+      "急转弯标志",
       "紧急停车标志"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订） PDF p222 / 印刷 p220",
+      "date": "2026-11-24",
+      "note": "标志页标注 Sharp Turn Ahead。"
+    }
   },
   {
     "id": 206,
-    "type": "mc",
+    "type": "mc_image",
     "stem": "This sign represents: 这个标志代表。",
     "stem_img": "img_complete_151.jpg",
     "options": [
@@ -8648,7 +8988,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'U.S. Route Marker'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 207,
@@ -8690,7 +9035,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W11-5 (Farm Vehicle), Section 2C.54 (Vehicular Traffic Warning Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 208,
@@ -8732,7 +9082,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'Flagman Ahead'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 209,
@@ -8774,7 +9129,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.216 / printed p.214: footnote to the sign table: an advisory speed sign accompanies the warning sign when the safe speed for a curve is below the limit; 'Curves' on PDF p.74 / printed p.72",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 210,
@@ -8816,18 +9176,23 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'Advisory Ramp Speed'; PDF p.71 / printed p.69 says to obey the posted advisory speed of the deceleration lane",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 211,
     "type": "mc_image",
-    "stem": "What does this sign mean?这个标志是什么意思？",
+    "stem": "What does this sign mean? 这个标志是什么意思？",
     "stem_img": "img_complete_066.jpg",
     "options": [
-      "There is a school crossing ahead; prepare to stop  前方有一个学校路口，准备停车",
-      "There is a shared section of road ahead; slow down and watch out for pedestrians",
-      "前方有一段共用道路，请减速并注意行人",
-      "There is a park or playground ahead; slow down and watch for pedestrians 前方有公园或操场；放慢速度，注意行人 There is a pedestrian crossing or crosswalk ahead; prepare to stop 前方有一个行人穿越或人行横道，准备停车"
+      "There is a school crossing ahead; prepare to stop 前方有一个学校路口，准备停车",
+      "There is a shared section of road ahead; slow down and watch out for pedestrians 前方有一段共用道路，请减速并注意行人",
+      "There is a park or playground ahead; slow down and watch for pedestrians 前方有公园或操场；放慢速度，注意行人",
+      "There is a pedestrian crossing or crosswalk ahead; prepare to stop 前方有一个行人穿越或人行横道，准备停车"
     ],
     "answer": "A",
     "answer_text": null,
@@ -8845,19 +9210,24 @@
     "options_en": [
       "There is a school crossing ahead; prepare to stop",
       "There is a shared section of road ahead; slow down and watch out for pedestrians",
-      "",
-      "There is a park or playground ahead; slow down and watch for pedestrians"
+      "There is a park or playground ahead; slow down and watch for pedestrians",
+      "There is a pedestrian crossing or crosswalk ahead; prepare to stop"
     ],
     "options_zh": [
       "前方有一个学校路口，准备停车",
-      "",
       "前方有一段共用道路，请减速并注意行人",
-      "前方有公园或操场；放慢速度，注意行人 There is a pedestrian crossing or crosswalk ahead; prepare to stop 前方有一个行人穿越或人行横道，准备停车"
+      "前方有公园或操场；放慢速度，注意行人",
+      "前方有一个行人穿越或人行横道，准备停车"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
     "lang_primary": "en",
-    "needs_translation": null
+    "needs_translation": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'School'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 212,
@@ -8899,7 +9269,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W2-6 with W13-1P, Section 2C.41 (Intersection Warning Signs; advisory plaque in Section 2C.59)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 213,
@@ -8941,7 +9316,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） Section 4T.02 (Meaning of Lane-Use Control Signal Indications)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 214,
@@ -8983,7 +9363,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W10-5, Section 8B.16 (Low Ground Clearance Grade Crossing Sign)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 215,
@@ -9025,7 +9410,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） Section 6D.05 (Flagger Procedures; Figure 6D-1)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 216,
@@ -9067,18 +9457,23 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W12-2, Section 2C.25 (Low Clearance Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 217,
     "type": "mc_image",
-    "stem": "This diamond-shaped sign indicates:这个菱形标志表示。",
+    "stem": "This diamond-shaped sign indicates: 这个菱形标志表示。",
     "stem_img": "img_complete_072.jpg",
     "options": [
-      "A parking area ahead; the width of the road is 13 feet and 6 inches 前方有一个停车区；道路宽度为 13 英尺 6 英寸",
-      "A median ahead; the width of the road is 13 feet and 6 inches 前方有一个中间地带；道路的宽度为 13 英尺 6 英寸",
-      "An overpass ahead; clearance from the roadway surface to the overpass is 13 feet and 6 inches 前方有立交桥；从路面到立交桥的间隙为 13 英尺 6 英寸",
-      "A bridge ahead; the width of the road is 13 feet and 6 inches 前方有一座桥；道路的宽度为 13 英尺 6 英寸"
+      "A parking area ahead; the width of the road is 13 feet and 6 inches 前方有一个停车区；道路宽度为13英尺6英寸",
+      "A median ahead; the width of the road is 13 feet and 6 inches 前方有一个中间地带；道路的宽度为13英尺6英寸",
+      "An overpass ahead; clearance from the roadway surface to the overpass is 13 feet and 6 inches 前方有立交桥；从路面到立交桥的间隙为13英尺6英寸",
+      "A bridge ahead; the width of the road is 13 feet and 6 inches 前方有一座桥；道路的宽度为13英尺6英寸"
     ],
     "answer": "C",
     "answer_text": null,
@@ -9095,20 +9490,26 @@
     "stem_zh": "这个菱形标志表示。",
     "options_en": [
       "A parking area ahead; the width of the road is 13 feet and 6 inches",
-      "",
       "A median ahead; the width of the road is 13 feet and 6 inches",
-      ""
+      "An overpass ahead; clearance from the roadway surface to the overpass is 13 feet and 6 inches",
+      "A bridge ahead; the width of the road is 13 feet and 6 inches"
     ],
     "options_zh": [
-      "",
       "前方有一个停车区；道路宽度为13英尺6英寸",
-      "",
-      "前方有一个中间地带；道路的宽度为13英尺6英寸 An overpass ahead; clearance from the roadway surface to the overpass is 13 feet and 6 inches 前方有立交桥；从路面到立交桥的间隙为13英尺6英寸 A bridge ahead; the width of the road is 13 feet and 6 inches 前方有一座桥；道路的宽度为13英尺6英寸"
+      "前方有一个中间地带；道路的宽度为13英尺6英寸",
+      "前方有立交桥；从路面到立交桥的间隙为13英尺6英寸",
+      "前方有一座桥；道路的宽度为13英尺6英寸"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
     "lang_primary": "en",
-    "needs_translation": null
+    "needs_translation": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W12-2, Section 2C.25 (Low Clearance Signs)",
+      "date": "2026-11-24",
+      "note": "独立核对时这题的英文选项字段还是错位的旧数据；选项按源文件重建后，标注的答案与出处一致。"
+    }
   },
   {
     "id": 218,
@@ -9150,7 +9551,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W5-2 (NARROW BRIDGE), Section 2C.18 (NARROW BRIDGE and NARROW UNDERPASS Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 219,
@@ -9193,7 +9599,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'Divided Highway'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 220,
@@ -9235,7 +9646,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W3-5, Section 2C.40 (Reduced Speed Limit Ahead and Speed Zone Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 221,
@@ -9277,7 +9693,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'Side Road'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 222,
@@ -9319,7 +9740,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W11-8 (Emergency Vehicle), Section 2C.54 (Vehicular Traffic Warning Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 223,
@@ -9361,11 +9787,16 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.217 / printed p.215: 'Road Work Signs': orange diamond-shaped signs are work-zone warnings",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 224,
-    "type": "mc",
+    "type": "mc_image",
     "stem": "This figure indicates that: 这个图形表明。",
     "stem_img": "img_complete_152.png",
     "options": [
@@ -9403,7 +9834,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'Workers'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 225,
@@ -9445,7 +9881,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） M4-10 (Detour Arrow), Section 6I.02 (Detour Signs and Plaques)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 226,
@@ -9487,7 +9928,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'Detour' (same diamond with 'AHEAD' instead of a distance)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 227,
@@ -9529,7 +9975,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: D_zh has long English run (46+ chars)"
+    "notes": "auto-detected: D_zh has long English run (46+ chars)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.224 / printed p.222: sign grid label 'Railroad'; text on PDF p.155 / printed p.153",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 228,
@@ -9571,7 +10022,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W10-12, Section 8B.22 (Skewed Crossing Sign)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 229,
@@ -9613,7 +10069,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W11-15 (Trail Crossing) with W16-7P, Section 2C.54 (Vehicular Traffic Warning Signs; arrow plaque in Section 2C.63)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 230,
@@ -9655,7 +10116,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'Slippery When Wet'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 231,
@@ -9697,7 +10163,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'No Passing Zone'; shape table PDF p.216 / printed p.214",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 232,
@@ -9739,7 +10210,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W8-17 (Shoulder Drop Off), Section 2C.29 (Shoulder Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 233,
@@ -9781,7 +10257,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: A_en has next-question phrase; B_en has next-question phrase"
+    "notes": "auto-detected: A_en has next-question phrase; B_en has next-question phrase",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.216 / printed p.214: footnote to the sign table: advisory speed shown with the warning sign when safe curve speed is below the limit; 'Curves' on PDF p.74 / printed p.72 mentions recommended speeds",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 234,
@@ -9823,7 +10304,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.216 / printed p.214: footnote to the sign table: advisory speed sign",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 235,
@@ -9865,7 +10351,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W8-4, Section 2C.29 (Shoulder Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 236,
@@ -9907,7 +10398,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: D_zh has long English run (44+ chars)"
+    "notes": "auto-detected: D_zh has long English run (44+ chars)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.216 / printed p.214: shape table: white vertical rectangle = regulation (such as speed signs); speed rules on PDF p.65 / printed p.63",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 237,
@@ -9949,7 +10445,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'Winding Road'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 238,
@@ -9991,7 +10492,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'Reserved Parking'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 239,
@@ -10033,7 +10539,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W2-4 (T-Intersection), Section 2C.41 (Intersection Warning Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 240,
@@ -10052,7 +10563,7 @@
       "signs"
     ],
     "is_common_mistake": false,
-    "explanation_key": null,
+    "explanation_key": "sign_two_direction_arrow",
     "verified": false,
     "needs_review": null,
     "source_doc": "complete",
@@ -10075,7 +10586,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W1-7, Section 2C.43 (Two-Direction Large Arrow Sign)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 241,
@@ -10117,7 +10633,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） Section 3G.01 (Delineators - General)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 242,
@@ -10160,7 +10681,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.215 / printed p.213: 'Orange, Steady Raised-Palm Symbol': pedestrians must not enter the roadway",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 243,
@@ -10202,7 +10728,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'Merge'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 244,
@@ -10244,7 +10775,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） R1-3P, Section 2B.04 (STOP Sign and ALL-WAY Plaque)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 245,
@@ -10286,13 +10822,18 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'Yield Ahead'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 246,
     "type": "mc_image",
     "stem": "What does this figure mean? 这个图形是什么意思？",
-    "stem_img": "img_complete_101.png",
+    "stem_img": "img_q246.jpg",
     "options": [
       "A playground ahead 前方有一个游乐场",
       "A child care center ahead 前面有一个儿童看护中心",
@@ -10328,7 +10869,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W15-1, Section 2C.56 (Playground Sign)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 247,
@@ -10370,7 +10916,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W8-1, Section 2C.26 (BUMP and DIP Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 248,
@@ -10412,13 +10963,18 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: D_zh has long English run (21+ chars)"
+    "notes": "auto-detected: D_zh has long English run (21+ chars)",
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W1-4 (Reverse Curve), Section 2C.07 (Horizontal Alignment Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 249,
     "type": "mc_image",
     "stem": "The arrow-marked sign means: 箭头标记的标志意味着",
-    "stem_img": "img_complete_104.jpg",
+    "stem_img": "img_q249.jpg",
     "options": [
       "the main road curves to the left 主干道向左转弯",
       "a series of curves ahead 前面有一系列的弯道",
@@ -10454,7 +11010,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W1-10 series, Section 2C.09 (Combination Horizontal Alignment/Intersection Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 250,
@@ -10496,11 +11057,16 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'Hill'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 251,
-    "type": "mc",
+    "type": "mc_image",
     "stem": "This sign means: 这个标志的意思",
     "stem_img": "img_complete_153.jpg",
     "options": [
@@ -10538,13 +11104,18 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: D_zh has long English run (32+ chars)"
+    "notes": "auto-detected: D_zh has long English run (32+ chars)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.223 / printed p.221: sign grid label 'Bicycles Present'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 252,
     "type": "mc_image",
     "stem": "What does the arrow mark sign mean? 箭头标记标志是什么意思",
-    "stem_img": "img_complete_106.jpg",
+    "stem_img": "img_q252.jpg",
     "options": [
       "Rest area open to the right 休息区开放向右转",
       "Make a sharp right turn 向右急转",
@@ -10580,18 +11151,23 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W1-6, Section 2C.10 (One-Direction Large Arrow Sign)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 253,
-    "type": "mc",
+    "type": "mc_image",
     "stem": "This sign indicates: 这个标志表明。",
     "stem_img": "img_complete_148.png",
     "options": [
       "a one-way 单向",
       "a sharp right turn 右急转弯",
       "a right curve 右转弯",
-      "a winding road"
+      "a winding road 弯弯曲曲的道路"
     ],
     "answer": "B",
     "answer_text": null,
@@ -10616,13 +11192,18 @@
       "单向",
       "右急转弯",
       "右转弯",
-      ""
+      "弯弯曲曲的道路"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'Sharp Turn Ahead'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 254,
@@ -10664,7 +11245,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'Cattle Crossing'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 255,
@@ -10706,7 +11292,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） Section 6L.06 (Arrow Boards)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 256,
@@ -10748,7 +11339,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） Section 6L.06 (Arrow Boards)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 257,
@@ -10790,7 +11386,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.56 / printed p.54: hand signals: stop or slowing = hand and arm downward",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 258,
@@ -10832,7 +11433,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'Person with a Disability'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 259,
@@ -10874,7 +11480,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） D9-7 (Gas), Section 2I.02 (General Service Signs for Conventional Roads)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 260,
@@ -10916,7 +11527,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.222 / printed p.220: sign grid label 'Hospital'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 261,
@@ -10958,7 +11574,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） D9-8 (Food), Section 2I.02 (General Service Signs for Conventional Roads)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 262,
@@ -11000,13 +11621,18 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） D9-9 (Lodging), Section 2I.02 (General Service Signs for Conventional Roads)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 263,
     "type": "mc_image",
     "stem": "The shield shape is a/an: 盾牌的形状是",
-    "stem_img": "img_complete_116.jpg",
+    "stem_img": "img_q263.png",
     "options": [
       "exit number 出口号",
       "route maker sign 公路号",
@@ -11042,7 +11668,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.224 / printed p.222: sign grid label 'Interstate'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 264,
@@ -11084,12 +11715,17 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.224 / printed p.222: sign grid label 'Rest Area'; 'Motorist Service Signs' on PDF p.217 / printed p.215",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 265,
     "type": "mc_image",
-    "stem": "This sign is a",
+    "stem": "This sign is a 这个标志是",
     "stem_img": "img_complete_118.jpg",
     "options": [
       "A highway exit sign 高速路出口标志",
@@ -11109,7 +11745,7 @@
     "source_doc": "complete",
     "source_para_idx": 1436,
     "stem_en": "This sign is a",
-    "stem_zh": "",
+    "stem_zh": "这个标志是",
     "options_en": [
       "A highway exit sign",
       "A destination distance sigh",
@@ -11126,7 +11762,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": "en_to_zh",
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） Section 2E.41 (Design of Freeway and Expressway Diagrammatic Advance Guide Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 266,
@@ -11168,7 +11809,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.224 / printed p.222: sign grid label 'Exit Marker'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 267,
@@ -11210,7 +11856,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.224 / printed p.222: sign grid label 'Exit Marker'",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 268,
@@ -11252,13 +11903,18 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.214 / printed p.212: 'Green Arrow': proceed only as shown by the arrow",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 269,
     "type": "mc_image",
     "stem": "These signs located on freeways are called ____. 这些位于高速公路上的标志被称为。",
-    "stem_img": "img_complete_122.jpg",
+    "stem_img": "img_q269.jpg",
     "options": [
       "Crossroads indicators 十字路口指标",
       "Dynamic message signs 动态信息标志",
@@ -11294,7 +11950,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） Section 2L.01 (Description of Changeable Message Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 270,
@@ -11336,7 +11997,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: D_zh has long English run (112+ chars)"
+    "notes": "auto-detected: D_zh has long English run (112+ chars)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.80 / printed p.78: 'Move Over Law': change to a non-adjacent lane if safe, otherwise slow below the limit",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 271,
@@ -11378,7 +12044,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.87 / printed p.85: parking list: never park within 10 feet of a fire hydrant",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 272,
@@ -11387,8 +12058,8 @@
     "stem_img": "img_complete_125.jpg",
     "options": [
       "Neither car 两辆车都不对",
-      "Car B B 车",
-      "Car A  A 车",
+      "Car B B车",
+      "Car A A车",
       "Both cars 两车都对"
     ],
     "answer": "C",
@@ -11406,21 +12077,27 @@
     "stem_zh": "两辆汽车正在转入一条分车道公路。哪辆车的转向是正确的？",
     "options_en": [
       "Neither car",
-      "Car B B",
-      "Car A  A",
+      "Car B",
+      "Car A",
       "Both cars"
     ],
     "options_zh": [
       "两辆车都不对",
-      "车",
-      "车",
+      "B车",
+      "A车",
       "两车都对"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "unverified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.75 / printed p.73: 'Left turn from a two-way road onto a four-lane highway': turn into the lane nearest the centre line, then move right",
+      "date": "2026-11-24",
+      "note": "配图只有 85×85 像素，看不清两辆车各进哪条车道，答案暂时没法对照手册 PDF p75 / 印刷 p73 的规则确认。"
+    }
   },
   {
     "id": 273,
@@ -11462,7 +12139,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: D_zh has long English run (92+ chars)"
+    "notes": "auto-detected: D_zh has long English run (92+ chars)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.80 / printed p.78: 'Pull Over and Stop for Emergency Vehicles': steer to the extreme right, stop, wait",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 274,
@@ -11470,7 +12152,7 @@
     "stem": "Two cars have parked outside of a fire station. Which of the following is most true? 有两辆汽车停在了一个消防站的外面。以下哪项是最正确的？",
     "stem_img": "img_complete_127.jpg",
     "options": [
-      "Car A cannot park across the driveway  A 车不能停在车道对面",
+      "Car A cannot park across the driveway A车不能停在车道对面",
       "Car A must remain at least 20ft from the driveway 轿车A必须与车道保持至少20英尺的距离",
       "Car A must remain at least 75ft from the driveway, and Car B must remain at least 20ft from the driveway 轿车A必须离车道至少75英尺，而轿车B必须离车道至少20英尺",
       "Car A must remain at least 20ft from the driveway, and Car B must remain at least 75ft from the driveway A车必须保持离车道至少20英尺，B车必须保持离车道至少75英尺"
@@ -11489,13 +12171,13 @@
     "stem_en": "Two cars have parked outside of a fire station. Which of the following is most true?",
     "stem_zh": "有两辆汽车停在了一个消防站的外面。以下哪项是最正确的？",
     "options_en": [
-      "Car A cannot park across the driveway  A",
+      "Car A cannot park across the driveway",
       "Car A must remain at least 20ft from the driveway",
       "Car A must remain at least 75ft from the driveway, and Car B must remain at least 20ft from the driveway",
       "Car A must remain at least 20ft from the driveway, and Car B must remain at least 75ft from the driveway"
     ],
     "options_zh": [
-      "车不能停在车道对面",
+      "A车不能停在车道对面",
       "轿车A必须与车道保持至少20英尺的距离",
       "轿车A必须离车道至少75英尺，而轿车B必须离车道至少20英尺",
       "A车必须保持离车道至少20英尺，B车必须保持离车道至少75英尺"
@@ -11504,7 +12186,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: D_zh has long English run (27+ chars)"
+    "notes": "auto-detected: D_zh has long English run (27+ chars)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.87 / printed p.85: parking list: 20 feet from a fire station driveway entrance, 75 feet on the opposite side of the street",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 275,
@@ -11546,7 +12233,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: D_zh has long English run (58+ chars)"
+    "notes": "auto-detected: D_zh has long English run (58+ chars)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.79 / printed p.77: 'Stop for School Buses': on the other side of a safety island or raised median, slow to 10 mph",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 276,
@@ -11554,10 +12246,10 @@
     "stem": "Which vehicle is least likely to be visible to the truck driver? 哪辆车最不可能被卡车司机看到？",
     "stem_img": "img_complete_129.jpg",
     "options": [
-      "Car A, as it is to the left of Car B  A 车，因为它在 B 车的左边",
-      "Car C, as it is to the right of Car A and Car B  C 车，因为它在 A 车和 B 车的右边",
+      "Car A A 车",
+      "Car C C 车",
       "None of the cars would be visible to the truck driver 没有车能被看到",
-      "Car B, as it is to the right of Car A  B 车，因为它在 A 车的右边"
+      "Car B B 车"
     ],
     "answer": "D",
     "answer_text": null,
@@ -11570,25 +12262,30 @@
     "needs_review": "orphan_answer",
     "source_doc": "complete",
     "source_para_idx": 1511,
-    "stem_en": "296.Which vehicle is least likely to be visible to the truck driver?",
+    "stem_en": "Which vehicle is least likely to be visible to the truck driver?",
     "stem_zh": "哪辆车最不可能被卡车司机看到？",
     "options_en": [
-      "Car AB. Car C",
-      "",
+      "Car A",
+      "Car C",
       "None of the cars would be visible to the truck driver",
       "Car B"
     ],
     "options_zh": [
-      "",
-      "",
+      "A 车",
+      "C 车",
       "没有车能被看到",
-      ""
+      "B 车"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.149 / printed p.147: 'The no-zone principle'; no-zone diagram on PDF p.150 / printed p.148; 'Side no-zone' on PDF p.152 / printed p.150",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 277,
@@ -11630,7 +12327,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.69 / printed p.67: 'Intersections' > Controlled: when turning left, yield to oncoming traffic and stop for pedestrians",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 278,
@@ -11638,8 +12340,8 @@
     "stem": "Three cars arrive at a four-way STOP, one car after the next. Which car can go first? 三辆车到达一个十字路口的STOP，一辆接一辆。哪辆车可以先走？",
     "stem_img": "img_complete_131.jpg",
     "options": [
-      "Car B, as it was first to arrive at the intersection  B 车，因为它是第一个到达十字路口的人",
-      "Car C, as it is to the right of Car A and Car B  C 车，因为它在A车和B车的右边",
+      "Car B, as it was first to arrive at the intersection B车，因为它是第一个到达十字路口的人",
+      "Car C, as it is to the right of Car A and Car B C车，因为它在A车和B车的右边",
       "Car A, as it is to the left of Car B A车，因为它在B车的左边",
       "Car B, as it is to the right of Car A B车，因为它在A车的右边"
     ],
@@ -11657,14 +12359,14 @@
     "stem_en": "Three cars arrive at a four-way STOP, one car after the next. Which car can go first?",
     "stem_zh": "三辆车到达一个十字路口的STOP，一辆接一辆。哪辆车可以先走？",
     "options_en": [
-      "Car B, as it was first to arrive at the intersection  B",
-      "Car C, as it is to the right of Car A and Car B  C",
+      "Car B, as it was first to arrive at the intersection",
+      "Car C, as it is to the right of Car A and Car B",
       "Car A, as it is to the left of Car B",
       "Car B, as it is to the right of Car A"
     ],
     "options_zh": [
-      "车，因为它是第一个到达十字路口的人",
-      "车，因为它在A车和B车的右边",
+      "B车，因为它是第一个到达十字路口的人",
+      "C车，因为它在A车和B车的右边",
       "A车，因为它在B车的左边",
       "B车，因为它在A车的右边"
     ],
@@ -11672,7 +12374,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: D_zh has long English run (40+ chars)"
+    "notes": "auto-detected: D_zh has long English run (40+ chars)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.69 / printed p.67: 'Intersections' > Controlled: at a multi-way stop yield to any vehicle already stopped at the intersection",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 279,
@@ -11714,7 +12421,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: D_zh has long English run (87+ chars)"
+    "notes": "auto-detected: D_zh has long English run (87+ chars)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.97 / printed p.95: 'Three Seconds-Plus Rule'; four or more seconds in bad weather",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 280,
@@ -11756,7 +12468,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: D_zh has long English run (56+ chars)"
+    "notes": "auto-detected: D_zh has long English run (56+ chars)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.74 / printed p.72: 'Right Turn on Red': full stop, then yield to traffic and pedestrians before turning",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 281,
@@ -11764,12 +12481,12 @@
     "stem": "Three cars arrive at an intersection at the same time. Who here has the right of way? 三辆车同时到达一个十字路口。这里谁有路权？",
     "stem_img": "img_complete_134.jpg",
     "options": [
-      "Car A  A 车",
-      "Car B  B 车",
-      "Car C  C 车",
-      "The pedestrian  行人"
+      "Car B B 车",
+      "Car C C 车",
+      "The pedestrian 行人",
+      "Car A A 车"
     ],
-    "answer": "D",
+    "answer": "C",
     "answer_text": null,
     "topics": [
       "unclassified"
@@ -11783,22 +12500,28 @@
     "stem_en": "Three cars arrive at an intersection at the same time. Who here has the right of way?",
     "stem_zh": "三辆车同时到达一个十字路口。这里谁有路权？",
     "options_en": [
-      "Car BB. Car CC. The pedestrian",
-      "",
-      "",
+      "Car B",
+      "Car C",
+      "The pedestrian",
       "Car A"
     ],
     "options_zh": [
+      "B 车",
+      "C 车",
       "行人",
-      "",
-      "",
-      ""
+      "A 车"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.68 / printed p.66: 'Pedestrians in a Crosswalk': motorists must stop for pedestrians in a crosswalk",
+      "date": "2026-11-24",
+      "note": "独立核对时这题的英文选项字段还是错位的旧数据；选项按源文件重建后，标注的答案与出处一致。"
+    }
   },
   {
     "id": 282,
@@ -11840,7 +12563,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.214 / printed p.212: 'Green Arrow': proceed only as shown by the arrow",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 283,
@@ -11882,7 +12610,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: D_zh has long English run (65+ chars)"
+    "notes": "auto-detected: D_zh has long English run (65+ chars)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.214 / printed p.212: 'Green Light': proceed, yielding to pedestrians and vehicles still in the intersection",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 284,
@@ -11974,10 +12707,10 @@
     "stem": "When turning a vehicle around, a motorist should start from the right edge of road and follow to make a turn during MVC’s road test. 在MVC的道路测试中，当车辆掉头时，驾驶者应从道路的右侧边缘开始，并按照进行转向。",
     "stem_img": null,
     "options": [
-      "The 4-point turn method  4 点转向法",
+      "The 4-point turn method 4 点转向法",
       "The U-turn method 调头法",
-      "The K-turn method  K 型转弯法 The T-turn method  T型转弯法",
-      ""
+      "The K-turn method K 型转弯法",
+      "The T-turn method T 型转弯法"
     ],
     "answer": "C",
     "answer_text": null,
@@ -11993,16 +12726,16 @@
     "stem_en": "When turning a vehicle around, a motorist should start from the right edge of road and follow to make a turn during MVC’s road test.",
     "stem_zh": "在MVC的道路测试中，当车辆掉头时，驾驶者应从道路的右侧边缘开始，并按照进行转向。",
     "options_en": [
-      "The 4-point turn method  4",
+      "The 4-point turn method",
       "The U-turn method",
-      "The K-turn method  K",
-      ""
+      "The K-turn method",
+      "The T-turn method"
     ],
     "options_zh": [
-      "点转向法",
+      "4 点转向法",
       "调头法",
-      "型转弯法 The T-turn method  T型转弯法",
-      ""
+      "K 型转弯法",
+      "T 型转弯法"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
@@ -12307,13 +13040,13 @@
   {
     "id": 294,
     "type": "mc",
-    "stem": "While operating a motor vehicle on a public road or highway, state law prohibits the use of hand-held cell phones for: 在公共道路或公路上驾驶机动车时，州法律禁止在以下情况下使用手持手机：",
+    "stem": "While driving a motor vehicle on a public road or highway, the state law prohibits the use of hand held cell phones for: 在公共道路或公路上驾驶机动车时，州法律禁止在以下情况下使用手持手机",
     "stem_img": null,
     "options": [
       "Sending a text 发送短信",
       "Reading a text 阅读短信",
       "Making a call 拨打电话",
-      "All of the above 以上皆是"
+      "All of the above 以上都是"
     ],
     "answer": "D",
     "answer_text": null,
@@ -12326,8 +13059,8 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 1636,
-    "stem_en": "While operating a motor vehicle on a public road or highway, state law prohibits the use of hand-held cell phones for:",
-    "stem_zh": "在公共道路或公路上驾驶机动车时，州法律禁止在以下情况下使用手持手机：",
+    "stem_en": "While driving a motor vehicle on a public road or highway, the state law prohibits the use of hand held cell phones for:",
+    "stem_zh": "在公共道路或公路上驾驶机动车时，州法律禁止在以下情况下使用手持手机",
     "options_en": [
       "Sending a text",
       "Reading a text",
@@ -12335,10 +13068,10 @@
       "All of the above"
     ],
     "options_zh": [
-      "",
-      "",
-      "",
-      ""
+      "发送短信",
+      "阅读短信",
+      "拨打电话",
+      "以上都是"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
@@ -12352,10 +13085,10 @@
     "stem": "In normal driving, a driver should place his/her hands on the steering wheel at the 在正常驾驶中，驾驶员应将双手放在方向盘上，在",
     "stem_img": null,
     "options": [
-      "10 and 3 o’clock positions  10 点钟和 3 点钟位置",
-      "8 and 3 o’clock positions  8 点钟和 3 点钟位置",
-      "9 and 2 o’clock positions  9 点钟和 2 点钟位置",
-      "9 and 3 o’clock positions  9 点钟和 3 点钟位置"
+      "10 and 3 o’clock positions 10点钟和3点钟位置",
+      "8 and 3 o’clock positions 8点钟和3点钟位置",
+      "9 and 2 o’clock positions 9点钟和2点钟位置",
+      "9 and 3 o’clock positions 9点钟和3点钟位置"
     ],
     "answer": "D",
     "answer_text": null,
@@ -12371,16 +13104,16 @@
     "stem_en": "In normal driving, a driver should place his/her hands on the steering wheel at the",
     "stem_zh": "在正常驾驶中，驾驶员应将双手放在方向盘上，在",
     "options_en": [
-      "10 and 3 o’clock positions  10",
-      "8 and 3 o’clock positions  8",
-      "9 and 2 o’clock positions  9",
-      ""
+      "10 and 3 o’clock positions",
+      "8 and 3 o’clock positions",
+      "9 and 2 o’clock positions",
+      "9 and 3 o’clock positions"
     ],
     "options_zh": [
-      "点钟和3点钟位置",
-      "点钟和3点钟位置",
-      "点钟和2点钟位置 9 and 3 o’clock positions  9点钟和3点钟位置",
-      ""
+      "10点钟和3点钟位置",
+      "8点钟和3点钟位置",
+      "9点钟和2点钟位置",
+      "9点钟和3点钟位置"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
@@ -12391,7 +13124,7 @@
   {
     "id": 296,
     "type": "mc",
-    "stem": "“No-Zone” refers to:  \" 盲区 \"指的是",
+    "stem": "“No-Zone” refers to: “盲区”指的是",
     "stem_img": null,
     "options": [
       "Blind spots around trucks 卡车周围的盲点",
@@ -12410,8 +13143,8 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 1655,
-    "stem_en": "“No-Zone” refers to:  \"",
-    "stem_zh": "盲区 \"指的是",
+    "stem_en": "“No-Zone” refers to:",
+    "stem_zh": "“盲区”指的是",
     "options_en": [
       "Blind spots around trucks",
       "Work zones on freeways",
@@ -13525,13 +14258,13 @@
   {
     "id": 323,
     "type": "mc",
-    "stem": "you must: 当你来到一辆停在任何道路上的学校或教会巴士前上下乘客时。你必须",
+    "stem": "When you come to a school or church bus that is stopped on any roadway to load or unload passengers, you must: 当你来到一辆停在任何道路上的学校或教会巴士前上下乘客时。你必须",
     "stem_img": null,
     "options": [
+      "Stop and remain stopped until all people have cleared the roadway 停止并保持停止，直到所有的人都离开道路。",
       "Slow down and proceed with caution 放慢脚步，谨慎行驶",
       "Increase your speed and pass the bus quickly 提高你的速度，快速通过巴士",
-      "Continue with the same speed 继续以同样的速度前进",
-      "Stop and remain stopped until all people have cleared the roadway 停止并保持停止，直到所有的人都离开道路。 344. If your vehicle is hit from the side, your body will be thrown:"
+      "Continue with the same speed 继续以同样的速度前进"
     ],
     "answer": "A",
     "answer_text": null,
@@ -13544,19 +14277,19 @@
     "needs_review": "stem_too_short;option_leak;orphan_after_shift",
     "source_doc": "complete",
     "source_para_idx": 1833,
-    "stem_en": "you must:",
+    "stem_en": "When you come to a school or church bus that is stopped on any roadway to load or unload passengers, you must:",
     "stem_zh": "当你来到一辆停在任何道路上的学校或教会巴士前上下乘客时。你必须",
     "options_en": [
+      "Stop and remain stopped until all people have cleared the roadway",
       "Slow down and proceed with caution",
       "Increase your speed and pass the bus quickly",
-      "Continue with the same speed",
-      "Stop and remain stopped until all people have cleared the roadway"
+      "Continue with the same speed"
     ],
     "options_zh": [
+      "停止并保持停止，直到所有的人都离开道路。",
       "放慢脚步，谨慎行驶",
       "提高你的速度，快速通过巴士",
-      "继续以同样的速度前进",
-      "停止并保持停止，直到所有的人都离开道路。 344. If your vehicle is hit from the side, your body will be thrown:"
+      "继续以同样的速度前进"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
@@ -13777,7 +14510,7 @@
   {
     "id": 329,
     "type": "mc",
-    "stem": "Before backing up your vehicle, you should look to the front, sides and rear, and continue to look         while backing. 在倒车之前，你应该看一下前面、侧面和后面，并在倒车时继续看",
+    "stem": "Before backing up your vehicle, you should look to the front, sides and rear, and continue to look ____ while backing. 在倒车之前，你应该看一下前面、侧面和后面，并在倒车时继续看 ____。",
     "stem_img": null,
     "options": [
       "To the front 前方",
@@ -13796,8 +14529,8 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 1874,
-    "stem_en": "Before backing up your vehicle, you should look to the front, sides and rear, and continue to look         while backing.",
-    "stem_zh": "在倒车之前，你应该看一下前面、侧面和后面，并在倒车时继续看",
+    "stem_en": "Before backing up your vehicle, you should look to the front, sides and rear, and continue to look ____ while backing.",
+    "stem_zh": "在倒车之前，你应该看一下前面、侧面和后面，并在倒车时继续看 ____。",
     "options_en": [
       "To the front",
       "To the sides",
@@ -14113,7 +14846,7 @@
   {
     "id": 337,
     "type": "mc",
-    "stem": "If there are three or more lanes going in the same direction on a highway, the    are usually the smoothest, in terms of the flow of traffic. 如果高速公路上有三条或更多的车道朝同一方向行驶，就交通流量而言，通常是最顺畅的是。",
+    "stem": "If there are three or more lanes going in the same direction on a highway, the ____ are usually the smoothest, in terms of the flow of traffic. 如果高速公路上有三条或更多的车道朝同一方向行驶，就交通流量而言，通常最顺畅的是 ____。",
     "stem_img": null,
     "options": [
       "Left lanes 左侧车道",
@@ -14132,8 +14865,8 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 1926,
-    "stem_en": "If there are three or more lanes going in the same direction on a highway, the    are usually the smoothest, in terms of the flow of traffic.",
-    "stem_zh": "如果高速公路上有三条或更多的车道朝同一方向行驶，就交通流量而言，通常是最顺畅的是。",
+    "stem_en": "If there are three or more lanes going in the same direction on a highway, the ____ are usually the smoothest, in terms of the flow of traffic.",
+    "stem_zh": "如果高速公路上有三条或更多的车道朝同一方向行驶，就交通流量而言，通常最顺畅的是 ____。",
     "options_en": [
       "Left lanes",
       "Accelerating lanes",
@@ -14412,9 +15145,9 @@
     "stem_img": null,
     "options": [
       "On highways that have at least two lanes traveling in each direction 在每个方向至少有两条车道行驶的高速公路上",
-      "When driving in a lane set aside for left-turns 在留出的左转车道上行驶时",
       "When passing a vehicle that is in the left-turn lane 在超过处于左转弯车道的车辆时",
-      "On one-way streets where all lanes of traffic move in the same direction 在单行道上，所有的车道都在同一方向行驶"
+      "On one-way streets where all lanes of traffic move in the same direction 在单行道上，所有的车道都在同一方向行驶",
+      "When driving in a lane set aside for left-turns 在留出的左转车道上行驶时"
     ],
     "answer": "D",
     "answer_text": null,
@@ -14431,15 +15164,15 @@
     "stem_zh": "在下列所有情况下都允许右侧超车，但以下情况除外。",
     "options_en": [
       "On highways that have at least two lanes traveling in each direction",
-      "When driving in a lane set aside for left-turns",
       "When passing a vehicle that is in the left-turn lane",
-      "On one-way streets where all lanes of traffic move in the same direction"
+      "On one-way streets where all lanes of traffic move in the same direction",
+      "When driving in a lane set aside for left-turns"
     ],
     "options_zh": [
       "在每个方向至少有两条车道行驶的高速公路上",
-      "在留出的左转车道上行驶时",
       "在超过处于左转弯车道的车辆时",
-      "在单行道上，所有的车道都在同一方向行驶"
+      "在单行道上，所有的车道都在同一方向行驶",
+      "在留出的左转车道上行驶时"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
@@ -15838,7 +16571,7 @@
   {
     "id": 378,
     "type": "mc",
-    "stem": "399.A motorist must stop        from railroad crossings when there are flashing lights, ringing bells or flag signals. 当有闪灯、铃声或旗帜信号时，驾车者必须在铁路交叉口停车。",
+    "stem": "A motorist must stop ____ from railroad crossings when there are flashing lights, ringing bells or flag signals. 当有闪灯、铃声或旗帜信号时，驾车者必须在距铁路交叉口 ____ 处停车。",
     "stem_img": null,
     "options": [
       "At least 1 foot 至少一英尺",
@@ -15857,8 +16590,8 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 2217,
-    "stem_en": "399.A motorist must stop        from railroad crossings when there are flashing lights, ringing bells or flag signals.",
-    "stem_zh": "当有闪灯、铃声或旗帜信号时，驾车者必须在铁路交叉口停车。",
+    "stem_en": "A motorist must stop ____ from railroad crossings when there are flashing lights, ringing bells or flag signals.",
+    "stem_zh": "当有闪灯、铃声或旗帜信号时，驾车者必须在距铁路交叉口 ____ 处停车。",
     "options_en": [
       "At least 1 foot",
       "At least 15 feet",
@@ -16011,9 +16744,9 @@
     "stem_img": null,
     "options": [
       "This signal tells you that you cannot turn at this intersection, so continue on straight 这个信号灯告诉你，你不能在这个路口转弯，所以继续直走。",
-      "Slow down and drive with caution 放慢速度，谨慎驾驶 Prepare to stop; the light will soon turn red  准备停车；信号灯很快就会变红",
-      "Stop, yield and proceed when safe 停车，让路，安全时继续前进",
-      ""
+      "Slow down and drive with caution 放慢速度，谨慎驾驶",
+      "Prepare to stop; the light will soon turn red 准备停车；信号灯很快就会变红",
+      "Stop, yield and proceed when safe 停车，让路，安全时继续前进"
     ],
     "answer": "B",
     "answer_text": null,
@@ -16031,14 +16764,14 @@
     "options_en": [
       "This signal tells you that you cannot turn at this intersection, so continue on straight",
       "Slow down and drive with caution",
-      "Stop, yield and proceed when safe",
-      ""
+      "Prepare to stop; the light will soon turn red",
+      "Stop, yield and proceed when safe"
     ],
     "options_zh": [
       "这个信号灯告诉你，你不能在这个路口转弯，所以继续直走。",
-      "放慢速度，谨慎驾驶 Prepare to stop; the light will soon turn red  准备停车；信号灯很快就会变红",
-      "停车，让路，安全时继续前进",
-      ""
+      "放慢速度，谨慎驾驶",
+      "准备停车；信号灯很快就会变红",
+      "停车，让路，安全时继续前进"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
@@ -16265,7 +16998,7 @@
       "Yes, as long as you are careful 是的，只要你小心",
       "Only if a hands-free device is used 只有在使用免提设备的情况下",
       "Only if you are driving on a rural road 只有当你在农村道路上行驶时",
-      "Talking on a cell phone while driving is never permitted"
+      "Talking on a cell phone while driving is never permitted 绝不允许在驾驶时使用手机通话"
     ],
     "answer": "B",
     "answer_text": null,
@@ -16290,7 +17023,7 @@
       "是的，只要你小心",
       "只有在使用免提设备的情况下",
       "只有当你在农村道路上行驶时",
-      ""
+      "绝不允许在驾驶时使用手机通话"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
@@ -16931,13 +17664,13 @@
   {
     "id": 404,
     "type": "mc",
-    "stem": "When you are in the middle lane of a road, you want to turn left. You may turn left from the middle lane only if: 当你在一条道路的中间车道上时，你想左转。只有在以下情况下，你才能从中间车道左转：",
+    "stem": "While in the middle lane of a road, you would like to turn left. You can turn left from the middle lane only if: 当你在一条道路的中间车道上时，你想左转。只有在以下情况下，你才能从中间车道左转",
     "stem_img": null,
     "options": [
-      "You are turning onto a one-way road  你正转入一条单行道",
-      "You are unable to merge to the left-most lane due to traffic  由于交通原因你无法并入最左侧车道",
-      "The middle lane is marked for left turns only  中间车道标有「仅限左转」",
-      "You are not allowed to turn left from the middle lane  你不允许从中间车道左转"
+      "You are turn onto a one-way road 你正转入一条单行道",
+      "You are unable to merge to the left-most lane due to traffic 由于交通原因，您无法并入最左侧车道",
+      "Signs and lane markings show you can turn left 标志和车道标线显示你可以左转",
+      "You are turning from a one-way road 你正在从一条单行道上转弯"
     ],
     "answer": "C",
     "answer_text": null,
@@ -16950,19 +17683,19 @@
     "needs_review": "orphan_answer;orphan_after_pair_merge",
     "source_doc": "complete",
     "source_para_idx": 2404,
-    "stem_en": "When you are in the middle lane of a road, you want to turn left. You may turn left from the middle lane only if:",
-    "stem_zh": "当你在一条道路的中间车道上时，你想左转。只有在以下情况下，你才能从中间车道左转：",
+    "stem_en": "While in the middle lane of a road, you would like to turn left. You can turn left from the middle lane only if:",
+    "stem_zh": "当你在一条道路的中间车道上时，你想左转。只有在以下情况下，你才能从中间车道左转",
     "options_en": [
       "You are turn onto a one-way road",
       "You are unable to merge to the left-most lane due to traffic",
-      "",
-      ""
+      "Signs and lane markings show you can turn left",
+      "You are turning from a one-way road"
     ],
     "options_zh": [
-      "",
       "你正转入一条单行道",
-      "",
-      ""
+      "由于交通原因，您无法并入最左侧车道",
+      "标志和车道标线显示你可以左转",
+      "你正在从一条单行道上转弯"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
@@ -17018,10 +17751,10 @@
     "stem": "When entering a freeway from an acceleration lane, it is important to 当从加速车道进入高速公路时，一定要。",
     "stem_img": null,
     "options": [
-      "Increase speed beyond speed limit to make sure you enter  提高速度超过限速，确保你进入",
-      "Increase your speed to match that of the freeway  提高你的速度以配合高速公路车流的速度",
-      "Keep your speed below that of the freeway until you’ve entered traffic flow  保持你的速度低于高速公路车流的速度，直到你进入车流",
-      "Come to a full stop and wait for an opening in traffic  来个全速停车，等待车辆的空挡"
+      "Increase speed beyond speed limit make sure you enter 提高速度超过限速，确保你进入",
+      "Increase your speed to match that of the freeway 提高你的速度以配合高速公路车流的速度",
+      "Keep your speed below that of the freeway until you’ve entered traffic flow 保持你的速度低于高速公路车流的速度，直到你进入车流。",
+      "Come to a full stop and wait for an opening in traffic. 来个全速停车，等待车辆的空挡。"
     ],
     "answer": "B",
     "answer_text": null,
@@ -17038,14 +17771,14 @@
     "stem_zh": "当从加速车道进入高速公路时，一定要。",
     "options_en": [
       "Increase speed beyond speed limit make sure you enter",
-      ".",
       "Increase your speed to match that of the freeway",
+      "Keep your speed below that of the freeway until you’ve entered traffic flow",
       "Come to a full stop and wait for an opening in traffic."
     ],
     "options_zh": [
-      "",
       "提高速度超过限速，确保你进入",
-      "提高你的速度以配合高速公路车流的速度 Keep your speed below that of the freeway until you’ve entered traffic flow 保持你的速度低于高速公路车流的速度，直到你进入车流。",
+      "提高你的速度以配合高速公路车流的速度",
+      "保持你的速度低于高速公路车流的速度，直到你进入车流。",
       "来个全速停车，等待车辆的空挡。"
     ],
     "answer_text_en": "",
@@ -18726,8 +19459,8 @@
     "options_zh": [
       "在路肩上",
       "在中间的车道上",
-      "",
-      ""
+      "尽可能靠左",
+      "尽可能靠右"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
@@ -18846,14 +19579,14 @@
     "options_en": [
       "Use an arm signal to alert the driver behind you",
       "Use the brake-operated signal lights to alert the driver behind you",
-      "Both a & B Either A or B",
-      ""
+      "Both A & B",
+      "Either A or B"
     ],
     "options_zh": [
       "使用手臂信号来提醒你后面的司机",
       "使用刹车信号灯提醒后面的司机",
-      "任一的 indicates the outside edge of the traffic lane, and may be crossed only by traffic moving to or from the shoulder.",
-      ""
+      "两者都用",
+      "任一即可"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
@@ -18868,9 +19601,9 @@
     "stem_img": null,
     "options": [
       "Solid yellow line 黄色实线",
-      "Broken yellow line 黄色虚线",
-      "Solid white line 白色实线",
-      "Broken white line 白色虚线"
+      "Broken yellow line 黄虚线",
+      "Solid white line 白实线",
+      "Broken white line 白虚线"
     ],
     "answer": "C",
     "answer_text": null,
@@ -18892,10 +19625,10 @@
       "Broken white line"
     ],
     "options_zh": [
-      "",
-      "",
-      "",
-      ""
+      "黄色实线",
+      "黄虚线",
+      "白实线",
+      "白虚线"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
@@ -19200,13 +19933,13 @@
   {
     "id": 458,
     "type": "mc",
-    "stem": "Which of the following does not generally lead to loss of driving privileges in the state of New Jersey? 以下哪项通常不会导致新泽西驾驶权的丧失？",
+    "stem": "When changing a lane, all of the following are correct maneuvers, EXCEPT: 在改变车道时，以下所有的动作都是正确的，但不包括。",
     "stem_img": null,
     "options": [
-      "A single speeding conviction 单次超速",
-      "Driving with a suspended license 以暂停的驾照驾驶",
-      "Failure to appear in court 未能出庭",
-      "Failure to provide proof of insurance 未能提供保险证明"
+      "When you turn your head to check the blind spots, turn the steering wheel 当你转头检查盲点时，转动方向盘",
+      "Look over shoulder in the direction you plan to move, to check the blind spots 向你计划移动的方向看肩膀，以检查盲点",
+      "Look in your rearview and side mirrors 看看你的后视镜和侧视镜",
+      "Do not take your eyes off the road ahead for more than an instant 不要把你的眼睛从前面的道路上移开超过一瞬间"
     ],
     "answer": "A",
     "answer_text": null,
@@ -19219,19 +19952,19 @@
     "needs_review": "no_options",
     "source_doc": "complete",
     "source_para_idx": 2803,
-    "stem_en": "Which of the following does not generally lead to loss of driving privileges in the state of New Jersey?",
-    "stem_zh": "以下哪项通常不会导致新泽西驾驶权的丧失？",
+    "stem_en": "When changing a lane, all of the following are correct maneuvers, EXCEPT:",
+    "stem_zh": "在改变车道时，以下所有的动作都是正确的，但不包括。",
     "options_en": [
-      "",
-      "",
-      "",
-      ""
+      "When you turn your head to check the blind spots, turn the steering wheel",
+      "Look over shoulder in the direction you plan to move, to check the blind spots",
+      "Look in your rearview and side mirrors",
+      "Do not take your eyes off the road ahead for more than an instant"
     ],
     "options_zh": [
-      "",
-      "",
-      "",
-      ""
+      "当你转头检查盲点时，转动方向盘",
+      "向你计划移动的方向看肩膀，以检查盲点",
+      "看看你的后视镜和侧视镜",
+      "不要把你的眼睛从前面的道路上移开超过一瞬间"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
@@ -19289,7 +20022,7 @@
     "options": [
       "Hold the steering wheel tightly 紧紧握住方向盘",
       "Brake immediately 立即刹车",
-      "",
+      "Slowly ease your foot off the accelerator 慢慢放松你的脚，离开油门",
       "Steer straight ahead 直线前进"
     ],
     "answer": "B",
@@ -19308,13 +20041,13 @@
     "options_en": [
       "Hold the steering wheel tightly",
       "Brake immediately",
-      "",
+      "Slowly ease your foot off the accelerator",
       "Steer straight ahead"
     ],
     "options_zh": [
       "紧紧握住方向盘",
       "立即刹车",
-      "",
+      "慢慢放松你的脚，离开油门",
       "直线前进"
     ],
     "answer_text_en": "",
@@ -20166,7 +20899,7 @@
   {
     "id": 481,
     "type": "mc",
-    "stem": "If a NJ driver who is under the age of twenty-one is convicted of purchasing or consuming alcohol in a business, he or she could be fined up to     and lose his or her license for up to   months.    21 岁 以 下 的新泽西司机在驾驶时购买或饮用酒精将被处以最高 罚款并吊销驾照最长 个月。",
+    "stem": "If a NJ driver who is under the age of twenty-one is convicted of purchasing or consuming alcohol in a business, he or she could be fined up to ____ and lose his or her license for up to ____ months. 21 岁以下的新泽西司机被定罪在营业场所购买或饮用酒精，将被处以最高 ____ 罚款并吊销驾照最长 ____ 个月。",
     "stem_img": null,
     "options": [
       "$500; 6",
@@ -20185,8 +20918,8 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 2935,
-    "stem_en": "If a NJ driver who is under the age of twenty-one is convicted of purchasing or consuming alcohol in a business, he or she could be fined up to     and lose his or her license for up to   months.    21",
-    "stem_zh": "岁 以 下 的新泽西司机在驾驶时购买或饮用酒精将被处以最高 罚款并吊销驾照最长 个月。",
+    "stem_en": "If a NJ driver who is under the age of twenty-one is convicted of purchasing or consuming alcohol in a business, he or she could be fined up to ____ and lose his or her license for up to ____ months.",
+    "stem_zh": "21 岁以下的新泽西司机被定罪在营业场所购买或饮用酒精，将被处以最高 ____ 罚款并吊销驾照最长 ____ 个月。",
     "options_en": [
       "$500; 6",
       "$1000; 12",
@@ -20418,7 +21151,7 @@
   {
     "id": 487,
     "type": "mc",
-    "stem": "If a New Jersey driver fails to comply with a police officer’s request to illuminate the inside of his or her vehicle during a traffic stop, he or she will be fined    . 如果新泽西司机不服从警务人员在交通中止期间对其照亮车辆内部的要求，他/她将被处以   罚款。",
+    "stem": "If a New Jersey driver fails to comply with a police officer’s request to illuminate the inside of his or her vehicle during a traffic stop, he or she will be fined ____. 如果新泽西司机不服从警务人员在交通拦停期间照亮车辆内部的要求，他/她将被处以 ____ 罚款。",
     "stem_img": null,
     "options": [
       "$250",
@@ -20437,8 +21170,8 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 2956,
-    "stem_en": "If a New Jersey driver fails to comply with a police officer’s request to illuminate the inside of his or her vehicle during a traffic stop, he or she will be fined    .",
-    "stem_zh": "如果新泽西司机不服从警务人员在交通中止期间对其照亮车辆内部的要求，他/她将被处以   罚款。",
+    "stem_en": "If a New Jersey driver fails to comply with a police officer’s request to illuminate the inside of his or her vehicle during a traffic stop, he or she will be fined ____.",
+    "stem_zh": "如果新泽西司机不服从警务人员在交通拦停期间照亮车辆内部的要求，他/她将被处以 ____ 罚款。",
     "options_en": [
       "$250",
       "$500",
@@ -20460,7 +21193,7 @@
   {
     "id": 488,
     "type": "mc",
-    "stem": "If a driver is convicted of consuming alcohol while operating a vehicle a second time, he or she will be required to complete     days of community service. 被第二次定罪为驾驶时饮酒将被要求完成   天的社区服务。",
+    "stem": "If a driver is convicted of consuming alcohol while operating a vehicle a second time, he or she will be required to complete ____ days of community service. 被第二次定罪为驾驶时饮酒将被要求完成 ____ 天的社区服务。",
     "stem_img": null,
     "options": [
       "10",
@@ -20479,8 +21212,8 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 2959,
-    "stem_en": "If a driver is convicted of consuming alcohol while operating a vehicle a second time, he or she will be required to complete     days of community service.",
-    "stem_zh": "被第二次定罪为驾驶时饮酒将被要求完成   天的社区服务。",
+    "stem_en": "If a driver is convicted of consuming alcohol while operating a vehicle a second time, he or she will be required to complete ____ days of community service.",
+    "stem_zh": "被第二次定罪为驾驶时饮酒将被要求完成 ____ 天的社区服务。",
     "options_en": [
       "10",
       "5",
@@ -20544,7 +21277,7 @@
   {
     "id": 490,
     "type": "mc",
-    "stem": "What is the legal BAC limit for New Jersey drivers who are under the age of twenty-one? 21 岁以下的新泽西司机合法血液酒精含量(BAC)为 。",
+    "stem": "What is the legal BAC limit for New Jersey drivers who are under the age of twenty-one? 21 岁以下的新泽西司机合法血液酒精含量（BAC）为 ____。",
     "stem_img": null,
     "options": [
       "0.02%",
@@ -20552,7 +21285,7 @@
       "0.01%",
       "0.00%"
     ],
-    "answer": "D",
+    "answer": "C",
     "answer_text": null,
     "topics": [
       "bac_levels"
@@ -20563,8 +21296,8 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 2965,
-    "stem_en": "What is the legal BAC limit for New Jersey drivers who are under the age of twenty-one? 21",
-    "stem_zh": "岁以下的新泽西司机合法血液酒精含量(BAC)为 。",
+    "stem_en": "What is the legal BAC limit for New Jersey drivers who are under the age of twenty-one?",
+    "stem_zh": "21 岁以下的新泽西司机合法血液酒精含量（BAC）为 ____。",
     "options_en": [
       "0.02%",
       "0.08%",
@@ -20581,12 +21314,17 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订） PDF p117 / 印刷 p115",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 491,
     "type": "mc",
-    "stem": "What is the legal BAC limit for individuals who are 21 years of age or older in the state of New Jersey? 21 岁及以上的新泽西司机合法血液酒精含量(BAC)为 。",
+    "stem": "What is the legal BAC limit for individuals who are 21 years of age or older in the state of New Jersey? 21 岁及以上的新泽西司机合法血液酒精含量（BAC）为 ____。",
     "stem_img": null,
     "options": [
       "0.20%",
@@ -20594,7 +21332,7 @@
       "0.07%",
       "0.10%"
     ],
-    "answer": "C",
+    "answer": "B",
     "answer_text": null,
     "topics": [
       "unclassified"
@@ -20605,8 +21343,8 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 2969,
-    "stem_en": "What is the legal BAC limit for individuals who are 21 years of age or older in the state of New Jersey? 21",
-    "stem_zh": "岁及以上的新泽西司机合法血液酒精含量(BAC)为 。",
+    "stem_en": "What is the legal BAC limit for individuals who are 21 years of age or older in the state of New Jersey?",
+    "stem_zh": "21 岁及以上的新泽西司机合法血液酒精含量（BAC）为 ____。",
     "options_en": [
       "0.20%",
       "0.08%",
@@ -20623,7 +21361,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订） PDF p117 / 印刷 p115",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 492,
@@ -21555,7 +22298,7 @@
   {
     "id": 514,
     "type": "mc",
-    "stem": "Upon a NJ driver’s conviction of refusing to submit to chemical testing, he or she will be ordered to pay an insurance surcharge of     for three consecutive years. 新泽西司机被定罪为拒绝接受化学测试将被勒令连续三年支付 的保险附加费。",
+    "stem": "Upon a NJ driver’s conviction of refusing to submit to chemical testing, he or she will be ordered to pay an insurance surcharge of ____ for three consecutive years. 新泽西司机被定罪为拒绝接受化学测试将被勒令连续三年支付 ____ 的保险附加费。",
     "stem_img": null,
     "options": [
       "$1,000",
@@ -21574,8 +22317,8 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 3057,
-    "stem_en": "Upon a NJ driver’s conviction of refusing to submit to chemical testing, he or she will be ordered to pay an insurance surcharge of     for three consecutive years.",
-    "stem_zh": "新泽西司机被定罪为拒绝接受化学测试将被勒令连续三年支付 的保险附加费。",
+    "stem_en": "Upon a NJ driver’s conviction of refusing to submit to chemical testing, he or she will be ordered to pay an insurance surcharge of ____ for three consecutive years.",
+    "stem_zh": "新泽西司机被定罪为拒绝接受化学测试将被勒令连续三年支付 ____ 的保险附加费。",
     "options_en": [
       "$1,000",
       "$100",
@@ -21723,7 +22466,7 @@
   {
     "id": 518,
     "type": "mc",
-    "stem": "The penalties for a first offence of refusing to submit to chemical testing in the state of New Jersey are equivalent to those for driving with a BAC of    . 在新泽西州对第一次拒绝接受化学测试的处罚等同于那些血液酒精含量为   的司机。",
+    "stem": "The penalties for a first offence of refusing to submit to chemical testing in the state of New Jersey are equivalent to those for driving with a BAC of ____. 在新泽西州对第一次拒绝接受化学测试的处罚等同于那些血液酒精含量为 ____ 的司机。",
     "stem_img": null,
     "options": [
       "0.08%",
@@ -21742,8 +22485,8 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 3075,
-    "stem_en": "The penalties for a first offence of refusing to submit to chemical testing in the state of New Jersey are equivalent to those for driving with a BAC of    .",
-    "stem_zh": "在新泽西州对第一次拒绝接受化学测试的处罚等同于那些血液酒精含量为   的司机。",
+    "stem_en": "The penalties for a first offence of refusing to submit to chemical testing in the state of New Jersey are equivalent to those for driving with a BAC of ____.",
+    "stem_zh": "在新泽西州对第一次拒绝接受化学测试的处罚等同于那些血液酒精含量为 ____ 的司机。",
     "options_en": [
       "0.08%",
       "0.10%",
@@ -21934,7 +22677,7 @@
   {
     "id": 523,
     "type": "mc",
-    "stem": "If a New Jersey driver is convicted of driving at a slow speed that impedes traffic,   points will be added to his or her driving record. 如果新泽西司机被定罪因低速驾驶阻碍交通 将增加分到其驾驶记录。",
+    "stem": "If a New Jersey driver is convicted of driving at a slow speed that impedes traffic, ____ points will be added to his or her driving record. 如果新泽西司机被定罪因低速驾驶阻碍交通，其驾驶记录将增加 ____ 分。",
     "stem_img": null,
     "options": [
       "5",
@@ -21953,8 +22696,8 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 3093,
-    "stem_en": "If a New Jersey driver is convicted of driving at a slow speed that impedes traffic,   points will be added to his or her driving record.",
-    "stem_zh": "如果新泽西司机被定罪因低速驾驶阻碍交通 将增加分到其驾驶记录。",
+    "stem_en": "If a New Jersey driver is convicted of driving at a slow speed that impedes traffic, ____ points will be added to his or her driving record.",
+    "stem_zh": "如果新泽西司机被定罪因低速驾驶阻碍交通，其驾驶记录将增加 ____ 分。",
     "options_en": [
       "5",
       "2",
@@ -22144,13 +22887,13 @@
   {
     "id": 528,
     "type": "mc",
-    "stem": "13 岁以上 18 岁以下的新泽西居民，可能因为 ____ 导致其驾照吊销或延迟发放。NJ residents between the ages of 13 and 18 may have their license suspended or delayed for ____.",
+    "stem": "New Jersey residents who are over the age of thirteen but under the age of eighteen may have their licenses suspended or postponed because of: 13 岁以上 18 岁以下的新泽西居民，可能因为 ____ 导致其驾照吊销或延迟发放。",
     "stem_img": null,
     "options": [
       "Graffiti 涂鸦",
       "Poor grades 成绩不佳",
-      "Suspension from school 暂时停学",
-      "None of these answers are correct 以上都不对"
+      "None of these answers are correct 以上都不对",
+      "Suspension from school 暂时停学"
     ],
     "answer": "A",
     "answer_text": null,
@@ -22163,7 +22906,7 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 3121,
-    "stem_en": "NJ residents between the ages of 13 and 18 may have their license suspended or delayed for ____.",
+    "stem_en": "New Jersey residents who are over the age of thirteen but under the age of eighteen may have their licenses suspended or postponed because of:",
     "stem_zh": "13 岁以上 18 岁以下的新泽西居民，可能因为 ____ 导致其驾照吊销或延迟发放。",
     "options_en": [
       "Graffiti",
@@ -22265,7 +23008,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: A_en has next-question phrase; B_en has next-question phrase; D_zh has long English run (46+ chars)"
+    "notes": "auto-detected: A_en has next-question phrase; B_en has next-question phrase; D_zh has long English run (46+ chars)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.216 / printed p.214: shape table: white vertical rectangle = regulation (such as speed signs); speed limits on PDF p.64-65 / printed p.62-63",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 531,
@@ -22307,7 +23055,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.85 / printed p.83: 'Using Headlights': headlights required when wipers are in use; PDF p.65 / printed p.63: always slow down when the road is wet",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 532,
@@ -22433,7 +23186,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.56 / printed p.54: hand signals: right turn = hand and arm upward",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 535,
@@ -22560,13 +23318,18 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W1-11 (Hairpin Curve), Section 2C.07 (Horizontal Alignment Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 538,
-    "type": "mc",
+    "type": "mc_image",
     "stem": "You drive up to an intersection and you see this sign. What should you do? 你开到一个路口看见这个标志。你应该怎么做？",
-    "stem_img": null,
+    "stem_img": "img_q538.jpg",
     "options": [
       "Come to a complete stop and proceed after yielding to any pedestrians and traffic 完全停住，礼让行人和车辆后继续前进",
       "Slow down and prepare to yield to pedestrians and traffic ahead 减速并准备礼让前方行人和车辆",
@@ -22602,7 +23365,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: D_zh has long English run (67+ chars)"
+    "notes": "auto-detected: D_zh has long English run (67+ chars)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订） PDF p69 / 印刷 p67；标志见 PDF p224 / 印刷 p222",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 539,
@@ -22654,8 +23422,8 @@
     "options": [
       "You must not park within 50ft of a STOP sign and within 25ft of a crosswalk at an intersection 你不能在路口停车标志 50 英尺内及人行横道 25 英尺内停车",
       "You must not park within 10ft of any STOP sign or crosswalk 你不能在路口停车标志或人行横道10 英尺内停车",
-      "You must not park within 5ft of a STOP sign or 50ft of a crosswalk 你不能在路口停车标志 5 英尺内或人行横道 50 英尺内停车 You can park as close to any STOP sign or crosswalk as you want, so long as you don’t pass the",
-      "STOP line or enter the crossing 你可以在任何临近路口停车标志或人行横道的地方停车，只要你不停在停车线上或进入路口即可。"
+      "You must not park within 5ft of a STOP sign or 50ft of a crosswalk 你不能在路口停车标志 5 英尺内或人行横道 50 英尺内停车",
+      "You can park as close to any STOP sign or crosswalk as you want, so long as you don’t pass the STOP line or enter the crossing 你可以在任何临近路口停车标志或人行横道的地方停车，只要你不停在停车线上或进入路口即可。"
     ],
     "answer": "A",
     "answer_text": null,
@@ -22674,19 +23442,24 @@
       "You must not park within 50ft of a STOP sign and within 25ft of a crosswalk at an intersection",
       "You must not park within 10ft of any STOP sign or crosswalk",
       "You must not park within 5ft of a STOP sign or 50ft of a crosswalk",
-      "STOP line or enter the crossing"
+      "You can park as close to any STOP sign or crosswalk as you want, so long as you don’t pass the STOP line or enter the crossing"
     ],
     "options_zh": [
       "你不能在路口停车标志 50 英尺内及人行横道 25 英尺内停车",
       "你不能在路口停车标志或人行横道10 英尺内停车",
-      "你不能在路口停车标志 5 英尺内或人行横道 50 英尺内停车 You can park as close to any STOP sign or crosswalk as you want, so long as you don’t pass the",
+      "你不能在路口停车标志 5 英尺内或人行横道 50 英尺内停车",
       "你可以在任何临近路口停车标志或人行横道的地方停车，只要你不停在停车线上或进入路口即可。"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: D_zh has long English run (25+ chars)"
+    "notes": "auto-detected: D_zh has long English run (25+ chars)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.87 / printed p.85: parking list: 25 feet from a crosswalk at an intersection, 50 feet from a stop sign",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 541,
@@ -22696,7 +23469,7 @@
     "options": [
       "Car A can go first because it is turning A 车先行应为A 车转弯。",
       "Car B must yield because it is travelling straight through the intersection B 车让行因其直行通过路口",
-      "Car A must yield because it is turning left  A 车让行 因为A车左转",
+      "Car A must yield because it is turning left A车让行 因为A车左转",
       "Whoever yields should be decided by the drivers at the intersection 谁让行应在路口的司机决定"
     ],
     "answer": "C",
@@ -22713,22 +23486,27 @@
     "stem_en": "Two cars arrive at a crossroads at the same time. Which of the following is true?",
     "stem_zh": "两辆车同时到达十字路口。以下哪项正确？",
     "options_en": [
-      "Car A can go first because it is turning A",
-      "Car B must yield because it is travelling straight through the intersection B",
-      "Car A must yield because it is turning left  A",
+      "Car A can go first because it is turning",
+      "Car B must yield because it is travelling straight through the intersection",
+      "Car A must yield because it is turning left",
       "Whoever yields should be decided by the drivers at the intersection"
     ],
     "options_zh": [
-      "车先行应为A 车转弯。",
-      "车让行因其直行通过路口",
-      "车让行 因为A车左转",
+      "A 车先行应为A 车转弯。",
+      "B 车让行因其直行通过路口",
+      "A车让行 因为A车左转",
       "谁让行应在路口的司机决定"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: D_zh has long English run (97+ chars)"
+    "notes": "auto-detected: D_zh has long English run (97+ chars)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.69 / printed p.67: 'Intersections' > Controlled: when making a left turn, yield to oncoming traffic",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 542,
@@ -22774,9 +23552,9 @@
   },
   {
     "id": 543,
-    "type": "mc_image",
-    "stem": "You have reached an intersection controlled by a STOP sign. Where must you stop? 你到了一个由停车标志控制的交叉路口。你必须停在那里？",
-    "stem_img": "img_complete_143.jpg",
+    "type": "mc",
+    "stem": "You have reached an intersection controlled by a STOP sign. Where must you stop? 你到了一个由停车标志控制的交叉路口。你必须停在哪里？",
+    "stem_img": null,
     "options": [
       "Before the crosswalk 人行横道前",
       "Before entering the intersection 进入路口前",
@@ -22795,7 +23573,7 @@
     "source_doc": "complete",
     "source_para_idx": 3214,
     "stem_en": "You have reached an intersection controlled by a STOP sign. Where must you stop?",
-    "stem_zh": "你到了一个由停车标志控制的交叉路口。你必须停在那里？",
+    "stem_zh": "你到了一个由停车标志控制的交叉路口。你必须停在哪里？",
     "options_en": [
       "Before the crosswalk",
       "Before entering the intersection",
@@ -22812,18 +23590,23 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.69 / printed p.67: 'Intersections' > Controlled: stop within five feet of the nearest crosswalk or stop line; stop behind a solid white line",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 544,
-    "type": "mc",
-    "stem": "Car B has entered an intersection to turn right on a red signal. Car A then arrives with a green signal. Which of the following is true? B 车已经在红灯时进入路口右转。A 车到达时是绿灯。以下哪项最正确？",
-    "stem_img": null,
+    "type": "mc_image",
+    "stem": "Car B has entered an intersection to turn right on a red signal. Car A then arrives with a green signal. Which of the following is most correct? B 车已经在红灯时进入路口右转。A 车到达时是绿灯。以下哪项最正确？",
+    "stem_img": "img_q544.jpg",
     "options": [
-      "Car A must yield to Car B, as Car B is already in the intersection  A 车必须让 B 车，因为 B 车已经进入路口",
-      "Car B should stop and let Car A through  B 车应该停车让 A 车通过",
-      "Car A should speed up to pass Car B  A 车应该加速超过 B 车",
-      "None of the above  以上都不对"
+      "Car A must yield to Car B, as Car B is already in the intersection A 车必须让 B 车，因为 B 车已经进入路口",
+      "Car B should stop and let Car A through B 车应该停车让A 车通过",
+      "Car A should speed up to pass Car B A 车应该加速超过 B 车",
+      "None of the above 以上都不对"
     ],
     "answer": "A",
     "answer_text": null,
@@ -22836,19 +23619,19 @@
     "needs_review": "option_leak",
     "source_doc": "complete",
     "source_para_idx": 3219,
-    "stem_en": "Car B has entered an intersection to turn right on a red signal. Car A then arrives with a green signal. Which of the following is true?",
+    "stem_en": "Car B has entered an intersection to turn right on a red signal. Car A then arrives with a green signal. Which of the following is most correct?",
     "stem_zh": "B 车已经在红灯时进入路口右转。A 车到达时是绿灯。以下哪项最正确？",
     "options_en": [
       "Car A must yield to Car B, as Car B is already in the intersection",
-      "A",
-      "Car B should stop and let Car A through    B",
-      "Car A should speed up to pass Car B    A"
+      "Car B should stop and let Car A through",
+      "Car A should speed up to pass Car B",
+      "None of the above"
     ],
     "options_zh": [
-      "",
-      "车必须让 B 车，因为 B 车已经进入路口",
-      "车应该停车让A 车通过",
-      "车应该加速超过 B 车 None of the above 以上都不对 Two cars arrive at a intersection at the same time. Which of the following is true?"
+      "A 车必须让 B 车，因为 B 车已经进入路口",
+      "B 车应该停车让A 车通过",
+      "A 车应该加速超过 B 车",
+      "以上都不对"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
@@ -22862,10 +23645,10 @@
     "stem": "Two cars arrive at a intersection at the same time. Which of the following is true? 两辆车同时到达十字路口。以下哪项正确？",
     "stem_img": "img_complete_144.jpg",
     "options": [
-      "Car A is to the left of Car B and therefore must yield    A 车在 B 车的左侧所以必须让行",
-      "Car B must yield because it is on Car A’s right    B 车在 A 车右侧所以必须让行",
-      "Car B must yield because it is travelling straight through the intersection",
-      "B 车必须让行  因其直行通过路口 None of the above 以上都不对 New Jersey law requires of passenger vehicles operated in the state to wear seat belts."
+      "Car A is to the left of Car B and therefore must yield A 车在 B 车的左侧所以必须让行",
+      "Car B must yield because it is on Car A’s right B 车在 A 车右侧所以必须让行",
+      "Car B must yield because it is travelling straight through the intersection B 车必须让行 因其直行通过路口",
+      "None of the above 以上都不对"
     ],
     "answer": "A",
     "answer_text": null,
@@ -22881,22 +23664,27 @@
     "stem_en": "Two cars arrive at a intersection at the same time. Which of the following is true?",
     "stem_zh": "两辆车同时到达十字路口。以下哪项正确？",
     "options_en": [
-      "Car A is to the left of Car B and therefore must yield    A",
-      "Car B must yield because it is on Car A’s right    B",
+      "Car A is to the left of Car B and therefore must yield",
+      "Car B must yield because it is on Car A’s right",
       "Car B must yield because it is travelling straight through the intersection",
-      "B"
+      "None of the above"
     ],
     "options_zh": [
-      "车在 B 车的左侧所以必须让行",
-      "车在 A 车右侧所以必须让行",
-      "",
-      "车必须让行  因其直行通过路口 None of the above 以上都不对 New Jersey law requires of passenger vehicles operated in the state to wear seat belts."
+      "A 车在 B 车的左侧所以必须让行",
+      "B 车在 A 车右侧所以必须让行",
+      "B 车必须让行 因其直行通过路口",
+      "以上都不对"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: D_zh has long English run (87+ chars)"
+    "notes": "auto-detected: D_zh has long English run (87+ chars)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.70 / printed p.68: 'Uncontrolled': the vehicle on the left yields to the vehicle on the right",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 546,
@@ -23022,7 +23810,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） W1-15 (270-degree Curve), Section 2C.07 (Horizontal Alignment Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 549,
@@ -23111,7 +23904,7 @@
   {
     "id": 551,
     "type": "mc",
-    "stem": "A good rule on snow-covered roads (with reduced visibility) is to maintain a following distance  of  or more. 雪地（能见度低）行车应保持几秒的车距？",
+    "stem": "A good rule on snow-covered roads (with reduced visibility) is to maintain a following distance of ____ or more. 雪地（能见度低）行车应保持几秒的车距？",
     "stem_img": null,
     "options": [
       "Six seconds 6秒",
@@ -23130,7 +23923,7 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 3263,
-    "stem_en": "A good rule on snow-covered roads (with reduced visibility) is to maintain a following distance  of  or more.",
+    "stem_en": "A good rule on snow-covered roads (with reduced visibility) is to maintain a following distance of ____ or more.",
     "stem_zh": "雪地（能见度低）行车应保持几秒的车距？",
     "options_en": [
       "Six seconds",
@@ -23214,13 +24007,13 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 3333,
-    "stem_en": "",
+    "stem_en": "Cell phones may not be used while driving except for:",
     "stem_zh": "开车时不许使用手机，除非",
     "options_en": [
-      "",
-      "",
-      "",
-      ""
+      "Fire emergencies",
+      "Life-threatening situations",
+      "Traffic accidents",
+      "All of the above"
     ],
     "options_zh": [
       "火警",
@@ -23256,13 +24049,13 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 3338,
-    "stem_en": "",
+    "stem_en": "Which of the following will increase your auto insurance premium?",
     "stem_zh": "什么情况下会增加你的汽车保费？",
     "options_en": [
-      "",
-      "",
-      "",
-      ""
+      "Driving while intoxicated (DWI)",
+      "Driving under the influence (DUI)",
+      "Excessive blood alcohol content",
+      "All of the above"
     ],
     "options_zh": [
       "酒后驾驶",
@@ -23298,13 +24091,13 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 3348,
-    "stem_en": "",
+    "stem_en": "Which medications can affect your driving on the road?",
     "stem_zh": "什么药物会影响路上开车？",
     "options_en": [
-      "",
-      "",
-      "",
-      ""
+      "Cold medicine",
+      "Tranquilizers",
+      "Sleeping pills",
+      "All of the above"
     ],
     "options_zh": [
       "感冒药",
@@ -23340,13 +24133,13 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 3376,
-    "stem_en": "",
+    "stem_en": "When the back seat is unavailable, may a child sit in the front seat?",
     "stem_zh": "当后排不能坐人时，孩童可不可以坐在前排？",
     "options_en": [
-      "",
-      "",
-      "",
-      ""
+      "No",
+      "Yes",
+      "Only during the day",
+      "Only at night"
     ],
     "options_zh": [
       "不可以",
@@ -23382,13 +24175,13 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 3403,
-    "stem_en": "",
+    "stem_en": "If your tire blows out while driving, you should:",
     "stem_zh": "在行驶中你的车辆爆胎，你应",
     "options_en": [
-      "",
-      "",
-      "",
-      ""
+      "Keep going straight",
+      "Slow down gradually",
+      "Pull over to the right",
+      "All of the above"
     ],
     "options_zh": [
       "保持直行",
@@ -23424,13 +24217,13 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 3406,
-    "stem_en": "",
+    "stem_en": "When driving in daytime rain, you should:",
     "stem_zh": "白天下雨驾车时你应该",
     "options_en": [
-      "",
-      "",
-      "",
-      ""
+      "Use your wipers",
+      "Turn on your headlights",
+      "Use both wipers and headlights",
+      "Turn on your fog lights"
     ],
     "options_zh": [
       "使用雨刷",
@@ -23466,19 +24259,19 @@
     "needs_review": "orphan_after_shift;orphan_after_shift",
     "source_doc": "complete",
     "source_para_idx": 3414,
-    "stem_en": "",
-    "stem_zh": "你不能把车停在 消防水龙前 公共汽车站",
+    "stem_en": "You may NOT park:",
+    "stem_zh": "你不能把车停在",
     "options_en": [
-      "",
-      "",
-      "",
-      ""
+      "In front of a fire hydrant",
+      "At a bus stop",
+      "In front of a driveway",
+      "All of the above"
     ],
     "options_zh": [
+      "消防水龙前",
+      "公共汽车站",
       "车道前",
-      "以上皆是",
-      "",
-      ""
+      "以上皆是"
     ],
     "answer_text_en": "",
     "answer_text_zh": "",
@@ -23494,7 +24287,7 @@
     "options": [
       "Before turning 转弯时",
       "When parking 停车时",
-      "When changing lanes 转向时",
+      "When changing lanes 变道时",
       "All of the above 以上皆是"
     ],
     "answer": "D",
@@ -23508,18 +24301,18 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 3426,
-    "stem_en": "",
+    "stem_en": "When should you turn on your turn signal?",
     "stem_zh": "什么时候应打转向灯？",
     "options_en": [
-      "",
-      "",
-      "",
-      ""
+      "Before turning",
+      "When parking",
+      "When changing lanes",
+      "All of the above"
     ],
     "options_zh": [
       "转弯时",
       "停车时",
-      "转向时",
+      "变道时",
       "以上皆是"
     ],
     "answer_text_en": "",
@@ -23550,13 +24343,13 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 3431,
-    "stem_en": "",
+    "stem_en": "Where should the child car seat be placed when not in use?",
     "stem_zh": "小孩的车座在不用的时候应放在车的什么地方？",
     "options_en": [
-      "",
-      "",
-      "",
-      ""
+      "Front seat",
+      "Back seat",
+      "Trunk",
+      "All of the above"
     ],
     "options_zh": [
       "前排",
@@ -23578,10 +24371,10 @@
     "options": [
       "Speed up 加速",
       "Slow down 减速",
-      "Drive straight through the curve 沿着弯路直行",
+      "Keep going along the curve 沿着弯路直行",
       "All of the above 以上皆是"
     ],
-    "answer": "C",
+    "answer": "B",
     "answer_text": null,
     "topics": [
       "unclassified"
@@ -23592,13 +24385,13 @@
     "needs_review": null,
     "source_doc": "complete",
     "source_para_idx": 3434,
-    "stem_en": "",
+    "stem_en": "When driving on a curve, you should:",
     "stem_zh": "在弯道上行驶你应该",
     "options_en": [
-      "",
-      "",
-      "",
-      ""
+      "Speed up",
+      "Slow down",
+      "Keep going along the curve",
+      "All of the above"
     ],
     "options_zh": [
       "加速",
@@ -23610,7 +24403,12 @@
     "answer_text_zh": "",
     "lang_primary": "zh",
     "needs_translation": "zh_to_en",
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订） PDF p74 / 印刷 p72",
+      "date": "2026-11-25"
+    }
   },
   {
     "id": 563,
@@ -23623,7 +24421,7 @@
       "0.01%",
       "0.00%"
     ],
-    "answer": "D",
+    "answer": "C",
     "answer_text": null,
     "topics": [
       "unclassified"
@@ -23634,8 +24432,8 @@
     "needs_review": null,
     "source_doc": "mistakes",
     "source_para_idx": 151,
-    "stem_en": "21",
-    "stem_zh": "岁以下的新泽西司机合法血液酒精含量(BAC)为          。",
+    "stem_en": "The legal blood alcohol content (BAC) for NJ drivers under 21 is:",
+    "stem_zh": "21 岁以下的新泽西司机合法血液酒精含量 (BAC) 为",
     "options_en": [
       "0.02%",
       "0.08%",
@@ -23652,7 +24450,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订） PDF p117 / 印刷 p115",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 564,
@@ -23665,7 +24468,7 @@
       "0.07%",
       "0.10%"
     ],
-    "answer": "C",
+    "answer": "B",
     "answer_text": null,
     "topics": [
       "unclassified"
@@ -23676,8 +24479,8 @@
     "needs_review": null,
     "source_doc": "mistakes",
     "source_para_idx": 155,
-    "stem_en": "21",
-    "stem_zh": "岁及以上的新泽西司机合法血液酒精含量(BAC)为   。",
+    "stem_en": "The legal blood alcohol content (BAC) for NJ drivers 21 and older is:",
+    "stem_zh": "21 岁及以上的新泽西司机合法血液酒精含量 (BAC) 为",
     "options_en": [
       "0.20%",
       "0.08%",
@@ -23694,11 +24497,16 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订） PDF p117 / 印刷 p115",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 565,
-    "type": "mc",
+    "type": "mc_image",
     "stem": "What does this flashing arrow panel mean? 这个闪烁的箭头面板是什么意思",
     "stem_img": "img_mistakes_q565.png",
     "options": [
@@ -23736,12 +24544,17 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） Section 6L.06 (Arrow Boards)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 566,
     "type": "mc_image",
-    "stem": "This sign is a",
+    "stem": "This sign is a 这个标志是",
     "stem_img": "img_mistakes_147.jpeg",
     "options": [
       "A highway exit sign 高速路出口标志",
@@ -23761,7 +24574,7 @@
     "source_doc": "mistakes",
     "source_para_idx": 308,
     "stem_en": "This sign is a",
-    "stem_zh": "",
+    "stem_zh": "这个标志是",
     "options_en": [
       "A highway exit sign",
       "A destination distance sigh",
@@ -23778,7 +24591,12 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": "en_to_zh",
-    "notes": null
+    "notes": null,
+    "review": {
+      "status": "not_in_manual",
+      "source": "MUTCD 第 11 版（2023 年 12 月） Section 2E.41 (Design of Freeway and Expressway Diagrammatic Advance Guide Signs)",
+      "date": "2026-11-24"
+    }
   },
   {
     "id": 567,
@@ -23786,7 +24604,7 @@
     "stem": "Two cars have parked outside of a fire station. Which of the following is most true? 有两辆汽车停在了一个消防站的外面。以下哪项是最正确的？",
     "stem_img": "img_mistakes_148.jpeg",
     "options": [
-      "Car A cannot park across the driveway  A 车不能停在车道对面",
+      "Car A cannot park across the driveway A车不能停在车道对面",
       "Car A must remain at least 20ft from the driveway 轿车A必须与车道保持至少20英尺的距离",
       "Car A must remain at least 75ft from the driveway, and Car B must remain at least 20ft from the driveway 轿车A必须离车道至少75英尺，而轿车B必须离车道至少20英尺",
       "Car A must remain at least 20ft from the driveway, and Car B must remain at least 75ft from the driveway A车必须保持离车道至少20英尺，B车必须保持离车道至少75英尺"
@@ -23806,13 +24624,13 @@
     "stem_en": "Two cars have parked outside of a fire station. Which of the following is most true?",
     "stem_zh": "有两辆汽车停在了一个消防站的外面。以下哪项是最正确的？",
     "options_en": [
-      "Car A cannot park across the driveway  A",
+      "Car A cannot park across the driveway",
       "Car A must remain at least 20ft from the driveway",
       "Car A must remain at least 75ft from the driveway, and Car B must remain at least 20ft from the driveway",
       "Car A must remain at least 20ft from the driveway, and Car B must remain at least 75ft from the driveway"
     ],
     "options_zh": [
-      "车不能停在车道对面",
+      "A车不能停在车道对面",
       "轿车A必须与车道保持至少20英尺的距离",
       "轿车A必须离车道至少75英尺，而轿车B必须离车道至少20英尺",
       "A车必须保持离车道至少20英尺，B车必须保持离车道至少75英尺"
@@ -23821,6 +24639,11 @@
     "answer_text_zh": "",
     "lang_primary": "en",
     "needs_translation": null,
-    "notes": "auto-detected: D_zh has long English run (27+ chars)"
+    "notes": "auto-detected: D_zh has long English run (27+ chars)",
+    "review": {
+      "status": "verified",
+      "source": "NJ Driver Manual 2026（2026 年 4 月修订）PDF p.87 / printed p.85: parking list: 20 feet from a fire station driveway entrance, 75 feet on the opposite side of the street",
+      "date": "2026-11-24"
+    }
   }
 ]
