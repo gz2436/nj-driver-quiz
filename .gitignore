@@ -25,3 +25,6 @@ __pycache__/
 .venv/
 venv/
 .vercel
+
+# Local agent notes and hand-over (kept off the public repo)
+.agent/
